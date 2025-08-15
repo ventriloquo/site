@@ -1,6 +1,6 @@
 "use strict";
 
-import colection from "./db/colection.js";
+import colection from "./db/collection.js";
 
 const biblioteca = document.getElementById("biblioteca");
 
