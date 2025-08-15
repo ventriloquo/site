@@ -1,0 +1,478 @@
+:root {
+    --bg-0: #181818;
+    --bg-1: #282828;
+    --bg-2: #484848;
+    --fg-0: #e4e4ef;
+    --fg-1: #f4f4ff;
+    --red: #f43841;
+    --accent: #ffdd33;
+    --accent-2: #cc8c3c;
+    --link: #96a6c8;
+    --link-hover: #565f73;
+    --heading: #95a99f;
+    --border: solid 1px var(--heading);
+}
+
+html {
+    scroll-padding-top: 4em;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--bg-1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--link-hover);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--link);
+}
+
+body {
+    background-color: var(--bg-0);
+    color: var(--fg-0);
+    font-family: "Sans Serif", system-ui;
+    line-height: 1.6;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a[href*="//"]:after
+{
+    font-weight: 300;
+    font-size: 0.85em;
+    content: "\2197"; /* top right arrow */
+    color: var(--link);
+}
+
+a[href*="//"]:hover:after
+{
+    color: var(--link-hover);
+}
+
+a:before {
+    font-size: 0.7em;
+    margin-right: 0.4em;
+}
+
+/* Documents */
+a[href$=".pdf"]:before {
+    content: "PDF";
+}
+a[href$=".md"]:before {
+    content: "MD";
+}
+a[href$=".txt"]:before {
+    content: "TXT";
+}
+a[href$=".adoc"]:before {
+    content: "ASCIIDOC";
+}
+a[href$=".roff"]:before {
+    content: "ROFF";
+}
+a[href$=".tex"]:before {
+    content: "LATEX";
+}
+
+/* Video */
+a[href$=".mov"]:before,
+a[href$=".avi"]:before,
+a[href$=".webm"]:before,
+a[href$=".wmv"]:before,
+a[href$=".mkv"]:before,
+a[href$=".mp4"]:before {
+    content: "VID";
+}
+
+/* Audio */
+a[href$=".m4a"]:before,
+a[href$=".wav"]:before,
+a[href$=".ogg"]:before,
+a[href$=".opus"]:before,
+a[href$=".flac"]:before,
+a[href$=".mp3"]:before {
+    content: "AUD";
+}
+
+/* Archives */
+a[href$=".7z"]:before {
+    content: "7Z";
+}
+a[href$=".tar"]:before,
+a[href$=".tar.gz"]:before,
+a[href$=".tar.xz"]:before {
+    content: "TAR";
+}
+a[href$=".zip"]:before {
+    content: "ZIP";
+}
+a[href$=".rar"]:before {
+    content: "RAR";
+}
+
+/* Images */
+a[href$=".gif"]:before,
+a[href$=".jfif"]:before,
+a[href$=".jpg"]:before,
+a[href$=".webp"]:before,
+a[href$=".jpeg"]:before,
+a[href$=".png"]:before {
+    content: "IMG";
+}
+/* Other */
+a[href$=".json"]:before {
+  content: "JSON"
+}
+a[href$=".xml"]:before {
+  content: "XML"
+}
+
+h1 {
+    color: var(--accent);
+    font-size: xx-large;
+    position: relative;
+}
+
+h2 {
+    color: var(--heading);
+    font-size: x-large;
+}
+
+h1:has(+ p),
+h1:has(+ time),
+h1:has(+ br),
+h2:has(+ br) {
+    margin-bottom: -0.5rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    font-size: large;
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+time {
+    color: var(--bg-2);
+    font-size: initial;
+    margin-left: 0.4em;
+}
+
+q,
+blockquote {
+    display: block;
+    margin: 15px 0;
+    padding: 8px 0 8px 15px;
+    border-left: solid 3px var(--accent);
+}
+
+pre > p {
+    font-size: medium;
+    font-style: normal;
+}
+
+cite,
+cite time {
+    color: var(--accent-2);
+}
+
+cite::before {
+    content: "— ";
+}
+
+cite time::before {
+    content: "/ ";
+}
+
+hr {
+    border: none;
+    border-bottom: solid 1px var(--bg-1);
+    margin: 1em 0;
+}
+
+table {
+    border-radius: 3px;
+    width: 100%;
+    margin: 1em auto;
+    text-align: left;
+    border: var(--border);
+}
+
+th {
+    background-color: var(--heading);
+    color: var(--bg-0);
+}
+
+th,
+td {
+    padding: 0.3em 0.8em;
+}
+
+tr {
+    background-color: var(--bg-1);
+}
+
+tr:nth-of-type(even) {
+    background-color: var(--bg-2);
+}
+
+summary {
+    color: var(--heading);
+}
+
+summary:hover {
+    cursor: pointer;
+}
+
+code,
+kbd,
+pre {
+    padding: 5px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+kbd {
+    background-color: var(--fg-0);
+    color: var(--bg-0);
+}
+
+pre,
+code {
+    background-color: var(--bg-1);
+    color: var(--fg-1);
+}
+
+pre {
+    padding: 1em;
+    overflow-x: scroll;
+}
+
+pre code {
+    padding: 0;
+}
+
+pre p {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+main {
+    display: block;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--bg-0);
+    padding-top: 5em;
+    z-index: 1;
+}
+
+article {
+    display: none;
+}
+
+article:target {
+    display: block;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: var(--bg-0);
+    top: 0;
+    z-index: 2;
+    justify-content: space-between;
+    margin: auto;
+    width: 100vw;
+    border-bottom: solid 1px var(--bg-1);
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0.7em auto;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+    padding-inline-start: 1em;
+    line-height: 1;
+}
+
+ol {
+    list-style: auto;
+}
+
+ul {
+    list-style: disc;
+}
+
+ul ul,
+ol ol {
+    margin: 0;
+}
+
+ul p,
+ol p {
+    display: none;
+}
+
+li {
+    padding: 3px 0;
+}
+
+.content {
+    display: block;
+    max-width: 80ch;
+    margin: auto;
+    padding: 15px;
+}
+
+#nav_menu {
+    background-color: var(--bg-0);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: auto;
+    text-align: right;
+    padding: 0.5em;
+    border: var(--border);
+    border-top: none;
+    border-right: none;
+    border-color: var(--bg-1);
+}
+
+#nav_menu a {
+    margin: 1em;
+}
+
+.nav_menu {
+    display: none;
+}
+
+#biblioteca {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.livro {
+    position: relative;
+    width: 200px;
+    margin: 1em 10px;
+}
+
+.livro img {
+    width: 180px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.livro p {
+    font-size: larger;
+    text-align: center;
+    margin: 0;
+}
+
+.livro progress {
+    border-radius: 0;
+    border: none;
+    background-color: var(--bg-1);
+    width: 100%;
+    border: solid 1px var(--bg-0);
+}
+
+.livro progress::-webkit-progress-bar {
+    background-color: var(--bg-1);
+}
+
+.livro progress::-webkit-progress-value {
+    background-color: var(--heading);
+}
+
+.livro progress::-moz-progress-bar {
+    background-color: var(--heading);
+}
+
+button {
+    display: inline-block;
+    padding: 1em;
+    border: none;
+    background-color: var(--bg-0);
+    color: var(--link);
+}
+
+button:hover {
+    color: var(--link-hover);
+}
+
+.alert {
+    color: var(--red);
+}
+
+noscript {
+    display: flex;
+    position: absolute;
+    background-color: var(--bg-0);
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 720px) {
+    h1:hover::before {
+        content: "";
+    }
+
+    .nav_items {
+        display: none;
+    }
+
+    .nav_menu,
+    nav a {
+        display: inline-block;
+        font-size: large;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

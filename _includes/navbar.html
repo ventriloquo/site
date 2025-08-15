@@ -1,0 +1,18 @@
+<header id="header">
+  <nav>
+    <div>
+      <a href="/home/">Início</a>
+    </div>
+    <div id="nav_list" class="nav_items">
+      {% for link in site.data.links %}
+        <a href="{{link.url}}">{{link.title}}</a>
+      {% endfor %}
+    </div>
+    <button popovertarget="nav_menu" popovertargetaction="toggle" class="nav_menu">Menu</button>
+  </nav>
+  <div popover id="nav_menu">
+      {% for link in site.data.links %}
+        <a href="{{link.url}}">{{link.title}}</a>
+      {% endfor %}
+  </div>
+</header>
