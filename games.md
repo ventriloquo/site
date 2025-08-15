@@ -4,7 +4,7 @@ title: Jogos
 <style>
 img {
     width: 180px;
-    height: 270px;
+    max-height: 280px;
     object-fit: cover;
     display: inline-block;
     margin: 2px;
