@@ -172,6 +172,15 @@ export const colection = [
       maximum: "274",
     },
   },
+  {
+    title: "A Divina Comédia",
+    cover: "a_divina_comédia.jpg",
+    url: "https://a.co/d/ecJKIW2",
+    progress: {
+      current: "15",
+      maximum: "799",
+    },
+  },
 ];
 
 export default colection;
