@@ -12,8 +12,15 @@ img {
     border: solid 2px var(--bg-0);
     transition: all 300ms;
 }
+
 img:hover {
     border: solid 2px var(--accent);
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 720px) {

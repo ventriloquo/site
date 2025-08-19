@@ -57,4 +57,4 @@ perder no futuro.
 Enfim, vou deixar para fazer o polimento quando eu estiver com mais tempo e com
 a mente livre.
 
-Até o próximo post!`,
+Até o próximo post!
