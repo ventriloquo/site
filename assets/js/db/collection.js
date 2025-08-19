@@ -178,7 +178,7 @@ export const colection = [
     url: "https://a.co/d/ecJKIW2",
     progress: {
       current: "15",
-      maximum: "799",
+      maximum: "404",
     },
   },
 ];
