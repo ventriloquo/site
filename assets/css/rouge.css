@@ -1,98 +1,73 @@
-:root {
-    --fg:           #e4e4ef;
-    --bg:           #181818;
-    --bg-1:         #282828;
-    --bg-2:         #453d41;
-    --red:          #f43841;
-    --green:        #73c936;
-    --yellow:       #ffdd33;
-    --brown:        #cc8c3c;
-    --quartz:       #95a99f;
-    --niagara:      #96a6c8;
-    --wisteria:     #9e95c7;
+.highlight table td {
+  padding: 5px;
 }
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+
+.highlight table pre {
+  margin: 0;
+}
+
 .highlight, .highlight .w {
   color: var(--fg);
   background-color: var(--bg-1);
 }
-.highlight .gi {
-  color: var(--green);
-  background-color: var(--bg-1);
-}
-.highlight .gd {
-  color: var(--red);
-  background-color: var(--bg-1);
-}
+
 .highlight .err {
   color: var(--red);
   background-color: var(--bg-2);
   font-weight: bold;
 }
-.highlight .nt {
-  color: var(--quartz);
-}
-.highlight .sa {
-  color: var(--red);
-}
-.highlight .o, .highlight .ow {
-  color: var(--fg);
-}
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+
+.highlight .c, .highlight .ch,
+.highlight .cd, .highlight .cm,
+.highlight .cpf, .highlight .c1,
+.highlight .cs {
   color: var(--brown);
   font-style: italic;
 }
-.highlight .cp {
-  color: var(--quartz);
-}
-.highlight .p, .highlight .pi, .highlight .py {
-  color: var(--wisteria);
-}
-.highlight .kc {
-  color: var(--wisteria);
-}
+
+.highlight .p, .highlight .pi,
+.highlight .py, .highlight .kc,
 .highlight .no {
   color: var(--wisteria);
 }
+
 .highlight .gh {
   color: var(--green);
   font-weight: bold;
 }
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: var(--green);
-  font-style: italic;
-}
-.highlight .si {
-  color: var(--green);
-  font-style: italic;
-}
+
+.highlight .s, .highlight .sb,
+.highlight .sc, .highlight .dl,
+.highlight .sd, .highlight .s2,
+.highlight .sh, .highlight .sx,
+.highlight .s1, .highlight .si,
 .highlight .sr {
   color: var(--green);
   font-style: italic;
 }
+
 .highlight .na {
   color: var(--green);
 }
-.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv, .highlight .nb,.highlight .se {
-  color: var(--yellow);
-}
+
+.highlight .k, .highlight .kd,
+.highlight .kn, .highlight .kp,
+.highlight .kr, .highlight .kv,
+.highlight .nb,.highlight .se,
 .highlight .kt {
   color: var(--yellow);
 }
-.highlight .ss {
-  color: var(--quartz);
-}
-.highlight .nf, .highlight .nd {
+
+.highlight .nf, .highlight .nd,
+.highlight .m, .highlight .mb,
+.highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .il,
+.highlight .mo, .highlight .mx {
   color: var(--niagara);
-}
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
-  color: var(--niagara);
-}
-.highlight .nn {
-  color: var(--quartz);
-}
-.highlight .nc {
-  color: var(--quartz);
 }
 
+.highlight .ss, .highlight .nn,
+.highlight .nc, .highlight .cp,
+.highlight .nt {
+  color: var(--quartz);
+}
