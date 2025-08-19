@@ -9,12 +9,6 @@ img {
     display: inline-block;
     margin: 2px;
     padding: 2px;
-    border: solid 2px var(--bg-0);
-    transition: all 300ms;
-}
-
-img:hover {
-    border: solid 2px var(--accent);
 }
 
 p {
