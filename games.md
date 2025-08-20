@@ -17,6 +17,20 @@ p {
     justify-content: center;
 }
 
+noscript {
+    display: block;
+    position: initial;
+    width: 100%;
+    height: 4em;
+    background-color: var(--red);
+    color: var(--bg);
+    text-align: center;
+}
+
+.no_flex {
+    display: initial
+}
+
 @media only screen and (max-width: 720px) {
     img {
         margin: auto;
@@ -27,9 +41,23 @@ p {
 
 # Minha biblioteca de jogos do Nintendo Switch.
 
-Eu tenho um Nintendo Switch Lite a 6 meses, e nesses 6 meses eu já montei uma
+<p class="no_flex">
+<noscript>Não foi possível calcular quantos meses se passaram desde a compra do
+meu switch. Motivo: o JavaScript está desabilitado em seu navegador</noscript>
+Eu tenho um Nintendo Switch Lite a <span id="meses"></span> meses. Nesses meses eu já montei uma
 biblioteca até que bem grandinha, definitivamente maior que a minha antiga
-biblioteca do Xbox 360.
+biblioteca do saudoso Xbox 360 (que saudades 🥲).</p>
+
+<script>
+// Antes que você julgue essa aberração, saiba de uma coisa:
+// Isso aqui é fruto de uma burrice natural, não de uma inteligência
+// artificial.
+let date         = new Date
+let current_date = `${(date.getMonth() + 1)}${date.getFullYear()}`
+let buy_date     = 22025
+let final_date   = (current_date - buy_date)/10000
+document.getElementById("meses").innerText = ` ${final_date}`
+</script>
 
 ## Mídia física
 ![](/assets/img/games/sonic_mania.jpeg)
