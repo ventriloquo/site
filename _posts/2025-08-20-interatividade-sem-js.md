@@ -92,7 +92,7 @@ biblioteca, olha aqui:
 {% endfor %}
 </div>
 
-Bastou eu adicionar `| limit: 3` no final do for-loop ({% raw %}`{% for...`{% endraw %})
+Bastou eu adicionar {% raw %}`| limit: 3`{% endraw %} no final do for-loop ({% raw %}`{% for...`{% endraw %})
 e pronto! Eu tenho a mesma lista, só que com os primeiros 3 jogos!
 
 Essa facilidade é o que mais me atrai a usar o Jekyll.
