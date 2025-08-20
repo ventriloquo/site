@@ -46,11 +46,23 @@ title: Lista de Leitura
 <div id="biblioteca">
 {% for book in site.data.books %}
 <div class="livro" id="{{ book.title | slugify }}">
-    <img loading="lazy" src="/assets/img/books/{{ book.cover }}">
-    <progress value="{{ book.progress.current }}" max="{{ book.progress.maximum }}" title="{{ book.progress.current }} páginas lidas de {{ book.progress.maximum }}"></progress>
-    <p><a href="{{ book.url }}" target="_blank">{{ book.title }}</a></p>
+    <img
+        loading="lazy"
+        alt="{{ book.title }} cover"
+        width="180"
+        height="280"
+        src="/assets/img/books/{{ book.cover }}">
+    <progress
+        value="{{ book.progress.current }}"
+        max="{{ book.progress.maximum }}"
+        title="{{ book.progress.current }} páginas lidas de {{ book.progress.maximum }}"></progress>
+    <p><a
+        href="{{ book.url }}"
+        target="_blank">{{ book.title }}</a></p>
 {% unless book.progress.current == book.progress.maximum %}
-    <p style="font-size: small; font-style: italic; color: var(--accent-2);">Faltam {{ book.progress.maximum | minus: book.progress.current }} páginas</p>
+    <p
+        style="font-size: small; font-style: italic; color: var(--accent-2);"
+        >Faltam {{ book.progress.maximum | minus: book.progress.current }} páginas</p>
 {% endunless %}
 </div>
 {% endfor %}

@@ -95,6 +95,12 @@
   cover: /assets/img/games/rain_world.jpeg
 
 - title: "Blasphemous"
+  description: >
+    Esse aqui foi uma recomendação da minha namorada. Não
+    ando jogando ele nos últimos tempos, mas uma coisa é
+    certa, a história é muito interessante e a arte é de
+    outro nível.
+  buy_date: "26/04/2025"
   cover: /assets/img/games/blasphemous.jpeg
 
 - title: "Dragon Ball Fighterz"

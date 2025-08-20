@@ -420,8 +420,6 @@ li {
 }
 
 .livro img {
-    width: 180px;
-    height: 280px;
     object-fit: cover;
 }
 
@@ -449,6 +447,48 @@ li {
 
 .livro progress::-moz-progress-bar {
     background-color: var(--heading);
+}
+
+.game_collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    scroll-padding-top: 5em;
+}
+
+.game_collection img {
+    object-fit: cover;
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
+}
+
+.game_info {
+    display: none;
+    max-width: 50ch;
+}
+
+.game:target .game_info {
+    display: block
+}
+
+.game:target {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em auto;
+    width: 100%;
+    padding: 2em 0;
+    align-items: center;
+    border-bottom: var(--border);
+}
+
+.game:target img {
+    margin-bottom: 1em;
+}
+
+.game:target .game_info {
+    display: block;
+    margin: auto;
 }
 
 button {
@@ -497,5 +537,9 @@ noscript {
 
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    .game {
+      justify-content: center;
     }
 }
