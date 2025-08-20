@@ -20,16 +20,6 @@ div {
     justify-content: center;
 }
 
-noscript {
-    display: block;
-    position: initial;
-    width: 100%;
-    height: 4em;
-    background-color: var(--red);
-    color: var(--bg);
-    text-align: center;
-}
-
 .game_info {
     display: none;
     max-width: 30ch;
@@ -67,12 +57,9 @@ noscript {
 
 # Minha biblioteca de jogos do Nintendo Switch.
 
-<p>
-<noscript>Não foi possível calcular quantos meses se passaram desde a compra do
-meu switch. Motivo: o JavaScript está desabilitado em seu navegador</noscript>
 Eu tenho um Nintendo Switch Lite a alguns meses. Nesses meses eu já montei uma
 biblioteca até que bem grandinha, definitivamente maior que a minha antiga
-biblioteca do saudoso Xbox 360 (que saudades 🥲).</p>
+biblioteca do saudoso Xbox 360 (que saudades 🥲).
 
 ## Mídia física
 <div>
