@@ -344,6 +344,12 @@ img:hover {
     border: solid 2px var(--accent);
 }
 
+div:target {
+    border: solid 2px var(--wisteria);
+    padding: 1em;
+    margin: auto;
+}
+
 ul, ol {
     list-style-position: inside;
     padding-inline-start: 1em;
