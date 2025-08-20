@@ -503,6 +503,10 @@ button:hover {
     color: var(--link-hover);
 }
 
+del {
+  color: var(--bg-2);
+}
+
 .alert {
     color: var(--red);
 }
