@@ -15,5 +15,5 @@ title: Início
     Paleta de cores utilizada:
     <a href="https://github.com/rexim/gruber-darker-theme">Gruber Darker</a><br>
     Gerado com: <a href="https://jekyllrb.com">Jekyll</a><br>
-    Atualmente lendo: <a href="/books#livro_5">Akira, Vol. 3</a>
+    Atualmente lendo: <a href="/books#akira-vol-3">Akira, Vol. 3</a>
 </q>

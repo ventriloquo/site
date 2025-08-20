@@ -2,6 +2,9 @@
 title: Jogos
 ---
 <style>
+html {
+    scroll-padding-top: 5em;
+}
 img {
     width: 180px;
     max-height: 280px;
@@ -11,7 +14,7 @@ img {
     padding: 2px;
 }
 
-p {
+div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -27,8 +30,31 @@ noscript {
     text-align: center;
 }
 
-.no_flex {
-    display: initial
+.game_info {
+    display: none;
+    max-width: 30ch;
+}
+
+.game:target .game_info {
+    display: block
+}
+
+.game:target {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em auto;
+    width: 100%;
+    padding: 2em 0;
+    align-items: center
+}
+
+.game:target img {
+    margin-bottom: 1em;
+}
+
+.game:target .game_info {
+    display: block;
+    margin: auto;
 }
 
 @media only screen and (max-width: 720px) {
@@ -41,50 +67,55 @@ noscript {
 
 # Minha biblioteca de jogos do Nintendo Switch.
 
-<p class="no_flex">
+<p>
 <noscript>Não foi possível calcular quantos meses se passaram desde a compra do
 meu switch. Motivo: o JavaScript está desabilitado em seu navegador</noscript>
-Eu tenho um Nintendo Switch Lite a <span id="meses"></span> meses. Nesses meses eu já montei uma
+Eu tenho um Nintendo Switch Lite a alguns meses. Nesses meses eu já montei uma
 biblioteca até que bem grandinha, definitivamente maior que a minha antiga
 biblioteca do saudoso Xbox 360 (que saudades 🥲).</p>
 
-<script>
-// Antes que você julgue essa aberração, saiba de uma coisa:
-// Isso aqui é fruto de uma burrice natural, não de uma inteligência
-// artificial.
-let date         = new Date
-let current_date = `${(date.getMonth() + 1)}${date.getFullYear()}`
-let buy_date     = 22025
-let final_date   = (current_date - buy_date)/10000
-document.getElementById("meses").innerText = ` ${final_date}`
-</script>
-
 ## Mídia física
-![](/assets/img/games/sonic_mania.jpeg)
+<div>
+{% for midia_fisica in site.data.games.midia_fisica %}
+<div class="game" id="{{ midia_fisica.title | slugify }}">
+<a href="#{{ midia_fisica.title | slugify }}">
+    <img loading="lazy" src="{{ midia_fisica.cover }}">
+</a>
+    <hgroup class="game_info">
+        <h2>{{ midia_fisica.title }}</h2>
+        {% if midia_fisica.description %}
+            <q>{{ midia_fisica.description }}</q>
+        {% endif %}
+        {% if midia_fisica.buy_date %}
+            <p><span style="color: var(--accent)">Quando foi comprado:</span> {{ midia_fisica.buy_date }}</p>
+        {% endif %}
+        {% if midia_fisica.url %}
+            <a href="{{ midia_fisica.url }}" target="_blank">{{ midia_fisica.url }}</a>
+        {% endif %}
+    </hgroup>
+</div>
+{% endfor %}
+</div>
 
 ## Mídia digital
-![](/assets/img/games/mgs3.jpeg)
-![](/assets/img/games/re4.jpeg)
-![](/assets/img/games/dmc3.jpeg)
-![](/assets/img/games/burnout_paradise.jpeg)
-![](/assets/img/games/undertale.jpeg)
-![](/assets/img/games/portal_1.jpeg)
-![](/assets/img/games/portal_2.jpeg)
-![](/assets/img/games/doom_1_2.jpeg)
-![](/assets/img/games/quake_1.jpeg)
-![](/assets/img/games/quake_2.jpeg)
-![](/assets/img/games/rain_world.jpeg)
-![](/assets/img/games/blasphemous.jpeg)
-![](/assets/img/games/dragon_ball_fighterz.jpeg)
-![](/assets/img/games/superhot.jpeg)
-![](/assets/img/games/dead_cells.jpeg)
-![](/assets/img/games/broforce.jpeg)
-![](/assets/img/games/hades.jpeg)
-![](/assets/img/games/bioshock_1.jpeg)
-![](/assets/img/games/bioshock_2.jpeg)
-![](/assets/img/games/bioshock_infinite.jpeg)
-![](/assets/img/games/super_chicken_jumper.jpeg)
-![](/assets/img/games/brawhalla.jpeg)
-![](/assets/img/games/rocket_league.jpeg)
-![](/assets/img/games/alan_wake.jpeg)
-
+<div>
+{% for midia_digital in site.data.games.midia_digital %}
+<div class="game" id="{{ midia_digital.title | slugify }}">
+<a href="#{{ midia_digital.title | slugify }}">
+    <img loading="lazy" src="{{ midia_digital.cover }}">
+</a>
+    <hgroup class="game_info">
+        <h2>{{ midia_digital.title }}</h2>
+        {% if midia_digital.description %}
+            <q>{{ midia_digital.description }}</q>
+        {% endif %}
+        {% if midia_digital.buy_date %}
+            <p><span style="color: var(--accent)">Quando foi comprado:</span> {{ midia_digital.buy_date }}</p>
+        {% endif %}
+        {% if midia_digital.url %}
+            <a href="{{ midia_digital.url }}" target="_blank">{{ midia_digital.url }}</a>
+        {% endif %}
+    </hgroup>
+</div>
+{% endfor %}
+</div>
