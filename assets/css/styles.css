@@ -486,17 +486,6 @@ li {
     animation: left-to-right .5s both;
 }
 
-@keyframes left-to-right {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 button {
     display: inline-block;
     padding: 1em;
@@ -528,6 +517,26 @@ noscript {
     align-items: center;
     top: 0;
     left: 0;
+}
+
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 720px) {

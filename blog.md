@@ -12,7 +12,10 @@ title: Blog
 <table>
 <tbody>
 {% for post in site.posts %}
-  <tr><td>{{post.date | date: "%d.%m.%Y"}}</td><td><a href="{{post.url}}">{{post.title}}</a></td></tr>
+{% assign duration = 1 | plus: duration %}
+  <tr style="animation: fade-in both {{duration}}00ms;">
+    <td>{{post.date | date: "%d.%m.%Y"}}</td><td><a href="{{post.url}}">{{post.title}}</a></td>
+  </tr>
 {% endfor %}
 </tbody>
 </table>
