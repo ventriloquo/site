@@ -415,10 +415,6 @@ li {
     padding: .2em;
 }
 
-.livro:target {
-    border: solid 2px var(--wisteria);
-}
-
 .livro img {
     object-fit: cover;
 }
@@ -463,16 +459,12 @@ li {
     padding: 2px;
 }
 
-.game_info {
+.game_info, .book_info {
     display: none;
     max-width: 50ch;
 }
 
-.game:target .game_info {
-    display: block
-}
-
-.game:target {
+.game:target, .livro:target {
     display: flex;
     flex-wrap: wrap;
     margin: 2em auto;
@@ -486,7 +478,7 @@ li {
     margin-bottom: 1em;
 }
 
-.game:target .game_info {
+.game:target .game_info, .livro:target .book_info {
     display: block;
     margin: auto;
 }
@@ -543,7 +535,7 @@ noscript {
         display: none;
     }
 
-    .game {
+    .game, .livro {
       justify-content: center;
     }
 }
