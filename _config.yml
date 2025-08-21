@@ -2,6 +2,9 @@ title: Tukain's Website
 lang: pt-br
 author: Tukain
 description: Um site extremamente simples.
+url: https://tukain.xyz/
+timezone: America/Recife
+encoding: utf-8
 
 collections:
   posts:
