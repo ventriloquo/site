@@ -593,6 +593,10 @@ noscript {
     justify-content: center;
   }
 
+  .game:target img, .livro:target img {
+    transform: rotate(0);
+  }
+
   .game:target::before, .livro:target::before,
   .game:target::after, .livro:target::after {
     content: "";
