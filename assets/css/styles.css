@@ -356,12 +356,12 @@ img {
   user-select: none;
 }
 
-img:active {
-  border: solid 2px var(--red);
-}
-
 img:hover {
   border: solid 2px var(--accent);
+}
+
+img:active {
+  border: solid 2px var(--red);
 }
 
 ul, ol {
