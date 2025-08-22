@@ -488,20 +488,6 @@ li {
   position: relative;
 }
 
-.game:target::before, .livro:target::before {
-  content: "\2191";
-  position: absolute;
-  top: 5vh;
-  right: 50%;
-}
-
-.game:target::after, .livro:target::after {
-  content: "\2193";
-  position: absolute;
-  bottom: 5vh;
-  right: 50%;
-}
-
 .game img:hover, .livro img:hover {
   box-shadow: 0px 0px 7px 5px var(--bg-1);
 }
@@ -597,8 +583,4 @@ noscript {
     transform: rotate(0);
   }
 
-  .game:target::before, .livro:target::before,
-  .game:target::after, .livro:target::after {
-    content: "";
-  }
 }
