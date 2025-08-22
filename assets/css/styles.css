@@ -157,6 +157,18 @@ h1 {
     position: relative;
 }
 
+.main_title {
+  transition: all 500ms;
+}
+
+.main_title:hover {
+  color: var(--green);
+}
+
+.main_title:active {
+  color: var(--red);
+}
+
 h2 {
     color: var(--heading);
     font-size: x-large;

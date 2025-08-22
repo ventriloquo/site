@@ -2,7 +2,7 @@
 title: Início
 ---
 <hgroup>
-    <h1>Tukain&CloseCurlyQuote;s Website</h1>
+    <h1 class="main_title">Tukain&CloseCurlyQuote;s Website</h1>
     <p>Bem-vindo ao meu website!</p>
 </hgroup>
 <hr>
