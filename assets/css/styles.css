@@ -158,6 +158,10 @@ h1 {
 }
 
 .main_title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   transition: all 500ms;
 }
 
