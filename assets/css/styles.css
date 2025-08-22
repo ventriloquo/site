@@ -211,6 +211,7 @@ q, blockquote {
   margin: 15px 0;
   padding: 8px 0 8px 15px;
   border-left: solid 3px var(--accent);
+  text-align: justify;
 }
 
 pre > p {
@@ -353,6 +354,10 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+img:active {
+  border: solid 2px var(--red);
 }
 
 img:hover {
