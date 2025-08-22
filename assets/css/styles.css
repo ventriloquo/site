@@ -1,101 +1,101 @@
 :root {
-    --fg:           #e4e4ef;
-    --fg-1:         #f4f4ff;
-    --bg:           #181818;
-    --bg-1:         #282828;
-    --bg-2:         #453d41;
-    --red:          #f43841;
-    --green:        #73c936;
-    --yellow:       #ffdd33;
-    --brown:        #cc8c3c;
-    --quartz:       #95a99f;
-    --niagara:      #96a6c8;
-    --niagara-1:    #565f73;
-    --wisteria:     #9e95c7;
+  --fg:           #e4e4ef;
+  --fg-1:         #f4f4ff;
+  --bg:           #181818;
+  --bg-1:         #282828;
+  --bg-2:         #453d41;
+  --red:          #f43841;
+  --green:        #73c936;
+  --yellow:       #ffdd33;
+  --brown:        #cc8c3c;
+  --quartz:       #95a99f;
+  --niagara:      #96a6c8;
+  --niagara-1:    #565f73;
+  --wisteria:     #9e95c7;
 
-    --fg-0:         var(--fg);
-    --bg-0:         var(--bg);
-    --accent:       var(--yellow);
-    --accent-2:     var(--brown);
-    --link:         var(--niagara);
-    --link-hover:   var(--niagara-1);
-    --heading:      var(--quartz);
+  --fg-0:         var(--fg);
+  --bg-0:         var(--bg);
+  --accent:       var(--yellow);
+  --accent-2:     var(--brown);
+  --link:         var(--niagara);
+  --link-hover:   var(--niagara-1);
+  --heading:      var(--quartz);
 
-    --border: solid 1px var(--bg-1);
+  --border: solid 1px var(--bg-1);
 }
 
 html {
-    scroll-padding-top: 4em;
-    position: relative;
-    overflow-x: hidden;
+  scroll-padding-top: 4em;
+  position: relative;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    background-color: var(--bg-1);
+  width: 5px;
+  background-color: var(--bg-1);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--link-hover);
+  background-color: var(--link-hover);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--link);
+  background-color: var(--link);
 }
 
 body {
-    background-color: var(--bg-0);
-    color: var(--fg-0);
-    font-family: "Rubik", "Sans Serif", system-ui;
-    line-height: 1.6;
-    position: relative;
+  background-color: var(--bg-0);
+  color: var(--fg-0);
+  font-family: "Rubik", "Sans Serif", system-ui;
+  line-height: 1.6;
+  position: relative;
 }
 
 a {
-    text-decoration: none;
-    color: var(--link);
+  text-decoration: none;
+  color: var(--link);
 }
 
 a:hover {
-    color: var(--link-hover);
+  color: var(--link-hover);
 }
 
 a[href*="//"]:after
 {
-    font-weight: 300;
-    font-size: 0.85em;
-    content: "\2197"; /* top right arrow */
-    color: var(--link);
+  font-weight: 300;
+  font-size: 0.85em;
+  content: "\2197"; /* top right arrow */
+  color: var(--link);
 }
 
 a[href*="//"]:hover:after
 {
-    color: var(--link-hover);
+  color: var(--link-hover);
 }
 
 a:before {
-    font-size: 0.7em;
-    margin-right: 0.4em;
+  font-size: 0.7em;
+  margin-right: 0.4em;
 }
 
 /* Documents */
 a[href$=".pdf"]:before {
-    content: "PDF";
+  content: "PDF";
 }
 a[href$=".md"]:before {
-    content: "MD";
+  content: "MD";
 }
 a[href$=".txt"]:before {
-    content: "TXT";
+  content: "TXT";
 }
 a[href$=".adoc"]:before {
-    content: "ASCIIDOC";
+  content: "ASCIIDOC";
 }
 a[href$=".roff"]:before {
-    content: "ROFF";
+  content: "ROFF";
 }
 a[href$=".tex"]:before {
-    content: "LATEX";
+  content: "LATEX";
 }
 
 /* Video */
@@ -105,7 +105,7 @@ a[href$=".webm"]:before,
 a[href$=".wmv"]:before,
 a[href$=".mkv"]:before,
 a[href$=".mp4"]:before {
-    content: "VID";
+  content: "VID";
 }
 
 /* Audio */
@@ -115,23 +115,23 @@ a[href$=".ogg"]:before,
 a[href$=".opus"]:before,
 a[href$=".flac"]:before,
 a[href$=".mp3"]:before {
-    content: "AUD";
+  content: "AUD";
 }
 
 /* Archives */
 a[href$=".7z"]:before {
-    content: "7Z";
+  content: "7Z";
 }
 a[href$=".tar"]:before,
 a[href$=".tar.gz"]:before,
 a[href$=".tar.xz"]:before {
-    content: "TAR";
+  content: "TAR";
 }
 a[href$=".zip"]:before {
-    content: "ZIP";
+  content: "ZIP";
 }
 a[href$=".rar"]:before {
-    content: "RAR";
+  content: "RAR";
 }
 
 /* Images */
@@ -141,7 +141,7 @@ a[href$=".jpg"]:before,
 a[href$=".webp"]:before,
 a[href$=".jpeg"]:before,
 a[href$=".png"]:before {
-    content: "IMG";
+  content: "IMG";
 }
 /* Other */
 a[href$=".json"]:before {
@@ -152,9 +152,9 @@ a[href$=".xml"]:before {
 }
 
 h1 {
-    color: var(--accent);
-    font-size: xx-large;
-    position: relative;
+  color: var(--accent);
+  font-size: xx-large;
+  position: relative;
 }
 
 .main_title {
@@ -174,317 +174,317 @@ h1 {
 }
 
 h2 {
-    color: var(--heading);
-    font-size: x-large;
+  color: var(--heading);
+  font-size: x-large;
 }
 
 h1:has(+ p),
 h1:has(+ time),
 h1:has(+ br),
 h2:has(+ br) {
-    margin-bottom: -0.5rem;
-    padding-bottom: 1rem;
+  margin-bottom: -0.5rem;
+  padding-bottom: 1rem;
 }
 
 p {
-    font-size: large;
-    margin-top: 0.3em;
-    margin-bottom: 1em;
+  font-size: large;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
 }
 
-b,
-strong {
-    font-weight: bold;
+b, strong {
+  font-weight: bold;
 }
 
-i,
-em {
-    font-style: italic;
+i, em {
+  font-style: italic;
 }
 
 time {
-    color: var(--bg-2);
-    font-size: initial;
-    margin-left: 0.4em;
+  color: var(--bg-2);
+  font-size: initial;
+  margin-left: 0.4em;
 }
 
-q,
-blockquote {
-    display: block;
-    margin: 15px 0;
-    padding: 8px 0 8px 15px;
-    border-left: solid 3px var(--accent);
+q, blockquote {
+  display: block;
+  margin: 15px 0;
+  padding: 8px 0 8px 15px;
+  border-left: solid 3px var(--accent);
 }
 
 pre > p {
-    font-size: medium;
-    font-style: normal;
+  font-size: medium;
+  font-style: normal;
 }
 
-cite,
-cite time {
-    color: var(--accent-2);
+cite, cite time {
+  color: var(--accent-2);
 }
 
 cite::before {
-    content: "— ";
+  content: "— ";
 }
 
 cite time::before {
-    content: "/ ";
+  content: "/ ";
 }
 
 hr {
-    border: none;
-    border-bottom: solid 1px var(--bg-1);
-    margin: 1em 0;
+  border: none;
+  border-bottom: solid 1px var(--bg-1);
+  margin: 1em 0;
 }
 
 table {
-    border-radius: 3px;
-    width: 100%;
-    margin: 1em auto;
-    text-align: left;
-    border: var(--border);
+  border-radius: 3px;
+  width: 100%;
+  margin: 1em auto;
+  text-align: left;
+  border: var(--border);
 }
 
 th {
-    background-color: var(--heading);
-    color: var(--bg-0);
+  background-color: var(--heading);
+  color: var(--bg-0);
 }
 
 th,
 td {
-    padding: 0.3em 0.8em;
+  padding: 0.3em 0.8em;
 }
 
 tr {
-    background-color: var(--bg-1);
+  background-color: var(--bg-1);
 }
 
 tr:nth-of-type(even) {
-    background-color: var(--bg-2);
+  background-color: var(--bg-2);
 }
 
 summary {
-    color: var(--heading);
+  color: var(--heading);
 }
 
 summary:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 code,
 kbd,
 pre {
-    padding: 5px;
-    border-radius: 3px;
-    font-family: "Iosevka", "Jetbrains Mono", monospace;
+  padding: 5px;
+  border-radius: 3px;
+  font-family: "Iosevka", "Jetbrains Mono", monospace;
 }
 
 kbd {
-    background-color: var(--fg-0);
-    color: var(--bg-0);
+  background-color: var(--fg-0);
+  color: var(--bg-0);
 }
 
 pre,
 code {
-    background-color: var(--bg-1);
-    color: var(--fg-1);
+  background-color: var(--bg-1);
+  color: var(--fg-1);
 }
 
 pre {
-    padding: 1em;
-    overflow-x: scroll;
+  padding: 1em;
+  overflow-x: scroll;
 }
 
 pre code {
-    padding: 0;
+  padding: 0;
 }
 
 pre p {
-    padding: 0;
-    margin: 0;
-    display: flex;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 main {
-    display: block;
-    margin: auto;
-    position: relative;
-    min-height: 100vh;
-    width: 100vw;
-    background: var(--bg-0);
-    padding-top: 5em;
-    z-index: 1;
+  display: block;
+  margin: auto;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--bg-0);
+  padding-top: 5em;
+  z-index: 1;
 }
 
 article {
-    display: none;
+  display: none;
 }
 
 article:target {
-    display: block;
+  display: block;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    position: fixed;
-    background-color: var(--bg-0);
-    top: 0;
-    z-index: 2;
-    justify-content: space-between;
-    margin: auto;
-    width: 100vw;
-    border-bottom: solid 1px var(--bg-1);
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  background-color: var(--bg-0);
+  top: 0;
+  z-index: 2;
+  justify-content: space-between;
+  margin: auto;
+  width: 100vw;
+  border-bottom: solid 1px var(--bg-1);
 }
 
 nav a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 1em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
 }
 
 img {
-    max-width: 100%;
-    display: block;
-    margin: 0.7em auto;
-    padding: 2px;
-    border: solid 2px var(--bg-0);
-    transition: all .5s;
+  max-width: 100%;
+  display: block;
+  margin: 0.7em auto;
+  padding: 2px;
+  border: solid 2px var(--bg-0);
+  transition: all .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img:hover {
-    border: solid 2px var(--accent);
+  border: solid 2px var(--accent);
 }
 
 ul, ol {
-    list-style-position: inside;
-    padding-inline-start: 1em;
-    line-height: 1;
+  list-style-position: inside;
+  padding-inline-start: 1em;
+  line-height: 1;
 }
 
 ol {
-    list-style: auto;
+  list-style: auto;
 }
 
 ul {
-    list-style: disc;
+  list-style: disc;
 }
 
 ul ul, ol ol {
-    margin: 0;
+  margin: 0;
 }
 
 ul p, ol p {
-    display: none;
+  display: none;
 }
 
 li {
-    padding: 3px 0;
+  padding: 3px 0;
 }
 
 .content {
-    display: block;
-    max-width: 80ch;
-    margin: auto;
-    padding: 15px;
+  display: block;
+  max-width: 80ch;
+  margin: auto;
+  padding: 15px;
 }
 
 #nav_menu {
-    background-color: var(--bg-0);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-left: auto;
-    text-align: right;
-    padding: 0.5em;
-    border: var(--border);
-    border-top: none;
-    border-right: none;
-    border-color: var(--bg-1);
+  background-color: var(--bg-0);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: auto;
+  text-align: right;
+  padding: 0.5em;
+  border: var(--border);
+  border-top: none;
+  border-right: none;
+  border-color: var(--bg-1);
 }
 
 #nav_menu a {
-    margin: 1em;
+  margin: 1em;
 }
 
 .nav_menu {
-    display: none;
+  display: none;
 }
 
 #biblioteca {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .livro {
-    position: relative;
-    width: 200px;
-    margin: 1em 10px;
-    border: solid 2px var(--bg);
-    padding: .2em;
+  position: relative;
+  width: 200px;
+  margin: 1em 10px;
+  border: solid 2px var(--bg);
+  padding: .2em;
 }
 
 .livro img {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .livro p {
-    font-size: larger;
-    text-align: center;
-    margin: 0;
+  font-size: larger;
+  text-align: center;
+  margin: 0;
 }
 
 .livro progress {
-    border-radius: 0;
-    border: none;
-    background-color: var(--bg-1);
-    width: 100%;
-    border: solid 1px var(--bg-0);
+  border-radius: 0;
+  border: none;
+  background-color: var(--bg-1);
+  width: 100%;
+  border: solid 1px var(--bg-0);
 }
 
 .livro progress::-webkit-progress-bar {
-    background-color: var(--bg-1);
+  background-color: var(--bg-1);
 }
 
 .livro progress::-webkit-progress-value {
-    background-color: var(--heading);
+  background-color: var(--heading);
 }
 
 .livro progress::-moz-progress-bar {
-    background-color: var(--heading);
+  background-color: var(--heading);
 }
 
 .game_collection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    scroll-padding-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  scroll-padding-top: 5em;
 }
 
 .game_collection img {
-    object-fit: cover;
-    display: inline-block;
-    margin: 2px;
-    padding: 2px;
+  object-fit: cover;
+  display: inline-block;
+  margin: 2px;
+  padding: 2px;
 }
 
 .game_info, .book_info {
-    display: none;
-    max-width: 50ch;
+  display: none;
+  max-width: 50ch;
 }
 
 .game:target, .livro:target {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2em auto;
-    width: 100%;
-    padding: 2em 0;
-    align-items: center;
-    border-bottom: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  width: 100%;
+  padding: 2em 0;
+  align-items: center;
+  border-bottom: var(--border);
 }
 
 .game img:hover, .livro img:hover {
@@ -492,26 +492,26 @@ li {
 }
 
 .game:target img, .livro:target img {
-    margin-bottom: 1em;
-    transform: rotate(-10deg);
+  margin-bottom: 1em;
+  transform: rotate(-10deg);
 }
 
 .game:target .game_info, .livro:target .book_info {
-    display: block;
-    margin: auto;
-    animation: left-to-right .5s both;
+  display: block;
+  margin: auto;
+  animation: left-to-right .5s both;
 }
 
 button {
-    display: inline-block;
-    padding: 1em;
-    border: none;
-    background-color: var(--bg-0);
-    color: var(--link);
+  display: inline-block;
+  padding: 1em;
+  border: none;
+  background-color: var(--bg-0);
+  color: var(--link);
 }
 
 button:hover {
-    color: var(--link-hover);
+  color: var(--link-hover);
 }
 
 del {
@@ -519,20 +519,20 @@ del {
 }
 
 .alert {
-    color: var(--red);
+  color: var(--red);
 }
 
 noscript {
-    display: flex;
-    position: absolute;
-    background-color: var(--bg-0);
-    z-index: 1000;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
+  display: flex;
+  position: absolute;
+  background-color: var(--bg-0);
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
 }
 
 @keyframes left-to-right {
@@ -556,25 +556,25 @@ noscript {
 }
 
 @media only screen and (max-width: 720px) {
-    h1:hover::before {
-        content: "";
-    }
+  h1:hover::before {
+    content: "";
+  }
 
-    .nav_items {
-        display: none;
-    }
+  .nav_items {
+    display: none;
+  }
 
-    .nav_menu,
-    nav a {
-        display: inline-block;
-        font-size: large;
-    }
+  .nav_menu,
+  nav a {
+    display: inline-block;
+    font-size: large;
+  }
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
-    .game, .livro {
-      justify-content: center;
-    }
+  .game, .livro {
+    justify-content: center;
+  }
 }
