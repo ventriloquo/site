@@ -484,7 +484,22 @@ li {
   width: 100%;
   padding: 2em 0;
   align-items: center;
-  border-bottom: var(--border);
+  min-height: 80vh;
+  position: relative;
+}
+
+.game:target::before, .livro:target::before {
+  content: "\2191";
+  position: absolute;
+  top: 5vh;
+  right: 50%;
+}
+
+.game:target::after, .livro:target::after {
+  content: "\2193";
+  position: absolute;
+  bottom: 5vh;
+  right: 50%;
 }
 
 .game img:hover, .livro img:hover {
