@@ -24,12 +24,6 @@
   --border: solid 1px var(--bg-1);
 }
 
-html {
-  scroll-padding-top: 4em;
-  position: relative;
-  overflow-x: hidden;
-}
-
 ::-webkit-scrollbar {
   width: 5px;
   background-color: var(--bg-1);
@@ -41,6 +35,12 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--link);
+}
+
+html {
+  scroll-padding-top: 4em;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -85,7 +85,7 @@ h1:active {
   color: var(--red);
 }
 
-h2 {
+h2, h3, h4, h5, h6 {
   color: var(--heading);
   font-size: x-large;
 }
