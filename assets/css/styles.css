@@ -90,6 +90,18 @@ h2, h3, h4, h5, h6 {
   font-size: x-large;
 }
 
+body:has(h1:hover) img,
+body:has(h1:hover) q,
+body:has(h1:hover) blockquote {
+  border-color: var(--green)
+}
+
+body:has(h1:active) img,
+body:has(h1:active) q,
+body:has(h1:active) blockquote {
+  border-color: var(--red)
+}
+
 p {
   font-size: large;
   margin-top: 0.3em;
@@ -116,6 +128,7 @@ q, blockquote {
   padding: 8px 0 8px 15px;
   border-left: solid 3px var(--accent);
   text-align: justify;
+  transition: all 500ms;
 }
 
 ul, ol {
