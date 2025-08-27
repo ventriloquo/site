@@ -1,5 +1,6 @@
 ---
 title: Interatividade sem JavaScript
+modified: 2025-08-27
 ---
 
 Se você dar uma navegada no meu site, vai perceber que não existe 1 linha
