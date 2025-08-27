@@ -62,6 +62,15 @@ main {
   z-index: 1;
 }
 
+footer {
+  z-index: 10;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: var(--bg-1);
+}
+
 article {
   display: block;
   max-width: 80ch;

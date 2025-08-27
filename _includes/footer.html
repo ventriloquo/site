@@ -1,0 +1,12 @@
+<footer>
+  <hgroup>
+    <h2>{{site.title}}</h2>
+    <p>{{site.description}}</p>
+  </hgroup>
+  <q>
+      Gerado com: <a href="https://jekyllrb.com">Jekyll</a><br>
+      Paleta de cores utilizada: <a href="https://github.com/rexim/gruber-darker-theme">Gruber Darker</a><br>
+      Atualmente lendo: <a href="/books#{{ site.data.status.lendo | slugify }}">{{ site.data.status.lendo }}</a><br>
+      Atualmente jogando: <a href="/games#{{ site.data.status.jogando | slugify }}">{{ site.data.status.jogando }}</a>
+  </q>
+</footer>
