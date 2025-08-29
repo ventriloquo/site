@@ -401,6 +401,7 @@ nav a {
 }
 
 #nav_menu {
+  font-family: "Neue Machina";
   background-color: var(--bg-0);
   display: flex;
   flex-wrap: wrap;
