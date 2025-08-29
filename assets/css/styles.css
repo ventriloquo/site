@@ -1,3 +1,8 @@
+@font-face {
+  src: url("/assets/fonts/NeueMachina-Regular.otf");
+  font-family: "Neue Machina";
+}
+
 :root {
   --fg:           #e4e4ef;
   --fg-1:         #f4f4ff;
@@ -46,7 +51,7 @@ html {
 body {
   background-color: var(--bg-0);
   color: var(--fg-0);
-  font-family: "Rubik", "Sans Serif", system-ui;
+  font-family: "Neue Machina", "Rubik", "Sans Serif", system-ui;
   line-height: 1.6;
   position: relative;
 }
