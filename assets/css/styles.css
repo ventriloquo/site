@@ -176,6 +176,10 @@ hr {
   margin: 1em 0;
 }
 
+q hr, blockquote hr {
+  border-color: var(--bg-2);
+}
+
 a {
   text-decoration: none;
   color: var(--link);
