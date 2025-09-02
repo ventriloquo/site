@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build site
-      run: jekyll build
+      uses: actions/jekyll-build-pages@v1
 
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3
