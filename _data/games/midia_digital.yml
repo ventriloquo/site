@@ -41,6 +41,15 @@
   buy_date: "26/07/2025"
   cover: /assets/img/games/undertale.jpeg
 
+- title: "Warhammer 40,000: Boltgun"
+  description: >
+    O Nintendo Switch pode não ter o Space-Marines disponível para
+    compra, e eu também aposto que ele rodaria péssimo, mas pelo menos
+    ele não fica sem a adrenalina que só um jogo da série 40k consegue
+    oferecer!
+  buy_date: "02/09/2025"
+  cover: "/assets/img/games/warhammer_40000_boltgun.jpg"
+
 - title: "Portal"
   description: >
     THE CAKE IS A LIE
