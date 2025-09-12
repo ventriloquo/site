@@ -100,7 +100,7 @@ div.highlight {
 
 div.language-c.highlighter-rouge::after { content: "C" }
 div.language-css.highlighter-rouge::after { content: "CSS" }
-div.language-rust.highlighter-rouge::after { content: "Rust" }
+div.language-rust.highlighter-rouge::after { content: "Rust/Hare" }
 div.language-django.highlighter-rouge::after { content: "HTML Django" }
 div.language-elisp.highlighter-rouge::after { content: "Emacs Lisp" }
 div.language-javascript.highlighter-rouge::after { content: "JavaScript" }

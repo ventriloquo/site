@@ -2,7 +2,36 @@
 title: Teste
 ---
 # Teste de colorização de código
-## CSS
+{% raw %}
+```django
+<div class="game_collection">
+{% for midia_digital in site.data.games.midia_digital %}
+    <div class="game" id="{{ midia_digital.title | slugify }}">
+    <a href="#{{ midia_digital.title | slugify }}">
+        <img
+            alt="{{ midia_digital.title }} cover art"
+            width="180"
+            height="180"
+            loading="lazy"
+            src="{{ midia_digital.cover }}">
+    </a>
+        <hgroup class="game_info">
+            <h2>{{ midia_digital.title }}</h2>
+            {% if midia_digital.description %}
+                <q>{{ midia_digital.description }}</q>
+            {% endif %}
+            {% if midia_digital.buy_date %}
+                <p><span style="color: var(--accent)">Quando foi comprado:</span> {{ midia_digital.buy_date }}</p>
+            {% endif %}
+            {% if midia_digital.url %}
+                <a href="{{ midia_digital.url }}" target="_blank">{{ midia_digital.url }}</a>
+            {% endif %}
+        </hgroup>
+    </div>
+{% endfor %}
+</div>
+```
+{% endraw %}
 ```css
 :root {
     --fg:               #e4e4ef;
@@ -58,7 +87,6 @@ body {
 }
 ```
 
-## Javascript
 ```javascript
 "use strict";
 
@@ -127,7 +155,6 @@ status_biblioteca.innerHTML = `
 `;
 ```
 
-## Hare/Rust
 ```rust
 use raylib::*;
 
@@ -198,7 +225,6 @@ export fn main() int = {
 };
 ```
 
-## Elisp
 ```elisp
 (defun fib (limite &optional tipo)
   (setq a 0
