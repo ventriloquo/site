@@ -1,6 +1,6 @@
 ---
 title: Interatividade sem JavaScript
-modified: 2025-08-27
+modified: 2025-09-12
 ---
 
 Se você dar uma navegada no meu site, vai perceber que não existe 1 linha
@@ -28,8 +28,8 @@ Liquid e também tinha uma estrutura simples.
 
 Um exemplo que posso fazer é o seguinte:
 
-{% highlight django %}
 {% raw %}
+```django
 <div class="game_collection">
 {% for midia_digital in site.data.games.midia_digital %}
     <div class="game" id="{{ midia_digital.title | slugify }}">
@@ -56,8 +56,8 @@ Um exemplo que posso fazer é o seguinte:
     </div>
 {% endfor %}
 </div>
+```
 {% endraw %}
-{% endhighlight %}
 
 Esse é o código reponsável por gerar a listagem de jogos de mídia digital na
 página da minha biblioteca de jogos. É basicamente HTML com ~~algumas~~ muitas
@@ -113,3 +113,25 @@ momento, ele é completamente limpo de qualquer linha de JavaScript, e no dia
 que eu for colocar algo com JavaScript, vai ter que ser algo que realmente
 precise dele para funcionar. De resto, se eu consiguir implementar só usando
 Liquid e CSS, eu vou implementar só com eles.
+
+## Limitações
+
+Claro que este tipo de implementação tem suas limitações, a maior e mais clara
+delas é que o site é completamente estático. Ele não tem um estado que se
+modifica de acordo com a interação do usuário, nem faz mudanças de forma
+dinâmica, no máximo, faz uma ilusão semelhante.
+
+Apesar disso, acredito que este modo de operar é superior, por conta dos
+benefícios no desempenho e também na questão de mantenabilidade (sim, essa
+palavra existe).
+
+Claro que a sintáxe da Liquid é um pouco... estranha. Mas não é como se
+JavaScript fosse a coisa mais bela de se ver também.
+
+{% raw %}
+```liquid
+{% if book.progress.current == book.progress.maximum %}
+  {% assign read = 1 | plus: read %}
+{% endif %}
+```
+{% endraw %}

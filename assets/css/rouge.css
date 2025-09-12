@@ -1,3 +1,27 @@
+.highlighter-rouge {
+  position: relative;
+  max-width: 960px;
+}
+
+div.highlighter-rouge::after {
+  content: "";
+  max-width: 910px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: .3em;
+  padding-left: 1em;
+  padding-right: 0;
+  width: 100%;
+  background-image: linear-gradient(to left, var(--bg-1), var(--accent));
+  color: var(--bg-0);
+}
+
+div.highlight {
+  padding-top: 2em;
+  padding-bottom: 0;
+}
+
 .highlight table td {
   padding: 5px;
 }
@@ -71,3 +95,13 @@
 .highlight .nt {
   color: var(--quartz);
 }
+
+/* languages */
+
+div.language-c.highlighter-rouge::after { content: "C" }
+div.language-css.highlighter-rouge::after { content: "CSS" }
+div.language-rust.highlighter-rouge::after { content: "Rust" }
+div.language-django.highlighter-rouge::after { content: "HTML Django" }
+div.language-elisp.highlighter-rouge::after { content: "Emacs Lisp" }
+div.language-javascript.highlighter-rouge::after { content: "JavaScript" }
+div.language-liquid.highlighter-rouge::after { content: "Liquid" }
