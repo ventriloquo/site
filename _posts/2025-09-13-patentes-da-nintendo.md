@@ -37,7 +37,7 @@ A [patente N°12.403.397](https://gamesfray.com/wp-content/uploads/2025/09/US124
 é, de forma resumida, uma patente sobre as mecânicas de sumonar um personagem
 para lutar no lugar do personagem controlado pelo jogador.
 
-Notou alguma semlhança?
+Notou alguma semelhança?
 
 Jogos da franquia JoJo's Bizarre Adventures, Persona, Digimon, Bakugan, Yu-Gi-Oh!, todos eles
 possuem mecânicas que caem como uma luva nessa descrição da patente.
