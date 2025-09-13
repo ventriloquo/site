@@ -148,6 +148,8 @@ ul, ol {
   list-style-position: inside;
   padding-inline-start: 1em;
   line-height: 1;
+  font-size: large;
+  margin-bottom: 1em;
 }
 
 ol {
