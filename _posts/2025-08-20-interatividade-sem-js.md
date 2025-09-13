@@ -130,8 +130,10 @@ JavaScript fosse a coisa mais bela de se ver também.
 
 {% raw %}
 ```liquid
-{% if book.progress.current == book.progress.maximum %}
-  {% assign read = 1 | plus: read %}
-{% endif %}
+{% for book in site.data.books %}
+  {% if book.progress.current == book.progress.maximum %}
+    {% assign read = 1 | plus: read %}
+  {% endif %}
+{% endfor %}
 ```
 {% endraw %}
