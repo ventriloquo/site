@@ -1,5 +1,5 @@
 ---
-title: Nintendo fez uma das patentes mais idiotas do mundo.
+title: A Nintendo fez uma das patentes mais idiotas do mundo.
 ---
 
 Não é segredo para ninguém que a Nintendo (ou como o Lion do Canal Central diz:
