@@ -68,12 +68,14 @@ main {
 }
 
 footer {
-  z-index: 10;
   padding: 1em;
   display: flex;
+  position: absolute;
+  width: 100vw;
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: var(--bg-1);
+  z-index: 15;
 }
 
 article {
@@ -406,7 +408,7 @@ nav a {
   padding: 1em;
 }
 
-#nav_menu {
+#nav_menu:popover-open {
   font-family: "Neue Machina";
   background-color: var(--bg-0);
   display: flex;
@@ -419,6 +421,7 @@ nav a {
   border-top: none;
   border-right: none;
   border-color: var(--bg-1);
+  z-index: 1;
 }
 
 #nav_menu a {
@@ -427,6 +430,40 @@ nav a {
 
 .nav_menu {
   display: none;
+}
+
+.blog_item {
+  display: block;
+  transition: all 300ms;
+}
+
+.blog_item span {
+  display: none;
+}
+
+.blog_item:hover {
+  padding: 1em;
+  background-color: var(--link);
+}
+
+.blog_item:hover a {
+  color: var(--bg-2);
+  text-decoration: underline;
+}
+
+.blog_item:hover span {
+  display: block;
+  color: var(--bg-0);
+  animation: fade-in 300ms both;
+}
+
+.blog_item:hover span a {
+  color: var(--bg-0);
+  text-decoration: none;
+}
+
+.blog_item:hover span a::after {
+  content: "";
 }
 
 .book_shelf {

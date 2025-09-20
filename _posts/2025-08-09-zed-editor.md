@@ -7,9 +7,11 @@ meu PC (vamos dizer que eu tive um pequeno acidente com o sistema de
 arquivos e precisei formatar o coitado), e eu fiquei curioso com um
 certo programa que eu já ouvi falar antes, mas deixei de dar atenção
 a um tempo: O Zed Editor.
+
 <q>Sim. Esse post vai girar em torno de um editor de texto que
 ninguém fora da "bolha de programação" vai sequer saber do que se
 trata.</q>
+
 Ele tem o foco em ser tão fácil de usar quanto o VSCode, mas com uma
 diferença, ser rápido para um cacete. E olha, no meu laptop, com seu
 <strong>PODEROSO</strong> Celeron N4020 de 1.10Ghz e a quantia

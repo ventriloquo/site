@@ -16,24 +16,39 @@
 
   <style>
     hgroup {
-        display: flex;
-        position: absolute;
-        background-color: var(--bg-0);
-        z-index: 1000;
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      display: block;
+      background-color: var(--bg-0);
+      max-width: 40ch;
+      margin: auto;
+      padding: 1em;
+      text-align: justify;
     }
-    hgroup p, hgroup h1 {
-      margin: 0.4em 1em;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+    .perfil, body:has(.perfil:active) .burro {
+      display: block;
+      border-radius: 10px;
+    }
+    .perfil:active, .burro {
+      display: none;
     }
   </style>
 </head>
 
 <body>
   <hgroup>
+    <img
+      alt="minha foto de perfil"
+      title="Clica e segura, só pra testar uma coisinha..."
+      class="perfil"
+      src="/assets/img/avatar.png">
+    <img
+      alt="..."
+      title="..."
+      class="burro"
+      src="/assets/img/burro.gif">
     <h1>Bem-vindo ao meu site!</h1>
     <p>Aqui é um lugar onde eu guardo algumas das minhas ideias, coisas que
     gosto de fazer e etc.</p>
