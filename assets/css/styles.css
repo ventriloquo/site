@@ -1,11 +1,6 @@
 @import url("/assets/css/themes/switch.css");
 
 @font-face {
-  src: url("/assets/fonts/NeueMachina-Regular.otf");
-  font-family: "Neue Machina";
-}
-
-@font-face {
   src: url("/assets/fonts/AOTFShinGoProRegular.otf");
   font-family: "Shin Go Pro";
 }
@@ -69,16 +64,6 @@ article {
   margin: auto auto auto 0;
   padding: 15px;
   background-color: var(--bg-0);
-}
-
-aside {
-  margin-top: 1em;
-  position: absolute;
-  left: calc(950px + 10em);
-}
-
-aside h4 {
-  color: var(--fg-2);
 }
 
 h1 {
@@ -171,24 +156,6 @@ a:hover {
   color: var(--link-hover);
 }
 
-.button {
-  color: var(--fg-2);
-  background-color: var(--bg-2);
-  padding: 5px 25px;
-  border-radius: 3px;
-  box-shadow: black 0px 1px 3px 0px;
-  transition: all 200ms;
-  font-size: small
-}
-
-.button:hover {
-  color: var(--fg-1);
-}
-
-.button:active {
-  box-shadow: 0px 1px 3px 0px black inset;
-}
-
 a[href*="//"]:after {
   font-weight: 300;
   font-size: 0.85em;
@@ -274,25 +241,6 @@ img:active {
   border: solid 2px var(--accent-1);
 }
 
-.profile {
-  margin-bottom: 1em;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.profile h3 {
-  color: var(--fg-2);
-}
-
-.profile img {
-  border-radius: 100%;
-  margin: 0;
-  margin-right: 10px;
-  border: none;
-  width: 80px;
-  height: 80px;
-}
-
 button {
   display: inline-block;
   padding: 1em;
@@ -350,6 +298,43 @@ nav a {
 
 .nav_menu {
   display: none;
+}
+
+.profile {
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile h3 {
+  color: var(--fg-1);
+}
+
+.profile img {
+  border-radius: 100%;
+  margin: 0;
+  margin-right: 10px;
+  border: none;
+  width: 80px;
+  height: 80px;
+}
+
+.button {
+  color: var(--fg-2);
+  background-color: var(--bg-2);
+  padding: 5px 25px;
+  border-radius: 3px;
+  box-shadow: black 0px 1px 3px 0px;
+  transition: all 200ms;
+  font-size: small
+}
+
+.button:hover {
+  color: var(--fg-1);
+}
+
+.button:active {
+  box-shadow: 0px 1px 3px 0px black inset;
 }
 
 .blog_item {
@@ -417,7 +402,7 @@ nav a {
   font-size:  medium;
   font-style: italic;
   padding:    5px 1em;
-  color:      var(--bg-0);
+  color:      var(--bg-1);
   text-align: center;
   user-select: none;
 }
@@ -529,7 +514,4 @@ nav a {
     transform: rotate(0);
   }
 
-  aside {
-    display: none;
-  }
 }
