@@ -5,13 +5,18 @@
   font-family: "Neue Machina";
 }
 
+@font-face {
+  src: url("/assets/fonts/AOTFShinGoProRegular.otf");
+  font-family: "Shin Go Pro";
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   background-color: var(--bg-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--link-hover);
+  background-color: var(--bg-2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -27,7 +32,7 @@ html {
 body {
   background-color: var(--bg-1);
   color: var(--fg-0);
-  font-family: "Neue Machina", "Rubik", "Sans Serif", system-ui;
+  font-family: "Shin Go Pro", "Rubik", "Sans Serif", system-ui;
   line-height: 1.6;
   position: relative;
 }
@@ -50,9 +55,8 @@ footer {
   width: calc(100vw - 30px);
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: var(--bg-1);
+  background-color: var(--bg-0);
   z-index: 15;
-  border-top: var(--border);
 }
 
 footer q, footer blockquote {
@@ -61,7 +65,7 @@ footer q, footer blockquote {
 
 article {
   display: block;
-  max-width: 80ch;
+  max-width: 70ch;
   margin: auto auto auto 0;
   padding: 15px;
   background-color: var(--bg-0);
@@ -81,7 +85,6 @@ h1 {
   font-size: xx-large;
   position: relative;
   transition: all 500ms;
-  user-select: none;
 }
 
 h2, h3, h4, h5, h6 {
@@ -112,7 +115,7 @@ q, blockquote {
   margin: 15px 0;
   padding: 8px 8px 8px 15px;
   border-left: solid 3px var(--accent-1);
-  background-color: var(--bg-0);
+  background-color: var(--bg-1);
   text-align: justify;
   transition: all 500ms;
 }
@@ -174,6 +177,13 @@ a:hover {
   padding: 6px 10px;
   border-radius: 3px;
   box-shadow: black 0px 1px 3px 0px;
+  transition: all 200ms;
+}
+
+.button:hover {
+  color: var(--fg-1);
+  box-shadow: 0px 1px 3px 0px black inset;
+  transition: all 200ms;
 }
 
 a[href*="//"]:after {
@@ -185,96 +195,6 @@ a[href*="//"]:after {
 
 a[href*="//"]:hover:after {
   color: var(--link-hover);
-}
-
-a:before {
-  font-size: 0.7em;
-  margin-right: 0.4em;
-}
-
-/* Documents */
-a[href$=".pdf"]:before {
-  content: "PDF";
-}
-
-a[href$=".md"]:before {
-  content: "MD";
-}
-
-a[href$=".txt"]:before {
-  content: "TXT";
-}
-
-a[href$=".adoc"]:before {
-  content: "ASCIIDOC";
-}
-
-a[href$=".roff"]:before {
-  content: "ROFF";
-}
-
-a[href$=".tex"]:before {
-  content: "LATEX";
-}
-
-/* Video */
-a[href$=".mov"]:before,
-a[href$=".avi"]:before,
-a[href$=".wmv"]:before,
-a[href$=".mkv"]:before,
-a[href$=".mp4"]:before,
-a[href$=".webm"]:before {
-  content: "VID";
-}
-
-/* Audio */
-a[href$=".m4a"]:before,
-a[href$=".wav"]:before,
-a[href$=".ogg"]:before,
-a[href$=".mp3"]:before,
-a[href$=".opus"]:before,
-a[href$=".flac"]:before {
-  content: "AUD";
-}
-
-/* Archives */
-a[href$=".7z"]:before {
-  content: "7Z";
-}
-
-a[href$=".tar"]:before,
-a[href$=".tar.gz"]:before,
-a[href$=".tar.xz"]:before,
-a[href$=".tar.br"]:before,
-a[href$=".tar.bzip"]:before {
-  content: "TAR";
-}
-
-a[href$=".zip"]:before {
-  content: "ZIP";
-}
-
-a[href$=".rar"]:before {
-  content: "RAR";
-}
-
-/* Images */
-a[href$=".gif"]:before,
-a[href$=".jpg"]:before,
-a[href$=".png"]:before,
-a[href$=".jfif"]:before,
-a[href$=".jpeg"]:before,
-a[href$=".webp"]:before {
-  content: "IMG";
-}
-
-/* Other */
-a[href$=".json"]:before {
-  content: "JSON"
-}
-
-a[href$=".xml"]:before {
-  content: "XML"
 }
 
 table {
@@ -438,33 +358,15 @@ nav a {
   transition: all 300ms;
 }
 
-.blog_item span {
-  display: none;
-}
-
 .blog_item:hover {
   padding: 1em;
   background-color: var(--link);
+  color: var(--bg-2);
 }
 
 .blog_item:hover a {
   color: var(--bg-2);
   text-decoration: underline;
-}
-
-.blog_item:hover span {
-  display: block;
-  color: var(--bg-0);
-  animation: fade-in 300ms both;
-}
-
-.blog_item:hover span a {
-  color: var(--bg-0);
-  text-decoration: none;
-}
-
-.blog_item:hover span a::after {
-  content: "";
 }
 
 .book_shelf {
@@ -598,6 +500,11 @@ nav a {
 }
 
 @media only screen and (orientation: portrait) {
+  main {
+    margin-top: 5em;
+    padding: 10px;
+  }
+
   .nav_items {
     display: none;
   }

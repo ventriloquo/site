@@ -158,6 +158,7 @@ status_biblioteca.innerHTML = `
 ```rust
 use raylib::*;
 
+// teste
 type game_screen = enum {
 	LOGO = 0,
 	TITLE,
