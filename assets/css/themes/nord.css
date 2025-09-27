@@ -1,6 +1,6 @@
 :root {
-  --bg-1:         #3b4252;
-  --bg-0:         #2e3440;
+  --bg-0:         #3b4252;
+  --bg-1:         #2e3440;
   --bg-2:         #434c5e;
   --fg-0:         #eceff4;
   --fg-1:         #d8dee9;
@@ -22,5 +22,9 @@
   --heading:      var(--cyan);
 
   --border: solid 2px var(--bg-1);
+}
+
+time {
+  color: var(--green) !important;
 }
 
