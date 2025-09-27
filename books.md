@@ -71,7 +71,7 @@ title: Lista de Leitura
         {% elsif book.progress.current == book.progress.maximum %}
             {% assign color = "green" %}
         {% else %}
-            {% assign color = "brown" %}
+            {% assign color = "orange" %}
         {% endif %}
         <div
           class="progress"

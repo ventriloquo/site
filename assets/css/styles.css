@@ -1,32 +1,8 @@
+@import url("/assets/css/themes/nord.css");
+
 @font-face {
   src: url("/assets/fonts/NeueMachina-Regular.otf");
   font-family: "Neue Machina";
-}
-
-:root {
-  --fg:           #e4e4ef;
-  --fg-1:         #f4f4ff;
-  --bg:           #181818;
-  --bg-1:         #282828;
-  --bg-2:         #453d41;
-  --red:          #f43841;
-  --green:        #73c936;
-  --yellow:       #ffdd33;
-  --brown:        #cc8c3c;
-  --quartz:       #95a99f;
-  --niagara:      #96a6c8;
-  --niagara-1:    #565f73;
-  --wisteria:     #9e95c7;
-
-  --fg-0:         var(--fg);
-  --bg-0:         var(--bg);
-  --accent:       var(--yellow);
-  --accent-2:     var(--brown);
-  --link:         var(--niagara);
-  --link-hover:   var(--niagara-1);
-  --heading:      var(--quartz);
-
-  --border: solid 1px var(--bg-1);
 }
 
 ::-webkit-scrollbar {
@@ -86,7 +62,7 @@ article {
 }
 
 h1 {
-  color: var(--accent);
+  color: var(--accent-1);
   font-size: xx-large;
   position: relative;
   transition: all 500ms;
@@ -141,7 +117,7 @@ q, blockquote {
   display: block;
   margin: 15px 0;
   padding: 8px 0 8px 15px;
-  border-left: solid 3px var(--accent);
+  border-left: solid 3px var(--accent-1);
   text-align: justify;
   transition: all 500ms;
 }
@@ -338,13 +314,12 @@ pre {
   overflow-x: scroll;
 }
 
-pre, code {
-  background-color: var(--bg-1);
-  color: var(--fg-1);
-}
-
 pre code {
   padding: 0;
+}
+
+p code {
+  background-color: var(--bg-2);
 }
 
 kbd {
@@ -366,7 +341,7 @@ img, iframe {
 }
 
 img:hover {
-  border: solid 2px var(--accent);
+  border: solid 2px var(--accent-1);
 }
 
 img:active {
@@ -476,7 +451,7 @@ nav a {
   position: relative;
   width: 200px;
   margin: 1em 10px;
-  border: solid 2px var(--bg);
+  border: solid 2px var(--bg-0);
   padding: .2em;
 }
 
@@ -515,7 +490,7 @@ nav a {
   font-size:  medium;
   font-style: italic;
   padding:    5px 1em;
-  color:      var(--bg);
+  color:      var(--bg-0);
   text-align: center;
   user-select: none;
 }
