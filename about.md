@@ -21,13 +21,11 @@ linguagens como o [JavaScript](https://encrypted-tbn0.gstatic.com/images?q=tbn:A
 e shell-scripts. E claro, também gosto de criar sites.
 
 Sou um usuário Linux a cerca de 5 anos, porém só comecei a
-me aprofundar nesse mundo a +/- 2 anos. Hoje em dia eu uso
-um setup do
-<a target="_blank" href="https://swaywm.org/">Sway</a> com o tema
-<a target="_blank" href="https://srcery.sh/">Srcery</a> no
-<a target="_blank" href="https://xubuntu.org/">Xubuntu</a>.
+me aprofundar nesse mundo a +/- 2 anos.
 
 ---
 
-  Além desses interesses em tecnologia, eu também gosto de
-  animes e músicas no estilo _Lo-Fi_ e _[Future Funk](https://businesscasual87.bandcamp.com/album/sails)_.
+Além desses interesses em tecnologia, eu também gosto de
+animes e músicas no estilo [_Lo-Fi_](https://city-girl.bandcamp.com/album/neon-impasse),
+_[Future Funk](https://businesscasual87.bandcamp.com/album/sails)_,
+[_Rock_](https://www.youtube.com/watch?v=KlWBO9m52Fk), entre outras (menos Funk, Sertanejo ou qualquer porcaria do tipo).

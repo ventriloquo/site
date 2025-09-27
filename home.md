@@ -12,3 +12,4 @@ meu cotidiano. Também é um lugar onde eu ponho em prática algumas
 coisas que eu aprendi, seja elas relacionadas à tecnologia, programação ou
 qualquer outro assunto que eu achar pertinente.
 
+Resumindo, esse aqui é o site de um Nerdola.
