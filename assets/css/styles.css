@@ -1,4 +1,4 @@
-@import url("/assets/css/themes/nord.css");
+@import url("/assets/css/themes/switch.css");
 
 @font-face {
   src: url("/assets/fonts/NeueMachina-Regular.otf");
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-0);
+  background-color: var(--bg-1);
   color: var(--fg-0);
   font-family: "Neue Machina", "Rubik", "Sans Serif", system-ui;
   line-height: 1.6;
@@ -35,10 +35,10 @@ body {
 main {
   display: block;
   margin: auto;
+  max-width: 80ch;
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  background: var(--bg-0);
   padding-top: 5em;
   z-index: 1;
 }
@@ -47,34 +47,41 @@ footer {
   padding: 1em;
   display: flex;
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 30px);
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: var(--bg-1);
   z-index: 15;
+  border-top: var(--border);
+}
+
+footer q, footer blockquote {
+  background-color: inherit
 }
 
 article {
   display: block;
   max-width: 80ch;
-  margin: auto;
+  margin: auto auto auto 0;
   padding: 15px;
+  background-color: var(--bg-0);
+}
+
+aside {
+  margin-top: 1em;
+  position: absolute;
+  left: calc(950px + 10em);
+}
+
+aside h4 {
+  color: var(--fg-2);
 }
 
 h1 {
-  color: var(--accent-1);
   font-size: xx-large;
   position: relative;
   transition: all 500ms;
   user-select: none;
-}
-
-h1:hover {
-  color: var(--green);
-}
-
-h1:active {
-  color: var(--red);
 }
 
 h2, h3, h4, h5, h6 {
@@ -82,22 +89,9 @@ h2, h3, h4, h5, h6 {
   font-size: x-large;
 }
 
-body:has(h1:hover) img,
-body:has(h1:hover) q,
-body:has(h1:hover) blockquote {
-  border-color: var(--green)
-}
-
-body:has(h1:active) img,
-body:has(h1:active) q,
-body:has(h1:active) blockquote {
-  border-color: var(--red)
-}
-
 p {
   font-size: large;
-  margin-top: 0.3em;
-  margin-bottom: 1em;
+  margin-bottom: 1.3em;
 }
 
 b, strong {
@@ -116,10 +110,15 @@ time {
 q, blockquote {
   display: block;
   margin: 15px 0;
-  padding: 8px 0 8px 15px;
+  padding: 8px 8px 8px 15px;
   border-left: solid 3px var(--accent-1);
+  background-color: var(--bg-0);
   text-align: justify;
   transition: all 500ms;
+}
+
+q p, blockquote p {
+  margin: .3em auto;
 }
 
 ul, ol {
@@ -152,7 +151,7 @@ li {
 
 hr {
   border: none;
-  border-bottom: solid 1px var(--bg-1);
+  border-bottom: solid 1px var(--bg-2);
   margin: 1em 0;
 }
 
@@ -167,6 +166,14 @@ a {
 
 a:hover {
   color: var(--link-hover);
+}
+
+.button {
+  color: var(--fg-2);
+  background-color: var(--bg-2);
+  padding: 6px 10px;
+  border-radius: 3px;
+  box-shadow: black 0px 1px 3px 0px;
 }
 
 a[href*="//"]:after {
@@ -332,7 +339,7 @@ img, iframe {
   display: block;
   margin: 0.7em auto;
   padding: 2px;
-  border: solid 2px var(--bg-0);
+  border: solid 2px var(--bg-1);
   transition: all .5s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -346,6 +353,25 @@ img:hover {
 
 img:active {
   border: solid 2px var(--red);
+}
+
+.profile {
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile h3 {
+  color: var(--fg-2);
+}
+
+.profile img {
+  border-radius: 100%;
+  margin: 0;
+  margin-right: 10px;
+  border: none;
+  width: 80px;
+  height: 80px;
 }
 
 button {
@@ -451,7 +477,7 @@ nav a {
   position: relative;
   width: 200px;
   margin: 1em 10px;
-  border: solid 2px var(--bg-0);
+  border: solid 2px var(--bg-1);
   padding: .2em;
 }
 
@@ -595,5 +621,9 @@ nav a {
 
   .game:target img, .book:target img {
     transform: rotate(0);
+  }
+
+  aside {
+    display: none;
   }
 }

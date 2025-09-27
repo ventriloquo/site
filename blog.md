@@ -3,8 +3,10 @@ title: Blog
 ---
 <style>
   table, td, th {
-    background-color: var(--bg-0);
     border: none;
+  }
+  td a {
+    color: var(--fg-2);
   }
 </style>
 <a href="/rss.xml">Feed RSS</a>

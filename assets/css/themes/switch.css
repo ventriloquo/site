@@ -1,6 +1,6 @@
 :root {
-  --bg-0:         #323232;
-  --bg-1:         #2d2d2d;
+  --bg-1:         #323232;
+  --bg-0:         #2d2d2d;
   --bg-2:         #505050;
   --fg-0:         #ffffff;
   --fg-1:         #ababab;
@@ -21,6 +21,6 @@
   --link-hover:   var(--accent-2);
   --heading:      var(--cyan);
 
-  --border: solid 2px var(--bg-1);
+  --border: solid 2px var(--bg-2);
 }
 
