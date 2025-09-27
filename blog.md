@@ -8,8 +8,11 @@ title: Blog
   td a {
     color: var(--fg-2);
   }
+  .feed {
+    text-align: center !important;
+  }
 </style>
-<a href="/rss.xml">Feed RSS</a>
+<p class="feed"><a href="/rss.xml">Feed RSS</a></p>
 <table>
 <tbody>
 {% for post in site.posts %}

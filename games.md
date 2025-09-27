@@ -25,7 +25,7 @@ biblioteca do saudoso Xbox 360 (que saudades 🥲).
             <q>{{ midia_fisica.description }}</q>
         {% endif %}
         {% if midia_fisica.buy_date %}
-            <p><span style="color: var(--accent-1)">Quando foi comprado:</span> {{ midia_fisica.buy_date }}</p>
+            <p><span style="color: var(--accent-2)">Quando foi comprado:</span> {{ midia_fisica.buy_date }}</p>
         {% endif %}
         {% if midia_fisica.url %}
             <a href="{{ midia_fisica.url }}" target="_blank">{{ midia_fisica.url }}</a>
@@ -53,7 +53,7 @@ biblioteca do saudoso Xbox 360 (que saudades 🥲).
             <q>{{ midia_digital.description }}</q>
         {% endif %}
         {% if midia_digital.buy_date %}
-            <p><span style="color: var(--accent-1)">Quando foi comprado:</span> {{ midia_digital.buy_date }}</p>
+            <p><span style="color: var(--accent-2)">Quando foi comprado:</span> {{ midia_digital.buy_date }}</p>
         {% endif %}
         {% if midia_digital.url %}
             <a href="{{ midia_digital.url }}" target="_blank">{{ midia_digital.url }}</a>
