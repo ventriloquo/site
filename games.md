@@ -11,14 +11,14 @@ biblioteca do saudoso Xbox 360 (que saudades 🥲).
 <div class="game_collection">
 {% for midia_fisica in site.data.games.midia_fisica %}
 <div class="game" id="{{ midia_fisica.title | slugify }}">
-<a href="#{{ midia_fisica.title | slugify }}">
-    <img
-        alt="{{ midia_fisica.title }} cover art"
-        width="180"
-        height="280"
-        loading="lazy"
-        src="{{ midia_fisica.cover }}">
-</a>
+    <a href="#{{ midia_fisica.title | slugify }}">
+        <img
+            alt="{{ midia_fisica.title }} cover art"
+            width="180"
+            height="280"
+            loading="lazy"
+            src="{{ midia_fisica.cover }}">
+    </a>
     <hgroup class="game_info">
         <h2>{{ midia_fisica.title }}</h2>
         {% if midia_fisica.description %}
@@ -39,14 +39,14 @@ biblioteca do saudoso Xbox 360 (que saudades 🥲).
 <div class="game_collection">
 {% for midia_digital in site.data.games.midia_digital %}
 <div class="game" id="{{ midia_digital.title | slugify }}">
-<a href="#{{ midia_digital.title | slugify }}">
-    <img
-        alt="{{ midia_digital.title }} cover art"
-        width="180"
-        height="180"
-        loading="lazy"
-        src="{{ midia_digital.cover }}">
-</a>
+    <a href="#{{ midia_digital.title | slugify }}">
+        <img
+            alt="{{ midia_digital.title }} cover art"
+            width="180"
+            height="180"
+            loading="lazy"
+            src="{{ midia_digital.cover }}">
+    </a>
     <hgroup class="game_info">
         <h2>{{ midia_digital.title }}</h2>
         {% if midia_digital.description %}
