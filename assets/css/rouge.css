@@ -13,7 +13,7 @@ div.highlighter-rouge::after {
   padding-left: 1em;
   padding-right: 0;
   width: calc(100% - 16px);
-  background-image: linear-gradient(to left, var(--bg-1), var(--accent-1));
+  background-color: var(--orange);
   color: var(--bg-0);
 }
 
@@ -32,7 +32,7 @@ div.highlight {
 
 .highlight, .highlight .w {
   color: var(--fg);
-  background-color: var(--bg-0);
+  background-color: var(--bg-1);
 }
 
 .highlight .err {
