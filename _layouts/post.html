@@ -2,43 +2,45 @@
 <html lang="{{site.lang}}">
 {% include head.html %}
 <body>
-  <article>
-  {% if page.author %}
-  <div class="profile">
-    <img src="/assets/img/authors/{{ page.author | slugify }}.png">
-    <div>
-      <h3>{{ page.author }}</h3>
-      <time>
-        {% if page.modified %}
-          {{ page.date | date: "%d.%m.%Y" }} | Última alteração: {{ page.modified | date: "%d.%m.%Y" }}
-        {% else %}
-          {{ page.date | date: "%d.%m.%Y" }}
-        {% endif %}
-      </time>
+  <div class="post">
+    <article>
+    {% if page.author %}
+    <div class="profile">
+      <a href="/authors#{{ page.author | slugify }}"><img src="/assets/img/authors/{{ page.author | slugify }}.png"></a>
+      <div>
+        <h3>{{ page.author }}</h3>
+        <time>
+          {% if page.modified %}
+            {{ page.date | date: "%d.%m.%Y" }} | Última alteração: {{ page.modified | date: "%d.%m.%Y" }}
+          {% else %}
+            {{ page.date | date: "%d.%m.%Y" }}
+          {% endif %}
+        </time>
+      </div>
     </div>
-  </div>
-  {% else %}
-  <div class="profile">
-    <img src="/assets/img/avatar.png">
-    <div>
-      <h3>{{site.author}}</h3>
-      <time>
-        {% if page.modified %}
-          {{ page.date | date: "%d.%m.%Y" }} | Última alteração: {{ page.modified | date: "%d.%m.%Y" }}
-        {% else %}
-          {{ page.date | date: "%d.%m.%Y" }}
-        {% endif %}
-      </time>
+    {% else %}
+    <div class="profile">
+      <a href="/authors#tukain"><img src="/assets/img/avatar.png"></a>
+      <div>
+        <h3>{{site.author}}</h3>
+        <time>
+          {% if page.modified %}
+            {{ page.date | date: "%d.%m.%Y" }} | Última alteração: {{ page.modified | date: "%d.%m.%Y" }}
+          {% else %}
+            {{ page.date | date: "%d.%m.%Y" }}
+          {% endif %}
+        </time>
+      </div>
     </div>
-  </div>
-  {% endif %}
-  <hr>
-    <h1>{{page.title}}</h1>
-    {{ content }}
+    {% endif %}
     <hr>
-    <div>
-      <a class="button" href="/blog">Voltar</a>
-    </div>
-  </article>
+      <h1>{{page.title}}</h1>
+      {{ content }}
+      <hr>
+      <div>
+        <a class="button" href="/blog">Voltar</a>
+      </div>
+    </article>
+  </div>
 </body>
 </html>
