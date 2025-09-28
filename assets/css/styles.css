@@ -1,4 +1,4 @@
-@import url("/assets/css/themes/switch.css");
+@import url("/assets/css/themes/nord.css");
 
 @font-face {
   src: url("/assets/fonts/AOTFShinGoProRegular.otf");
@@ -314,9 +314,13 @@ nav a {
   border-radius: 100%;
   margin: 0;
   margin-right: 10px;
-  border: none;
+  border: var(--border);
   width: 80px;
   height: 80px;
+}
+
+.profile img:hover {
+  border-color: var(--accent-1);
 }
 
 .button {

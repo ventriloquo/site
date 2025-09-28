@@ -28,3 +28,14 @@ time {
   color: var(--green) !important;
 }
 
+body:has(.post) {
+  background-color: var(--bg-0) !important;
+}
+
+.post article {
+  background-color: var(--bg-1);
+}
+
+.post q, .post blockquote {
+  background-color: var(--bg-0);
+}
