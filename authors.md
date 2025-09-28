@@ -60,7 +60,7 @@ layout: base
             <p><a href="https://github.com/{{author.github_user}}">Github</a></p>
         {% endif %}
         {% if author.neocities %}
-            <p><a href="https://neocities.org/site/{{ author.neocities }}">Neocities/X</a></p>
+            <p><a href="https://neocities.org/site/{{ author.neocities }}">Neocities</a></p>
         {% endif %}
         {% if author.twitter %}
             <p><a href="https://x.com/{{author.twitter}}">Twitter/X</a></p>
