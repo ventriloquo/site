@@ -59,6 +59,9 @@ layout: base
         {% if author.github_user %}
             <p><a href="https://github.com/{{author.github_user}}">Github</a></p>
         {% endif %}
+        {% if author.neocities %}
+            <p><a href="https://neocities.org/site/{{ author.neocities }}">Neocities/X</a></p>
+        {% endif %}
         {% if author.twitter %}
             <p><a href="https://x.com/{{author.twitter}}">Twitter/X</a></p>
         {% endif %}
@@ -74,3 +77,23 @@ layout: base
 </div>
 {% endfor %}
 </div>
+
+# Quer se tornar um autor?
+Faça uma [fork deste site](https://github.com/ventriloquo/site), adicione uma
+entrada no arquivo `_data/authors.yml` e uma foto de perfil em
+`assets/img/authors/` (o nome deve ser em _slug notation_ e o arquivo deve ser
+`png`).
+
+Depois disso, é só fazer um post em `_posts`! Tipo assim:
+
+```markdown
+---
+title: Meu primeiro post
+author: Burro
+---
+
+Esse é o meu primeiro post
+```
+
+O post não vai ser adicionado automaticamente, eu irei checar o seu _pull
+request_ e só então irei fazer um _merge_ no repositório.

@@ -44,6 +44,7 @@ main {
 }
 
 footer {
+  margin-top: 1em;
   padding: 1em;
   display: flex;
   position: absolute;
