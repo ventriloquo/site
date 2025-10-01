@@ -301,29 +301,6 @@ nav a {
   display: none;
 }
 
-.profile {
-  margin-bottom: 1em;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.profile h3 {
-  color: var(--fg-1);
-}
-
-.profile img {
-  border-radius: 100%;
-  margin: 0;
-  margin-right: 10px;
-  border: var(--border);
-  width: 80px;
-  height: 80px;
-}
-
-.profile img:hover {
-  border-color: var(--accent-1);
-}
-
 .button {
   color: var(--fg-2);
   background-color: var(--bg-2);
@@ -457,6 +434,11 @@ nav a {
   animation: left-to-right .5s both;
 }
 
+.profile {
+  position: fixed;
+  right: calc(100vw - 1250px);
+}
+
 @keyframes left-to-right {
   from {
     opacity: 0;
@@ -488,7 +470,7 @@ nav a {
   }
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (max-width: 880px) {
   main {
     margin-top: 5em;
     padding: 10px;
@@ -517,6 +499,34 @@ nav a {
 
   .game:target img, .book:target img {
     transform: rotate(0);
+  }
+
+  .profile {
+    position: initial;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--bg-1);
+    border-bottom: var(--border);
+    border-color: var(--bg-0);
+  }
+
+  .profile h3 {
+    color: var(--fg-1);
+  }
+
+  .profile img {
+    border-radius: 100%;
+    margin: 0;
+    margin-right: 10px;
+    border: var(--border);
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile img:hover {
+    border-color: var(--accent-1);
   }
 
 }
