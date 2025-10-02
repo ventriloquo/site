@@ -136,6 +136,7 @@ ul p, ol p {
 
 li {
   padding: 3px 0;
+  line-height: 1.6;
 }
 
 hr {
