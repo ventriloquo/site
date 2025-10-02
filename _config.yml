@@ -20,6 +20,7 @@ defaults:
       type: posts
     values:
       layout: post
+      author: Tukain
   - scope:
       path: "blog.md"
     values:

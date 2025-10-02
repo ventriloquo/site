@@ -530,6 +530,9 @@ nav a {
     border-color: var(--accent-1);
   }
 
+  .social {
+    display: none;
+  }
 
   ::-webkit-scrollbar {
     display: none;
