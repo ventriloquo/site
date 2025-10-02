@@ -278,7 +278,7 @@ nav a {
 }
 
 #nav_menu:popover-open {
-  font-family: "Neue Machina";
+  font-family: "Shin Go Pro", "Rubik", "Sans Serif", system-ui;
   background-color: var(--bg-0);
   display: flex;
   flex-wrap: wrap;
@@ -473,7 +473,8 @@ nav a {
 @media only screen and (max-width: 880px) {
   main {
     margin-top: 5em;
-    padding: 10px;
+    padding: 15px;
+    max-width: 90vw;
   }
 
   .nav_items {
@@ -527,6 +528,11 @@ nav a {
 
   .profile img:hover {
     border-color: var(--accent-1);
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 
 }
