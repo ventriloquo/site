@@ -3,10 +3,6 @@ title: Jogos
 ---
 # Minha biblioteca de jogos do Nintendo Switch.
 
-Eu tenho um Nintendo Switch Lite a alguns meses. Nesses meses eu já montei uma
-biblioteca até que bem grandinha, definitivamente maior que a minha antiga
-biblioteca do saudoso Xbox 360 (que saudades 🥲).
-
 ## Mídia física
 <div class="game_collection">
 {% for midia_fisica in site.data.games.midia_fisica %}
