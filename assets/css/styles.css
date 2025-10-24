@@ -19,7 +19,7 @@
 }
 
 html {
-  scroll-padding-top: 4em;
+  scroll-padding-top: 1em;
   position: relative;
   overflow-x: hidden;
 }
@@ -39,7 +39,7 @@ main {
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  padding-top: 5em;
+  padding-top: 2em;
   z-index: 1;
 }
 
@@ -61,8 +61,8 @@ footer q, footer blockquote {
 
 article {
   display: block;
-  max-width: 70ch;
-  margin: auto auto auto 0;
+  max-width: 65vw;
+  margin: auto auto auto 8vw;
   padding: 15px;
   background-color: var(--bg-0);
 }
@@ -260,22 +260,28 @@ del {
 }
 
 nav {
-  top: 0;
-  z-index: 2;
-  display: flex;
   flex-wrap: wrap;
-  position: fixed;
+  flex-direction: column;
   justify-content: space-between;
-  margin: auto;
-  width: 100vw;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  left: 0;
+  z-index: 20;
+  width: 8vw;
+  height: 100vh;
   background-color: var(--bg-0);
-  border-bottom: solid 1px var(--bg-1);
 }
 
 nav a {
   text-decoration: none;
   display: inline-block;
   padding: 1em;
+}
+
+.nav_items {
+  display: flex;
+  flex-direction: column;
 }
 
 #nav_menu:popover-open {
@@ -299,6 +305,15 @@ nav a {
 }
 
 .nav_menu {
+  display: none;
+}
+
+.home_link .image img {
+  border-radius: 100% !important;
+  width: 60px;
+}
+
+.home_link .text {
   display: none;
 }
 
@@ -394,7 +409,7 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  scroll-padding-top: 5em;
+  scroll-padding-top: 8em;
 }
 
 .game_collection img {
@@ -437,7 +452,11 @@ nav a {
 
 .profile {
   position: fixed;
-  right: calc(100vw - 1250px);
+  left: 80vw;
+}
+
+.profile img {
+  margin: 0;
 }
 
 @keyframes left-to-right {
@@ -471,11 +490,25 @@ nav a {
   }
 }
 
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 1280px) {
   main {
     margin-top: 5em;
     padding: 15px;
     max-width: 90vw;
+  }
+
+  nav {
+    top: 0;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    border-bottom: dashed 2px var(--bg-2);
+  }
+
+  article {
+    margin: auto auto auto 0;
+    max-width: 70ch;
   }
 
   .nav_items {
@@ -485,6 +518,14 @@ nav a {
   .nav_menu, nav a {
     display: inline-block;
     font-size: large;
+  }
+
+  .home_link .image {
+    display: none;
+  }
+
+  .home_link .text {
+    display: block;
   }
 
   ::-webkit-scrollbar {

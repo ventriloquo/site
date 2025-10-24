@@ -2,6 +2,7 @@
 <html lang="{{site.lang}}">
 {% include head.html %}
 <body>
+{% include navbar.html %}
   <div class="post">
     <article>
       {% for author in site.data.authors %}
@@ -29,7 +30,7 @@
               </p></div>
             <time>
               {% if page.modified %}
-              {{ page.date | date: "%d.%m.%Y" }} <br> Última alteração em {{ page.modified | date: "%d.%m.%Y" }}
+              {{ page.date | date: "%d.%m.%Y" }} <br> Última alteração em: {{ page.modified | date: "%d.%m.%Y" }}
               {% else %}
                 {{ page.date | date: "%d.%m.%Y" }}
               {% endif %}
