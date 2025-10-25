@@ -509,6 +509,7 @@ nav a {
   article {
     margin: auto auto auto 0;
     max-width: 70ch;
+    padding-top: 5em;
   }
 
   .nav_items {
