@@ -5,49 +5,6 @@
   buy_date: "14/10/2025"
   cover: /assets/img/games/mario_kart_8_deluxe.jpeg
 
-- title: "Metal Gear Solid 3: Snake Eater"
-  description: >
-    Esse foi o presente de dia dos namorados que ganhei da minha
-    namorada. Simplesmente não tenho nem palavras para descrever
-    o quanto que esse presente significa para mim.
-    Eu te amo querida!
-  buy_date: "18/06/2025"
-  cover: /assets/img/games/mgs3.jpeg
-
-- title: "Resident Evil 4"
-  description: >
-    De longe o meu jogo favorito do Play 2.
-    Não dá para descrever a alegria que tive de
-    poder jogar ele novamente. Quero chegar o mais
-    perto dos 100% dele!
-  buy_date: "17/03/2025"
-  cover: /assets/img/games/re4.jpeg
-
-- title: "Devil May Cry 3: Special Edition"
-  description: >
-    +/- na mesma época do lançamento daquela animação
-    podre da Netflix, os jogos da franquia Devil May Cry
-    entraram em promoção. Eu não podia perder essa oportunidade.
-  buy_date: "26/03/2025"
-  cover: /assets/img/games/dmc3.jpeg
-
-- title: "Burnout Paradise: Remastered"
-  description: >
-    Senhor Jesus, como eu ficava sedento para jogar esse
-    bagulho na época que eu tive um Xbox 360. Eu passava
-    horas jogando e re-jogando a demo dele.
-  buy_date: "25/02/2025"
-  cover: /assets/img/games/burnout_paradise.jpeg
-
-- title: "Undertale"
-  description: >
-    Só Deus sabe quantas horas eu passei assistindo vídeos
-    sobre Undertale no Youtube no auge de popularidade dessa
-    budega. Depois de anos, finalmente posso experiênciar essa
-    obra prima.
-  buy_date: "26/07/2025"
-  cover: /assets/img/games/undertale.jpeg
-
 - title: "Warhammer 40,000: Boltgun"
   description: >
     O Nintendo Switch pode não ter o Space-Marines disponível para
@@ -56,6 +13,13 @@
     oferecer!
   buy_date: "02/09/2025"
   cover: "/assets/img/games/warhammer_40000_boltgun.jpg"
+
+- title: "Portal 2"
+  description: >
+    Após anos sedento para poder jogar esse jogo, finalmente tenho
+    ele em minhas mãos. Wheatley, te prepara desgraçado.
+  buy_date: "15/08/2025"
+  cover: /assets/img/games/portal_2.jpeg
 
 - title: "Portal"
   description: >
@@ -67,13 +31,6 @@
     THE CAKE IS A LIE
   buy_date: "15/08/2025"
   cover: /assets/img/games/portal_1.jpeg
-
-- title: "Portal 2"
-  description: >
-    Após anos sedento para poder jogar esse jogo, finalmente tenho
-    ele em minhas mãos. Wheatley, te prepara desgraçado.
-  buy_date: "15/08/2025"
-  cover: /assets/img/games/portal_2.jpeg
 
 - title: "Doom 1+2"
   description: >
@@ -102,6 +59,15 @@
   buy_date: "30/07/2025"
   cover: /assets/img/games/quake_2.jpeg
 
+- title: "Undertale"
+  description: >
+    Só Deus sabe quantas horas eu passei assistindo vídeos
+    sobre Undertale no Youtube no auge de popularidade dessa
+    budega. Depois de anos, finalmente posso experiênciar essa
+    obra prima.
+  buy_date: "26/07/2025"
+  cover: /assets/img/games/undertale.jpeg
+
 - title: "Rain World"
   description: >
     O famoso "jogo do Diggo". Eu consegui comprar ele numa
@@ -109,6 +75,15 @@
     não me acostumei 100% com os controles.
   buy_date: "01/07/2025"
   cover: /assets/img/games/rain_world.jpeg
+
+- title: "Metal Gear Solid 3: Snake Eater"
+  description: >
+    Esse foi o presente de dia dos namorados que ganhei da minha
+    namorada. Simplesmente não tenho nem palavras para descrever
+    o quanto que esse presente significa para mim.
+    Eu te amo querida!
+  buy_date: "18/06/2025"
+  cover: /assets/img/games/mgs3.jpeg
 
 - title: "Blasphemous"
   description: >
@@ -161,20 +136,13 @@
   buy_date: "26/03/2025"
   cover: /assets/img/games/broforce.jpeg
 
-- title: "Hotline Miami Collection"
+- title: "Devil May Cry 3: Special Edition"
   description: >
-    Que jogo mais psicodélico! Dá até dor de cabeça às vezes.
-  buy_date: "17/03/2025"
-  cover: /assets/img/games/hotline_miami_collection.jpeg
-
-- title: "Hades"
-  description: >
-    Quando alguém diz que comprou um console da Nintendo, o
-    que você espera é que o primeiro jogo dela seja da própria
-    Nintendo, não é? Bom, no meu caso foi o Hades (cê é louco,
-    jogo da Nintendo é caro demais).
-  buy_date: "23/02/2025"
-  cover: /assets/img/games/hades.jpeg
+    +/- na mesma época do lançamento daquela animação
+    podre da Netflix, os jogos da franquia Devil May Cry
+    entraram em promoção. Eu não podia perder essa oportunidade.
+  buy_date: "26/03/2025"
+  cover: /assets/img/games/dmc3.jpeg
 
 - title: "Bioshock: Remastered"
   description: >
@@ -206,11 +174,43 @@
   buy_date: "23/03/2025"
   cover: /assets/img/games/bioshock_infinite.jpeg
 
+- title: "Resident Evil 4"
+  description: >
+    De longe o meu jogo favorito do Play 2.
+    Não dá para descrever a alegria que tive de
+    poder jogar ele novamente. Quero chegar o mais
+    perto dos 100% dele!
+  buy_date: "17/03/2025"
+  cover: /assets/img/games/re4.jpeg
+
+- title: "Hotline Miami Collection"
+  description: >
+    Que jogo mais psicodélico! Dá até dor de cabeça às vezes.
+  buy_date: "17/03/2025"
+  cover: /assets/img/games/hotline_miami_collection.jpeg
+
 - title: "Super Chicken Jumper"
   description: >
     Um joguinho bem divertido e engraçadinho.
   buy_date: "26/02/2025"
   cover: /assets/img/games/super_chicken_jumper.jpeg
+
+- title: "Burnout Paradise: Remastered"
+  description: >
+    Senhor Jesus, como eu ficava sedento para jogar esse
+    bagulho na época que eu tive um Xbox 360. Eu passava
+    horas jogando e re-jogando a demo dele.
+  buy_date: "25/02/2025"
+  cover: /assets/img/games/burnout_paradise.jpeg
+
+- title: "Hades"
+  description: >
+    Quando alguém diz que comprou um console da Nintendo, o
+    que você espera é que o primeiro jogo dela seja da própria
+    Nintendo, não é? Bom, no meu caso foi o Hades (cê é louco,
+    jogo da Nintendo é caro demais).
+  buy_date: "23/02/2025"
+  cover: /assets/img/games/hades.jpeg
 
 - title: "Alan Wake: Remastered"
   description: >
