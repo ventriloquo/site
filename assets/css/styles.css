@@ -176,6 +176,7 @@ table {
   margin: 1em auto;
   text-align: left;
   border: var(--border);
+  box-shadow: black 0px 1px 3px 0px;
 }
 
 th {
@@ -325,11 +326,12 @@ nav a {
   border-radius: 3px;
   box-shadow: black 0px 1px 3px 0px;
   transition: all 200ms;
-  font-size: small
+  font-size: small;
 }
 
 .button:hover {
-  color: var(--fg-1);
+  color: var(--bg-1);
+  background-color: var(--link-hover);
 }
 
 .button:active {

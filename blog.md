@@ -2,17 +2,11 @@
 title: Blog
 ---
 <style>
-  table, td, th {
-    border: none;
-  }
-  td a {
-    color: var(--fg-2);
-  }
   .feed {
     text-align: center !important;
   }
 </style>
-<p class="feed"><a href="/rss.xml">Feed RSS</a></p>
+<p class="feed"><a class="button" href="/rss.xml">Feed RSS</a></p>
 <table>
 <tbody>
 {% for post in site.posts %}
