@@ -95,7 +95,9 @@ function createParagraph(id, text) {
   let p = notes.length + 1;
   let i = 1;
   let wordCount = 0;
+  let charCount = 0;
   let wordCountAll = 0;
+  let charCountAll = 0;
   for (const note of notes) {
     p--;
     i++;
@@ -109,16 +111,25 @@ function createParagraph(id, text) {
       `animation: fade 500ms both; animation-delay: ${i}00ms`,
     );
 
-    // note
+    // Word/Char count
     wordCount =
-      note.content.replaceAll(/(-|\(|\)|#|\n|  )/g, "").split(" ").length;
+      note.content.replaceAll(/(-|\(|\)|#|\n)/g, "").split(" ").filter((item) =>
+        item !== ""
+      ).length;
+    charCount =
+      note.content.replaceAll(/( |\n)/g, "").split(/([a-zA-Z])/g).filter(
+        (item) => item !== "",
+      ).length;
     wordCountAll = wordCount + wordCountAll;
+    charCountAll = charCount + charCountAll;
+
+    // note
     createPrivatePage(`note_${p}`, `${note.title}`);
     createElementWithText(
       "h3",
       `note_${p}`,
       "note_info",
-      `${note.date} - ${wordCount} palavras`,
+      `${note.date} - ${wordCount} palavras - ${charCount} caracteres`,
     );
     createParagraph(`note_${p}`, `${note.content}`);
   }
@@ -129,6 +140,7 @@ function createParagraph(id, text) {
     "stats",
     `Número de anotações: ${notes.length}
     Palavras escritas: ${wordCountAll}
+    Caracteres utilizados: ${charCountAll}
     `,
   );
 
@@ -143,6 +155,7 @@ function createParagraph(id, text) {
 
     Número de anotações: ${notes.length}
     Palavras escritas:   ${wordCountAll}
+    Caracteres utilizados: ${charCountAll}
     Lista de páginas:
     ${pagesList}
   `);
