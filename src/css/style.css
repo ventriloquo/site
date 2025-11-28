@@ -139,8 +139,25 @@ img:hover {
 }
 
 @media only screen and (orientation: portrait) {
+  body {
+    font-size: medium;
+  }
+
   #navbar {
-    font-size: x-large;
+    font-size: large;
     flex-direction: row;
   }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  h2 {
+    font-size: x-large;
+  }
+
+  h3 {
+    font-size: larger;
+  }
+
 }
