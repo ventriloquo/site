@@ -52,6 +52,7 @@ function createPage(name, altName) {
   createElement("article", "mainBody", `${slug}`);
   createElementWithText("h1", `${slug}`, "title", `${altName}`);
   links.push({ "name": `${altName}`, "url": `#${slug}` });
+
   pages.push(name);
 }
 
@@ -64,6 +65,7 @@ function createPrivatePage(name, altName) {
 
   createElement("article", "mainBody", `${slug}`);
   createElementWithText("h1", `${slug}`, "title", `${altName}`);
+
   pages.push(name);
 }
 
@@ -78,7 +80,11 @@ function createParagraph(id, text) {
   createPrivatePage("home", "Caderno do Tukain");
   createParagraph(
     "home",
-    `Aqui é um lugar em que eu compartilho algumas coisas do meu dia a dia e meus achados pelo mundo da internet.`,
+    `Aqui é um lugar em que eu compartilho algumas coisas do meu dia a dia e meus achados pelo mundo da internet.
+
+    ---
+
+    "The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite`,
   );
 }
 
@@ -89,6 +95,7 @@ function createParagraph(id, text) {
   let p = notes.length + 1;
   let i = 1;
   let wordCount = 0;
+  let wordCountAll = 0;
   for (const note of notes) {
     p--;
     i++;
@@ -103,16 +110,17 @@ function createParagraph(id, text) {
     );
 
     // note
+    wordCount =
+      note.content.replaceAll(/(-|\(|\)|#|\n|  )/g, "").split(" ").length;
+    wordCountAll = wordCount + wordCountAll;
     createPrivatePage(`note_${p}`, `${note.title}`);
     createElementWithText(
       "h3",
       `note_${p}`,
-      "note_date",
-      `${note.date}`,
+      "note_info",
+      `${note.date} - ${wordCount} palavras`,
     );
     createParagraph(`note_${p}`, `${note.content}`);
-
-    wordCount = note.content.split(" ").length + wordCount;
   }
 
   // Statistics
@@ -120,21 +128,21 @@ function createParagraph(id, text) {
   createParagraph(
     "stats",
     `Número de anotações: ${notes.length}
-    Palavras escritas: ${wordCount}
+    Palavras escritas: ${wordCountAll}
     `,
   );
 
   const pagesList = pages.toString()
-    .replaceAll(/^/g, "\t- #")
-    .replaceAll(",", "\n\t\t- #")
-    .replaceAll("\n\t\t- #note_", "\n\t\t\t- #note_");
+    .replaceAll(/^/g, "- #")
+    .replaceAll(",", "\n    - #")
+    .replaceAll("\n    - #note_", "\n      - #note_");
 
   console.log(`
     Estatísticas
     ============
 
     Número de anotações: ${notes.length}
-    Palavras escritas:   ${wordCount}
+    Palavras escritas:   ${wordCountAll}
     Lista de páginas:
     ${pagesList}
   `);
