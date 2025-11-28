@@ -3,13 +3,22 @@
   font-family: "Rubik";
 }
 
-:root {
-  --fg: #bbbbeb;
-  --bg: #232323;
-  --fg-2: #6666b6;
-  --fg-alt: #ebeebb;
-  --link: #3368ef;
-  --link-hover: #1146cd;
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+    --bg: #232323;
+    --fg: #bbbbeb;
+    --fg-2: #6666b6;
+    --fg-alt: #ebeebb;
+  }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+  :root {
+    --bg: #bbbbeb;
+    --fg: #232323;
+    --fg-2: #ebeebb;
+    --fg-alt: #6666b6;
+  }
 }
 
 html {
@@ -57,7 +66,6 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--link);
 }
 
 li {
@@ -117,15 +125,6 @@ h3 {
 
 p {
   line-height: 1.2;
-}
-
-img {
-  border: solid 2px transparent;
-  transition: all 500ms;
-}
-
-img:hover {
-  border: solid 2px var(--link);
 }
 
 @keyframes fade {
