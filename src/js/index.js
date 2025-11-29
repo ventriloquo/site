@@ -139,22 +139,23 @@ function createParagraph(id, text) {
   const pagesList = pages.toString()
     .replaceAll(/^/g, "- #")
     .replaceAll(",", "\n- #")
-    .replaceAll("\n- #note_", "\n    - #note_");
+    .replaceAll("\n- #note_", "\n  - #note_");
 
   // Statistics
   createPrivatePage("stats", "Estatísticas");
   createElementWithText(
     "pre",
     "stats",
-    undefined,
-    `Número de anotações: ${notes.length}
-Palavras escritas: ${wordCountAll}
+    "stats_data",
+    `Número de anotações:   ${notes.length}
+Palavras escritas:     ${wordCountAll}
 Caracteres utilizados: ${charCountAll}
 Lista de páginas:
 ${pagesList}
 - #stats
     `,
   );
+  putStyle("stats_data", "font-family: monospace")
 }
 
 //// Links
