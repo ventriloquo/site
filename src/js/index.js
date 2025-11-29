@@ -92,22 +92,24 @@ function createParagraph(id, text) {
 {
   createPage("notes", "Anotações");
   createElement("ul", "notes", "notes_list");
-  let p = notes.length + 1;
-  let i = 1;
+
   let wordCount = 0;
   let charCount = 0;
   let wordCountAll = 0;
   let charCountAll = 0;
+  let n = notes.length + 1;
+  let i = 1;
+
   for (const note of notes) {
-    p--;
+    n--;
     i++;
     // Entries;
-    createElement("li", "notes_list", `notes_entry${p}`);
-    createElement("a", `notes_entry${p}`, `${p}`);
-    putText(`${p}`, `${note.date} - ${note.title}`);
-    putAttribute(`${p}`, "href", `#note_${p}`);
+    createElement("li", "notes_list", `notes_entry${n}`);
+    createElement("a", `notes_entry${n}`, `${n}`);
+    putText(`${n}`, `${note.date} - ${note.title}`);
+    putAttribute(`${n}`, "href", `#note_${n}`);
     putStyle(
-      `${p}`,
+      `${n}`,
       `animation: fade 500ms both; animation-delay: ${i}00ms`,
     );
 
@@ -124,41 +126,35 @@ function createParagraph(id, text) {
     charCountAll = charCount + charCountAll;
 
     // note
-    createPrivatePage(`note_${p}`, `${note.title}`);
+    createPrivatePage(`note_${n}`, `${note.title}`);
     createElementWithText(
       "h3",
-      `note_${p}`,
+      `note_${n}`,
       "note_info",
       `${note.date} - ${wordCount} palavras - ${charCount} caracteres`,
     );
-    createParagraph(`note_${p}`, `${note.content}`);
+    createParagraph(`note_${n}`, `${note.content}`);
   }
-
-  // Statistics
-  createPrivatePage("stats", "Estatísticas");
-  createParagraph(
-    "stats",
-    `Número de anotações: ${notes.length}
-    Palavras escritas: ${wordCountAll}
-    Caracteres utilizados: ${charCountAll}
-    `,
-  );
 
   const pagesList = pages.toString()
     .replaceAll(/^/g, "- #")
-    .replaceAll(",", "\n    - #")
-    .replaceAll("\n    - #note_", "\n      - #note_");
+    .replaceAll(",", "\n- #")
+    .replaceAll("\n- #note_", "\n    - #note_");
 
-  console.log(`
-    Estatísticas
-    ============
-
-    Número de anotações: ${notes.length}
-    Palavras escritas:   ${wordCountAll}
-    Caracteres utilizados: ${charCountAll}
-    Lista de páginas:
-    ${pagesList}
-  `);
+  // Statistics
+  createPrivatePage("stats", "Estatísticas");
+  createElementWithText(
+    "pre",
+    "stats",
+    undefined,
+    `Número de anotações: ${notes.length}
+Palavras escritas: ${wordCountAll}
+Caracteres utilizados: ${charCountAll}
+Lista de páginas:
+${pagesList}
+- #stats
+    `,
+  );
 }
 
 //// Links
