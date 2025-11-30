@@ -1,37 +1,38 @@
 "use strict";
 import notes from "./notes.js";
 import socials from "./socials.js";
+import rick from "./rick.js";
 
 // Definitions
-const links = [];
-const pages = [];
+export const links = [];
+export const pages = [];
 
-function createElement(element, appendTo, name) {
+export function createElement(element, appendTo, name) {
   const temp = document.createElement(`${element}`);
   document.getElementById(appendTo).appendChild(temp);
   temp.setAttribute("id", `${name}`);
 }
 
-function putText(id, text) {
+export function putText(id, text) {
   document.getElementById(id).innerText = text;
 }
 
-function putStyle(id, style) {
+export function putStyle(id, style) {
   document.getElementById(id).setAttribute("style", `${style}`);
 }
 
-function putAttribute(id, ...attribute) {
+export function putAttribute(id, ...attribute) {
   document.getElementById(id).setAttribute(...attribute);
 }
 
-function createElementWithText(element, appendTo, name, text) {
+export function createElementWithText(element, appendTo, name, text) {
   const temp = document.createElement(`${element}`);
   document.getElementById(appendTo).appendChild(temp);
   temp.setAttribute("id", `${name}`);
   temp.innerText = text;
 }
 
-function slugify(text) {
+export function slugify(text) {
   return text.toLowerCase()
     .replaceAll(" ", "_")
     .replaceAll("é", "e")
@@ -43,7 +44,7 @@ function slugify(text) {
     .replaceAll("ó", "o");
 }
 
-function createPage(name, altName) {
+export function createPage(name, altName) {
   if (altName === undefined) {
     altName = name;
   }
@@ -57,7 +58,7 @@ function createPage(name, altName) {
   pages.push(name);
 }
 
-function createPrivatePage(name, altName) {
+export function createPrivatePage(name, altName) {
   if (altName === undefined) {
     altName = name;
   }
@@ -70,7 +71,7 @@ function createPrivatePage(name, altName) {
   pages.push(name);
 }
 
-function createParagraph(id, text) {
+export function createParagraph(id, text) {
   createElementWithText("p", `${id}`, `${id}_paragraph`, `${text}`);
 }
 
@@ -97,7 +98,7 @@ function createParagraph(id, text) {
       case 20: createElement("br", "home"); createParagraph("home", "Você só pode tá de sacanagem"); break
       case 50: createElement("br", "home"); createParagraph("home", "..."); break
       case 54: createElement("br", "home"); createParagraph("home", "foda-se"); break
-      case 55: window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; break
+      case 55: rick(); window.location.href = "#rick"; break
     }
   })
 }
