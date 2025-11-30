@@ -35,6 +35,7 @@ function slugify(text) {
   return text.toLowerCase()
     .replaceAll(" ", "_")
     .replaceAll("é", "e")
+    .replaceAll("ê", "e")
     .replaceAll("á", "a")
     .replaceAll("ã", "a")
     .replaceAll("ç", "c")
@@ -86,6 +87,19 @@ function createParagraph(id, text) {
 
     "The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite`,
   );
+
+  let clicks = 0
+  document.getElementById('home').getElementsByTagName('h1')[0].addEventListener('click', () => {
+    clicks++
+    switch (clicks) {
+      case 5: createElement("br", "home"); createParagraph("home", "Você já me clicou 5 vezes..."); break
+      case 10: createElement("br", "home"); createParagraph("home", "10 vezes? Sério?"); break
+      case 20: createElement("br", "home"); createParagraph("home", "Você só pode tá de sacanagem"); break
+      case 50: createElement("br", "home"); createParagraph("home", "..."); break
+      case 54: createElement("br", "home"); createParagraph("home", "foda-se"); break
+      case 55: window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; break
+    }
+  })
 }
 
 //// Blog
