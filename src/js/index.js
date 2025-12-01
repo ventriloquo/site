@@ -89,18 +89,40 @@ export function createParagraph(id, text) {
     "The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite`,
   );
 
-  let clicks = 0
-  document.getElementById('home').getElementsByTagName('h1')[0].addEventListener('click', () => {
-    clicks++
+  let clicks = 0;
+  const home_title =
+    document.getElementById("home").getElementsByTagName("h1")[0];
+  home_title.addEventListener("click", () => {
+    clicks++;
     switch (clicks) {
-      case 5: createElement("br", "home"); createParagraph("home", "Você já me clicou 5 vezes..."); break
-      case 10: createElement("br", "home"); createParagraph("home", "10 vezes? Sério?"); break
-      case 20: createElement("br", "home"); createParagraph("home", "Você só pode tá de sacanagem"); break
-      case 50: createElement("br", "home"); createParagraph("home", "..."); break
-      case 54: createElement("br", "home"); createParagraph("home", "foda-se"); break
-      case 55: rick(); window.location.href = "#rick"; break
+      case 5:
+        home_title.innerText = "Você já me clicou 5 vezes...";
+        break;
+      case 10:
+        home_title.innerText = "10 vezes? Sério?";
+        break;
+      case 20:
+        home_title.innerText = "Você só pode tá de sacanagem";
+        break;
+      case 30:
+        home_title.innerText = "Cara, você não tem mais nada para fazer não?";
+        break;
+      case 40:
+        home_title.innerText = "Dá pra parar?";
+        break;
+      case 50:
+        home_title.innerText = "...";
+        break;
+      case 54:
+        home_title.innerText = "Foda-se";
+        break;
+      case 55:
+        rick();
+        window.location.href = "#rick";
+        home_title.innerText = "Caderno do Tukain\n(para de me clicar)";
+        break;
     }
-  })
+  });
 }
 
 //// Blog
@@ -170,7 +192,7 @@ ${pagesList}
 - #stats
     `,
   );
-  putStyle("stats_data", "font-family: monospace")
+  putStyle("stats_data", "font-family: monospace");
 }
 
 //// Links
