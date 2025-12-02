@@ -7,12 +7,6 @@ import rick from "./rick.js";
 export const links = [];
 export const pages = [];
 
-export function createElement(element, appendTo, name) {
-  const temp = document.createElement(`${element}`);
-  document.getElementById(appendTo).appendChild(temp);
-  temp.setAttribute("id", `${name}`);
-}
-
 export function putText(id, text) {
   document.getElementById(id).innerText = text;
 }
@@ -25,6 +19,21 @@ export function putAttribute(id, ...attribute) {
   document.getElementById(id).setAttribute(...attribute);
 }
 
+/** creates an element with a target ID to appendTo, a name for it's own ID
+ *
+ * @example createElementWithText("div", "mainBody", "example")
+ */
+export function createElement(element, appendTo, name) {
+  const temp = document.createElement(`${element}`);
+  document.getElementById(appendTo).appendChild(temp);
+  temp.setAttribute("id", `${name}`);
+}
+
+/** creates an element with a target ID to appendTo, a name for it's own ID and
+ * the text.
+ *
+ * @example createElementWithText("p", "mainBody", "example", "This is an example")
+ */
 export function createElementWithText(element, appendTo, name, text) {
   const temp = document.createElement(`${element}`);
   document.getElementById(appendTo).appendChild(temp);
@@ -38,12 +47,25 @@ export function slugify(text) {
     .replaceAll("é", "e")
     .replaceAll("ê", "e")
     .replaceAll("á", "a")
+    .replaceAll("à", "a")
     .replaceAll("ã", "a")
     .replaceAll("ç", "c")
     .replaceAll("ô", "a")
+    .replaceAll("õ", "o")
     .replaceAll("ó", "o");
 }
 
+/** Creates a page with a given "name" for an ID and a "altName" for the title
+ * of the page.
+ *
+ * If no "altName" is given, then the "name" becomes both the ID and Title of
+ * the page.
+ *
+ * After the page is created, the ID for the page will be pushed to the
+ * "pages" array
+ *
+ * @example createPage("example", "Example page")
+ */
 export function createPage(name, altName) {
   if (altName === undefined) {
     altName = name;
@@ -58,6 +80,16 @@ export function createPage(name, altName) {
   pages.push(name);
 }
 
+/** Creates a page with a given "name" for an ID and a "altName" for the title
+ * of the page.
+ *
+ * If no "altName" is given, then the "name" becomes both the ID and Title of
+ * the page.
+ *
+ * It does not push the created page's ID to the "pages" array
+ *
+ * @example createPrivatePage("example-private", "Example private page")
+ */
 export function createPrivatePage(name, altName) {
   if (altName === undefined) {
     altName = name;
