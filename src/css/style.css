@@ -49,7 +49,7 @@ a {
   text-decoration: none;
 }
 
-#navbar {
+nav {
   display: flex;
   position: absolute;
   justify-content: space-between;
@@ -62,7 +62,7 @@ a {
   font-size: larger;
 }
 
-#navbar a {
+nav a {
   padding: 10px;
   margin: 5px;
   color: var(--bg);
@@ -70,7 +70,7 @@ a {
   border-radius: 5px;
 }
 
-#navbar a:hover {
+nav a:hover {
   text-decoration: underline;
   text-underline-offset: .2em;
 }
@@ -87,12 +87,12 @@ li a {
   transition: all 300ms;
 }
 
-li a:hover, #navbar a:hover {
+li a:hover, nav a:hover {
   background-color: var(--fg-2);
   color: var(--fg);
 }
 
-#navbar a:active {
+nav a:active {
   border-radius: 0px;
 }
 
@@ -152,7 +152,7 @@ p {
     font-size: medium;
   }
 
-  #navbar {
+  nav {
     font-size: large;
     flex-direction: row;
   }

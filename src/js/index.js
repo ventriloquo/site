@@ -109,6 +109,34 @@ export function createParagraph(id, text) {
 
 // Site
 
+//// Navbar
+function createNavbar(id) {
+  createElement("nav", "mainBody", `${id}`);
+
+  {
+    createElement("a", `${id}`, "home_link");
+    putAttribute("home_link", "href", "#");
+    putText("home_link", "Home");
+  }
+
+  {
+    createElement("div", `${id}`, "other_links");
+    for (const link of links) {
+      createElement("a", "other_links", `${link.name}`);
+      putAttribute(`${link.name}`, "href", `${link.url}`);
+      putText(`${link.name}`, `${link.name}`);
+    }
+  }
+
+  putStyle(`${id}`, "z-index: 1000")
+}
+
+
+function removeNavbar(id) {
+  document.getElementById(`${id}`).remove()
+}
+
+
 //// Home
 {
   createPrivatePage("home", "Caderno do Tukain");
@@ -151,7 +179,10 @@ export function createParagraph(id, text) {
       case 55:
         rick();
         window.location.href = "#rick";
+        removeNavbar("navbar")
         home_title.innerText = "Caderno do Tukain\n(para de me clicar)";
+        createNavbar("navbar_after_rick")
+        clicks = 0
         break;
     }
   });
@@ -250,22 +281,4 @@ ${pagesList}
   }
 }
 
-//// Navbar
-{
-  createElement("nav", "mainBody", "navbar");
-
-  {
-    createElement("a", "navbar", "home_link");
-    putAttribute("home_link", "href", "#");
-    putText("home_link", "Home");
-  }
-
-  {
-    createElement("div", "navbar", "other_links");
-    for (const link of links) {
-      createElement("a", "other_links", `${link.name}`);
-      putAttribute(`${link.name}`, "href", `${link.url}`);
-      putText(`${link.name}`, `${link.name}`);
-    }
-  }
-}
+createNavbar("navbar")
