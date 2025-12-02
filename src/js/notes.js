@@ -1,5 +1,15 @@
 export const posts = [
   {
+    title: "Tá sendo divertido desenvolver isso aqui",
+    date: "01.12.25",
+    content:
+    `Aos poucos eu estou adicionando coisas... engraçadinhas?
+
+    Bom, acho que "Easter Eggs" são um termo melhor.
+
+    Por enquanto eu só adicionei 1, mas já é um começo. Afinal, quero deixar esse site bem interativo.`
+  },
+  {
     title: "F One Punch Man 🪦",
     date: "28.11.25",
     content:
