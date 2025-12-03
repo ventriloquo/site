@@ -205,8 +205,11 @@ function removeNavbar(id) {
     i++;
     // Entries;
     createElement("li", "notes_list", `notes_entry${n}`);
+    createElement("span", `notes_entry${n}`, `date_${n}`);
     createElement("a", `notes_entry${n}`, `${n}`);
-    putText(`${n}`, `${note.date} - ${note.title}`);
+    putText(`date_${n}`, `${note.date}`);
+    putStyle(`date_${n}`, `display: inline-block; width: 5em`);
+    putText(`${n}`, `${note.title}`);
     putAttribute(`${n}`, "href", `#note_${n}`);
     putStyle(
       `${n}`,

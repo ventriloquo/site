@@ -165,12 +165,10 @@ p {
     font-size: larger;
   }
 
-  ul {
-    list-style: disc;
-  }
-
   li {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    border-bottom: solid .1em var(--fg);
   }
 
   li a {
@@ -180,8 +178,6 @@ p {
     color: var(--fg);
     font-size: larger;
     line-height: 1.0;
-    text-decoration: underline;
-    text-underline-offset: .3em;
   }
 
   li a:hover {
@@ -189,4 +185,7 @@ p {
     background-color: var(--bg);
   }
 
+  li a::before{
+    content: "\21AA\ "
+  }
 }
