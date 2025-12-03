@@ -21,7 +21,7 @@ export function putAttribute(id, ...attribute) {
 
 /** creates an element with a target ID to appendTo, a name for it's own ID
  *
- * @example createElementWithText("div", "mainBody", "example")
+ * @example createElement("div", "mainBody", "example")
  */
 export function createElement(element, appendTo, name) {
   const temp = document.createElement(`${element}`);
@@ -39,6 +39,18 @@ export function createElementWithText(element, appendTo, name, text) {
   document.getElementById(appendTo).appendChild(temp);
   temp.setAttribute("id", `${name}`);
   temp.innerText = text;
+}
+
+export function createImage(appendTo, name, src) {
+  createElement("img", `${appendTo}`, `${name}`)
+  putAttribute(`${name}`, "loading", "lazy")
+  putAttribute(`${name}`, "src", `${src}`)
+  putStyle(`${name}`,
+  `display: block;
+  max-width: 80%;
+  max-height: 400px;
+  margin: auto;
+  `)
 }
 
 export function slugify(text) {
