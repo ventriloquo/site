@@ -28,3 +28,6 @@ time {
   color: var(--green) !important;
 }
 
+nav {
+  background-color: var(--bg-1) !important;
+}

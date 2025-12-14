@@ -1,7 +1,7 @@
 ---
 title: Início
 ---
-# Tukain\'s Website
+# Tukain\'s Blog
 
 Aqui é um lugar onde eu gosto de compartilhar um pouco do
 meu cotidiano. Também é um lugar onde eu ponho em prática algumas
