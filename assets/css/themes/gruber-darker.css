@@ -1,0 +1,26 @@
+:root {
+  --fg-0:         #e4e4ef;
+  --fg-1:         #f4f4ff;
+  --bg-0:         #282828;
+  --bg-1:         #181818;
+  --bg-2:         #453d41;
+
+  --red:          #f43841;
+  --green:        #73c936;
+  --yellow:       #ffdd33;
+  --brown:        #cc8c3c;
+  --quartz:       #95a99f;
+  --niagara:      #96a6c8;
+  --niagara-1:    #565f73;
+  --wisteria:     #9e95c7;
+
+  --accent-1:     var(--yellow);
+  --accent-2:     var(--brown);
+  --link:         var(--niagara);
+  --link-hover:   var(--niagara-1);
+  --heading:      var(--quartz);
+  --orange:       var(--brown);
+
+  --border: solid 1px var(--bg-1);
+}
+

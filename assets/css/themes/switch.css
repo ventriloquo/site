@@ -1,0 +1,26 @@
+:root {
+  --bg-1:         #323232;
+  --bg-0:         #2d2d2d;
+  --bg-2:         #505050;
+  --fg-0:         #ffffff;
+  --fg-1:         #ababab;
+  --accent-1:     #19bbfd;
+  --accent-2:     var(--cyan);
+
+  --red:          rgb(248, 17, 24);
+  --green:        rgb(45, 197, 94);
+  --blue:         rgb(42, 132, 210);
+  --purple:       rgb(78, 90, 183);
+  --yellow:       rgb(236, 186, 15);
+  --orange:       rgb(243, 189, 9);
+
+  --cyan:         #27e9bc;
+  --grey:         var(--bg-1);
+
+  --link:         var(--accent-1);
+  --link-hover:   var(--accent-2);
+  --heading:      var(--cyan);
+
+  --border: solid 2px var(--bg-2);
+}
+
