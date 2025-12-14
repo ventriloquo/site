@@ -25,7 +25,7 @@ biblioteca.
 Fazer essa implementação foi um aprendizado também, já que eu não uso
 bibliotecas externas (no máximo busco informações no famoso Stack Overflow).
 Agora se tem uma coisa que eu preciso fazer é dar uma revisada no código e
-tentar deixar ele mais... legível. Não que ele esteja repleto de variáveis de 1
+tentar deixar ele mais\... legível. Não que ele esteja repleto de variáveis de 1
 letra, mas é sempre bom deixar o código fácil de ler para você mesmo não se
 perder no futuro.
 

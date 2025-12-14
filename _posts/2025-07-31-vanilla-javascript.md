@@ -17,7 +17,7 @@ Eu já vi coisas que eu nem sei ainda para que servem, como por exemplo
 mas pelo o que eu entendi pelas falas dele, isso é algo relacionado à
 <i>Pointers</i>.
 
-Mas as lives de JavaScript dele... aí sim eu consigo entender um pouco
+Mas as lives de JavaScript dele\... aí sim eu consigo entender um pouco
 mais!
 
 Graças ao fato do JavaScript ser uma linguagem tão flexível e
@@ -31,7 +31,7 @@ SSG's), ele é <b>muito</b> robusto. O que é de se esperar quando o
 assunto é praticar: quanto mais você pratica, melhor você fica.
 
 Não é mais o caso, mas esse site inteiro só tinha 1 página, todas as
-outras "páginas" eram seções da mesma página e eram alternadas usando
+outras \"páginas\" eram seções da mesma página e eram alternadas usando
 alguns truques com CSS e JavaScript para gerar o conteúdo. Hoje em dia
 ele tem páginas separadas pra valer, mas fiz isso para poder ter uma
 organização melhor dos arquivos.

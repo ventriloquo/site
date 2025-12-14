@@ -8,7 +8,7 @@ Basicamente, qualquer ID dado a um elemento no HTML pode ser acessado como uma v
 
 Bacana né?
 
-Você pode, por exemplo, criar um elemento <p>, dar o ID "paragrafo" e usar o JavaScript para adicionar texto a ele!
+Você pode, por exemplo, criar um elemento <p>, dar o ID \"paragrafo\" e usar o JavaScript para adicionar texto a ele!
 
 +/- assim:
 
@@ -16,5 +16,5 @@ Você pode, por exemplo, criar um elemento <p>, dar o ID "paragrafo" e usar o Ja
 <p id="paragrafo"></p>
 <script>
     id.innerText = "Adicionando texto!"
-</script>`
+</script>
 ```

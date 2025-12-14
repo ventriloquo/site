@@ -41,7 +41,7 @@ usando o [XFCE](https://xfce.org) nesse meio tempo. Ele é simplesmente o meu
 Desktop Environment favorito, sem mais nem menos. E está também no processo de
 transição para ser compatível com o Wayland. Sendo assim, as únicas opções que
 me restariam seriam Window Managers que só rodam no X.org (ex: DWM, Awesome,
-Berry) ou usar um Desktop Environment "velho" (ex: LXDE).
+Berry) ou usar um Desktop Environment \"velho\" (ex: LXDE).
 
 Sinceramente, eu não tenho a paciência para reconfigurar todo o meu ambiente de
 trabalho como eu tinha antigamente.

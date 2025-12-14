@@ -2,7 +2,7 @@
 title: Um setup offline
 ---
 
-A internet no Brasil é uma coisa... "interessante". Interessante na forma do
+A internet no Brasil é uma coisa\... \"interessante\". Interessante na forma do
 quão cara ela é e também no quão não-confiável e lento o serviço é. E tanto no
 bom quanto no mau caso, um setup com uma instalação offline do Linux é a melhor
 opção que você pode ter. Principalmente se esse setup tiver todos os programas
@@ -10,7 +10,7 @@ que você pode acabar precisando já pré-instalados ou disponíveis para instal
 mesmo sem conexão com a internet.
 
 Algo que lembre as antigas distribuições Linux -- aquelas que vinham em um
-<i>bundle</i> de CDs de instalação e de programas "extras", como o antigo
+<i>bundle</i> de CDs de instalação e de programas \"extras\", como o antigo
 Debian ou RedHat Linux.
 
 Sim. Eu sou um nerd.
@@ -20,14 +20,14 @@ Enfim.
 Eu já tenho comigo um setup que cumpre esses requisitos, e para dar aquela
 temperada, ele também usa o tema
 <a href="https://github.com/grassmunk/Chicago95/">Chicago95</a> para combinar
-com essa "estética retrô".
+com essa \"estética retrô\".
 
 <q>Só para ser claro, você não precisa ser um nerd como eu para ter um setup
 assim, na verdade eu recomendo esse tipo de setup para qualquer um. Depender
 demais no acesso livre à internet é algo que só tende a dar merda no futuro,
 então é bom ter um plano B.</q>
 
-O meu setup em si é bem "simples" (pelo menos comparado ao tipo de coisa que
+O meu setup em si é bem \"simples\" (pelo menos comparado ao tipo de coisa que
 você vê no unixporn) Ele usa o <i>desktop environment</i> (eita nome xique) XFCE,
 tem alguns utilitários, programas básicos (bloco de notas, calculadora, esse
 tipo de coisa) e também algumas ferramentas de desenvolvedor como o

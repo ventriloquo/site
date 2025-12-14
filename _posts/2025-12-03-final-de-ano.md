@@ -14,4 +14,4 @@ Fiz também bastante coisa nesse ano, criei muitas boas memórias.
 - Criei uma conta no Twitter e me arrependi logo em seguida (eu vou deletar aquele treco, ô algoritimo que só recomenda desgraça)
 - Tive as minhas primeiras férias como um CLT (o condenado trabalha 1 ano inteiro para tirar 30 dias de descanço, é foda kkkkk)
 
-Enfim, é muita coisa para tentar resumir.`
+Enfim, é muita coisa para tentar resumir.

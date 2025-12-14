@@ -21,4 +21,4 @@ Sinceramente, eu espero que esse treco seja cancelado. Dói só de ver os
 episódios lançando.
 
 Descarta essas 2 últimas temporadas, põe esse treco no congelador e só tira se
-for para tacar na mão de um estúdio como a Bones ou Mad House.`
+for para tacar na mão de um estúdio como a Bones ou Mad House.

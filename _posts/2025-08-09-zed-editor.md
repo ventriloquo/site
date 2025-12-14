@@ -9,7 +9,7 @@ certo programa que eu já ouvi falar antes, mas deixei de dar atenção
 a um tempo: O Zed Editor.
 
 <q>Sim. Esse post vai girar em torno de um editor de texto que
-ninguém fora da "bolha de programação" vai sequer saber do que se
+ninguém fora da \"bolha de programação\" vai sequer saber do que se
 trata.</q>
 
 Ele tem o foco em ser tão fácil de usar quanto o VSCode, mas com uma
@@ -28,7 +28,7 @@ meu site usando ele, porque ele automagicamente instala várias coisas
 Com isso, eu posso dar uma limpa no site com facilidade (muito trampo
 fazer o Neovim se comportar da mesma maneira, cê é louco).
 
-Ele também tem um "VIM Mode", o que facilita bastante na hora de usar,
+Ele também tem um \"VIM Mode\", o que facilita bastante na hora de usar,
 já que eu não preciso reaprender nada para escrever algo (já fiz isso
 com o Emacs, não quero fazer isso com mais nenhum editor de código) e
 juntando isso com a interface gráfica e as facilidades dele, temos um

@@ -2,7 +2,7 @@
 title: A vergonha que sinto ao usar JavaScript
 ---
 
-Isso é uma coisa... intrigante, para dizer o mínimo. Eu percebi isso a pouco
+Isso é uma coisa\... intrigante, para dizer o mínimo. Eu percebi isso a pouco
 tempo na realidade. Desde o início da minha adolescência, eu tenho um interesse
 muito grande no mundo da programação num âmbito geral da coisa.
 
@@ -12,12 +12,12 @@ com linguagens de programação para valer, e sim com linguagens de markup (como
 o <code>html</code>) ou shell-scripts (como os arquivos <code>bash</code>),
 uma hora eu experimentei uma linguagem de programação de verdade.
 
-E a minha primeira experiência foi... com o JavaScript. Eu nunca cheguei a
+E a minha primeira experiência foi\... com o JavaScript. Eu nunca cheguei a
 desenvolver um programa de verdade usando o JavaScript (em nenhuma linguagem na
 realidade), porém, é mais que evidente que ele teve uma influência muito grande
-na forma em que eu penso na hora de "programar".
+na forma em que eu penso na hora de \"programar\".
 
-Na realidade, todo o processo de "Web Dev" me marcou. Essa... <i>facilidade</i>,
+Na realidade, todo o processo de \"Web Dev\" me marcou. Essa\... <i>facilidade</i>,
 é muito atraente e conveniênte.
 
 Porém, após eu me interessar cada vez mais com o mundo open-source e Linux, eu

@@ -13,7 +13,7 @@ A parte interessante é que esse site costumava sim ter bastante JavaScript para
 fazer justamente essa interatividade, mas o meu autismo não me permite usar ele
 por muito tempo.
 
-Mas como que eu estou fazendo essa "interatividade"? Simples, eu estou usando
+Mas como que eu estou fazendo essa \"interatividade\"? Simples, eu estou usando
 um SSG (do inglês, gerador de site estático). O Jekyll para ser mais preciso.
 Faz um certo tempo que eu não uso ele (não tanto assim, no máximo 3 meses),
 mas, graças ao JavaScript irônicamente, aprendi a fazer outras coisas que
@@ -103,7 +103,7 @@ só o motor da parada, o resto fica por conta do CSS (que inclusive, está
 gigantesco, 549 linhas 😱).
 
 Eu não sou um guru do CSS, porém eu sei de uma coisinha ou outra, o suficiente
-para que esses "truques com 0 JavaScript" sejam possíveis pelo menos.
+para que esses \"truques com 0 JavaScript\" sejam possíveis pelo menos.
 
 É impressionante a quantidade de coisa que você pode fazer usando somente CSS,
 [até mesmo um jogo você consegue fazer](https://benjaminaster.github.io/CSS-Minecraft/)!
@@ -125,7 +125,7 @@ Apesar disso, acredito que este modo de operar é superior, por conta dos
 benefícios no desempenho e também na questão de mantenabilidade (sim, essa
 palavra existe).
 
-Claro que a sintáxe da Liquid é um pouco... estranha. Mas não é como se
+Claro que a sintáxe da Liquid é um pouco\... estranha. Mas não é como se
 JavaScript fosse a coisa mais bela de se ver também.
 
 {% raw %}
