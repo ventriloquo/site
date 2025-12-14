@@ -6,7 +6,7 @@ modified: 2025-09-12
 Se você dar uma navegada no meu site, vai perceber que não existe 1 linha
 sequer de JavaScript presente nele. E mesmo assim, ele tem um menu para mobile,
 cards interativos na [página da minha biblioteca de jogos](/games), entre
-outras coisas que quando vistas, assumi-se que foi utilizado JavaScript em
+outras coisas que quando vistas, assumiria-se que foi utilizado JavaScript em
 algum momento.
 
 A parte interessante é que esse site costumava sim ter bastante JavaScript para
