@@ -21,7 +21,7 @@
   --link-hover:   var(--accent-2);
   --heading:      var(--cyan);
 
-  --border: solid 2px var(--bg-0);
+  --border: solid .2em var(--bg-0);
 }
 
 time {
