@@ -1,7 +1,7 @@
 title: Tukain's Blog
 lang: pt-br
 author: Tukain
-description: A versão mais pessoal do meu site
+description: O blog de um nerd de computador
 url: https://tukain.xyz/
 timezone: America/Recife
 encoding: utf-8
@@ -9,7 +9,7 @@ encoding: utf-8
 collections:
   posts:
     output: true
-    permalink: /blog/posts/:year/:month/:day/:title
+    permalink: /blog/posts/:year/:month/:day/:slug
 
 defaults:
   - scope:
