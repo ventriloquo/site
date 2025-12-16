@@ -56,6 +56,9 @@ layout: base
     <img src="/assets/img/authors/{{ author.name | slugify }}.png">
     <hgroup>
         <h2>{{author.name}}</h2>
+        {% if author.codeberg_user %}
+            <p><a href="https://codeberg.org/{{author.codeberg_user}}">Codeberg</a></p>
+        {% endif %}
         {% if author.github_user %}
             <p><a href="https://github.com/{{author.github_user}}">Github</a></p>
         {% endif %}
