@@ -12,6 +12,9 @@
           <div>
             <h3>{{ author.name }}</h3>
             <div class="social"><p>
+            {% if author.codeberg_user %}
+              <br><a href="https://codeberg.org/{{author.codeberg_user}}">Codeberg</a>
+            {% endif %}
             {% if author.github_user %}
               <br><a href="https://github.com/{{author.github_user}}">Github</a>
             {% endif %}
