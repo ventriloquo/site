@@ -67,7 +67,7 @@ Eu posso até mesmo gerar uma lista com os 2 primeiros jogos da minha
 biblioteca, olha aqui:
 
 <div class="game_collection">
-{% for midia_digital in site.data.games.midia_digital | limit: 2 %}
+{% for midia_digital in site.data.games.midia_digital limit: 2 %}
     <div class="game" id="{{ midia_digital.title | slugify }}">
     <a href="#{{ midia_digital.title | slugify }}">
         <img

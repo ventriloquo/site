@@ -14,7 +14,7 @@ Resumindo, esse aqui é o site de um Nerdola.
 
 <table>
 <tbody>
-{% for post in site.posts | limit: 5 %}
+{% for post in site.posts limit: 5 %}
 {% assign duration = 1 | plus: duration %}
   <tr class="blog_item" style="animation: fade-in both {{duration}}00ms;">
     <td>{{post.date | date: "%d.%m.%Y"}}</td>
