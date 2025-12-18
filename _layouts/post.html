@@ -42,8 +42,10 @@
         </div>
         {% endif %}
       {% endfor %}
+      {% capture time %}{{ content | reading_time }}{% endcapture %}
+      <small>Tempo de leitura: {{ time }} {% if time == '1' %}minuto{% else %}minutos{% endif %}</small>
       <h1>{{page.title}}</h1>
-      {{ content }}
+      {{ content | toc }}
       <hr>
       <div>
         <a class="button" href="/blog">Voltar</a>

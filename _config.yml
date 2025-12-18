@@ -9,11 +9,16 @@ encoding: utf-8
 plugins:
   - jekyll-last-modified-at
   - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-toc
+  - jekyll-target-blank
+  - liquid_reading_time
+
+jekyll-admin:
+  homepage: "posts"
 
 last-modified-at:
   date-format: '%d-%b-%y'
-
-paginate: false
 
 collections:
   posts:
@@ -30,6 +35,7 @@ defaults:
     values:
       layout: post
       author: Tukain
+      toc: true
   - scope:
       path: "blog.md"
     values:
