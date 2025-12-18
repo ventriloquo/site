@@ -6,6 +6,15 @@ url: https://tukain.xyz/
 timezone: America/Recife
 encoding: utf-8
 
+plugins:
+  - jekyll-last-modified-at
+  - jekyll-sitemap
+
+last-modified-at:
+  date-format: '%d-%b-%y'
+
+paginate: false
+
 collections:
   posts:
     output: true
