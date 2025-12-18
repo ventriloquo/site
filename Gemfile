@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem 'liquid_reading_time'
   gem 'jekyll-target-blank'
+  gem 'jekyll-feed'
   #gem 'jekyll-admin'
 end
 

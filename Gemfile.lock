@@ -43,6 +43,8 @@ GEM
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
       webrick (>= 1.0)
+    jekyll-feed (0.17.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-last-modified-at (1.3.2)
       jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -146,6 +148,7 @@ DEPENDENCIES
   colorator
   forwardable-extended
   jekyll
+  jekyll-feed
   jekyll-last-modified-at
   jekyll-seo-tag
   jekyll-sitemap

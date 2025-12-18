@@ -12,6 +12,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
   - jekyll-target-blank
+  - jekyll-feed
   - liquid_reading_time
 
 jekyll-admin:
