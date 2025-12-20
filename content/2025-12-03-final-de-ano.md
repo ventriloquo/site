@@ -1,0 +1,15 @@
+# Final de ano já tá chegando
+Nesse ano muita coisa aconteceu na minha vida (na de todo mundo na real né?), algumas boas, outras nem tanto. Mas num geral, acho que foi um ano relativamente bom. Principalmente se eu comparar com o tempo perdido que foi final de 2019, 2020, 2021 e o início de 2022.
+
+Fiz também bastante coisa nesse ano, criei muitas boas memórias.
+
+- Tive um reencontro com um amigo que conheci no SENAI (a gente não se via fazia mó tempo)
+- Comprei um Nintendo Switch Lite no início do ano, depois em Outubro eu comprei um Switch padrão e vendi o Lite
+- Fiz, refiz e fiz esse site de novo e de novo
+- Quase comprei uma bicicleta elétrica (ainda bem que não comprei, principalmente por conta dessa PL de pagar IPVA até em cadeira de roda)
+- Usei/Testei vários streamings diferentes (até agora, os únicos que duraram o ano todo foram o Spotify e a Crunchyroll)
+- Completei 2 anos de namoro com a minha namorada (te amo querida)
+- Criei uma conta no Twitter e me arrependi logo em seguida (eu vou deletar aquele treco, ô algoritimo que só recomenda desgraça)
+- Tive as minhas primeiras férias como um CLT (o condenado trabalha 1 ano inteiro para tirar 30 dias de descanço, é foda kkkkk)
+
+Enfim, é muita coisa para tentar resumir.
