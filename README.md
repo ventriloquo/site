@@ -45,6 +45,9 @@ The variables are:
 - `SITE_DESCRIPTION`
 - `SITE_FAVICON_NAME`
 - `SITE_FAVICON_TYPE`
+- `BLOG_DIR`
+- `CREATE_HOMEPAGE`
+- `LATEST_POSTS_TEXT`
 
 These are all a bunch of strings (as basically anything on shell-scripts), so modify then as
 you like it.
