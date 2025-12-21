@@ -230,9 +230,9 @@ do
   POST_MONTH=$(echo $PAGE | awk -F'/' '{print $5}')
   POST_DAY=$(echo $PAGE| awk -F'/' '{print $6}')
   echo "<item>
-          <title>$(grep '<h1>' $PAGE/index.html \
+          <title>$(grep "<h1>" $PAGE/index.html \
                        | tr '<>/' '\n' \
-                       | head -n3 \
+                       | head -n6 \
                        | tail -n1 )</title>
           <link>$SITE_URL$POST_URL/</link>
           <guid>$SITE_URL$POST_URL/</guid>
