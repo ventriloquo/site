@@ -15,6 +15,7 @@ BLOG_DIR="blog"
 CREATE_HOMEPAGE="true"
 CREATE_NAVBAR="true"
 CREATE_FOOTER="true"
+CREATE_404="true"
 LATEST_POSTS_TEXT="Últimos posts:"
 SOCIAL_LINKS="https://neocities.org/site/tukainpng Neocities \
               https://codeberg.org/tukain          Codeberg \
@@ -139,8 +140,8 @@ build_site() {
     [ -f "./pages/navbar.html" ] && cat ./pages/navbar.html >> $OUT_FILE
     echo "<main>
             <time>$POST_DAY/$POST_MONTH/$POST_YEAR</time>
-            $(smu ./content/"$FILE" | sed 's/<a /<a target="_blank" /g')
-            </main>"        >> $OUT_FILE
+            $(smu ./content/$FILE | sed 's/<a /<a target="_blank" /g')
+          </main>" >> $OUT_FILE
     [ -f "./pages/footer.html" ] && cat ./pages/footer.html >> $OUT_FILE
   done
 
@@ -214,6 +215,28 @@ build_site() {
   cat ./pages/footer.html >> index.html
   mv index.html public
 
+  if [ "$CREATE_404" = "true" ]; then
+    cat ./pages/head.html > public/404.html
+    cat ./pages/head.html > public/not_found.html
+    [ -f "./pages/navbar.html" ] && cat ./pages/navbar.html >> public/404.html
+    [ -f "./pages/navbar.html" ] && cat ./pages/navbar.html >> public/not_found.html
+
+    echo "
+    <main>
+      <h1>404</h1>
+      <h4>Not Found</h4>
+    </main>" >> public/404.html
+
+    echo "
+    <main>
+      <h1>404</h1>
+      <h4>Not Found</h4>
+    </main>" >> public/not_found.html
+
+    [ -f "./pages/footer.html" ] && cat ./pages/footer.html >> public/404.html
+    [ -f "./pages/footer.html" ] && cat ./pages/footer.html >> public/not_found.html
+  fi
+
 }
 
 build_rss() {
@@ -234,20 +257,16 @@ do
   POST_MONTH=$(echo $PAGE | awk -F'/' '{print $5}')
   POST_DAY=$(echo $PAGE| awk -F'/' '{print $6}')
   echo "<item>
-          <title>$(grep "<h1>" $PAGE/index.html \
-                       | tr '<>/' '\n' \
-                       | head -n6 \
-                       | tail -n1 )</title>
+          <title>$(cat $PAGE/index.html \
+                  | grep "<h1>" $PAGE/index.html \
+                  | head -n1 \
+                  | xargs \
+                  | sed -e 's/<h1>//' -e 's/<\/h1>//')</title>
           <link>$SITE_URL/posts/$POST_URL/</link>
           <guid>$SITE_URL/posts/$POST_URL/</guid>
-          <pubDate>
-          $(date '+%a, %d %b %Y %T GMT' \
-            --date=$POST_YEAR-$POST_MONTH-$POST_DAY)
-          </pubDate>
-          <description>
-            <![CDATA[$(cat $PAGE/index.html | tail -n+54 | head -n-5)]]>
-            </description>
-          </item>" >> ./public/rss.xml
+          <pubDate>$(date '+%a, %d %b %Y %T GMT' --date=$POST_YEAR-$POST_MONTH-$POST_DAY)</pubDate>
+          <description><![CDATA[$(cat $PAGE/index.html | tail -n+54 | head -n-5)]]></description>
+        </item>" >> ./public/rss.xml
 done
 
 cat << EOF >> ./public/rss.xml
