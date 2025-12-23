@@ -4,19 +4,19 @@
 
 @media only screen and (prefers-color-scheme: dark) {
   :root {
-    --background: #1d2021;
-    --foreground: #ebdbb2;
-    --grey:       #282828;
-    --accent:     #98971a;
+    --background: #1F1F28;
+    --foreground: #DCD7BA;
+    --grey:       #2A2A37;
+    --accent:     #957FB8;
   }
 }
 
 @media only screen and (prefers-color-scheme: light) {
   :root {
-    --background: #fbf1c7;
-    --foreground: #3c3836;
-    --grey:       #ebdbb2;
-    --accent:     #98971a;
+    --background: #f2ebbc;
+    --foreground: #43436c;
+    --grey:       #e7dba0;
+    --accent:     #635da4;
   }
 }
 
