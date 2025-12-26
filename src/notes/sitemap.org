@@ -1,0 +1,18 @@
+#+TITLE: 
+
+- [2025-12-25 Thu]  [[file:2025-12-25.org][Emacs - O meu novo computador]]
+- [2025-12-20 Sat]  [[file:2025-12-20.org][Blog.sh - O meu próprio SSG]]
+- [2025-12-16 Tue]  [[file:2025-12-16.org][Gambiarras mostruosas com o Codeberg]]
+- [2025-12-15 Mon]  [[file:2025-12-15.org][Niri - O WM mais diferenciado que já usei]]
+- [2025-12-14 Sun]  [[file:2025-12-14.org][Boku no Hero acabou]]
+- [2025-12-12 Fri]  [[file:2025-12-12.org][Usando serviços da Google]]
+- [2025-12-10 Wed]  [[file:2025-12-10.org][Learn You A Haskell]]
+- [2025-12-09 Tue]  [[file:2025-12-09.org][Fiz minha própria "tela inicial" de navegador]]
+- [2025-12-06 Sat]  [[file:2025-12-06.org][The Game Awards 2025]]
+- [2025-12-03 Wed]  [[file:2025-12-03.org][Final de ano já tá chegando]]
+- [2025-11-28 Fri]  [[file:2025-11-28.org][F One Punch Man 🪦]]
+- [2025-11-27 Thu]  [[file:2025-11-27.org][Uma pequena curiosidade sobre o DOM]]
+- [2025-10-25 Sat]  [[file:2025-10-25.org][Tédio]]
+- [2025-09-13 Sat]  [[file:2025-09-13.org][A Nintendo fez uma das patentes mais idiotas do mundo.]]
+- [2025-06-30 Mon]  [[file:2025-06-30.org][Até que eu tô curtindo a Elisp]]
+- [1970-01-01 Thu]  [[file:1970-01-01.org][Epoch]]

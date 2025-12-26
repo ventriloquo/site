@@ -16,11 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: git clone --depth=1 git://git.codemadness.org/smu && cd smu && sudo make install && cd ..
-
-    - name: Build site
-      run: make
+    - name: Clone site
+      run: git clone --depth=1 https://codeberg.org/tukain/pages public
 
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v3

@@ -1,0 +1,6 @@
+#+TITLE: Links
+
+- [[https://codeberg.org/tukain][Codeberg]]
+- [[https://neocities.org/site/tukainpng][Neocities]]
+- [[https://github.com/ventriloquo][Github]]
+
