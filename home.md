@@ -28,3 +28,4 @@ Resumindo, esse aqui é o site de um Nerdola.
 </tbody>
 </table>
 <a class="button" href="/blog">Ler mais</a>
+<a class="button" href="/feed.xml">Feed</a>

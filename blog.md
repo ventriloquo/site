@@ -6,7 +6,7 @@ title: Blog
     text-align: center !important;
   }
 </style>
-<p class="feed"><a class="button" href="/feed.xml">Feed RSS</a></p>
+<p class="feed"><a class="button" href="/feed.xml">Feed</a></p>
 <table>
 <tbody>
 {% for post in site.posts %}
