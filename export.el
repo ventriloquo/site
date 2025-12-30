@@ -1,14 +1,42 @@
 (setq org-html-head-extra
       (concat "<style>"
 	      (with-temp-buffer (insert-file-contents "src/assets/styles.css") (buffer-string))
-	      "</style>
-	      <nav>
-	        <a href='/'>Home</a>
-	        <div>
-	          <a href='/links.html'>Links</a>
-	          <a href='/notes.html'>Anotações</a>
-	        </div>
-	      </nav>"))
+	      "</style>"))
+
+(setq org-html-preamble
+      (concat
+       "
+       <header>
+         <nav>
+           <div class='home_link'>
+           <a class='text' href='/'>Início</a>
+           </div>
+           <div id='nav_list' class='nav_items'>
+           "
+           (with-temp-buffer (insert-file-contents "src/assets/links") (buffer-string))
+           "
+           </div>
+           <button
+             popovertarget='nav_menu'
+             popovertargetaction='toggle'
+             class='nav_menu'>Menu</button>
+         </nav>
+         <div popover='' id='nav_menu'>
+           <a href='/'>Início</a>
+           "
+           (with-temp-buffer (insert-file-contents "src/assets/links") (buffer-string))
+           "
+         </div>
+       </header>
+       "))
+
+(setq org-html-postamble (concat
+			  "
+                          <footer>
+                          <p>Criado com: %c</p>
+                          <p>Por: <a href='https://codeberg.org/tukain/'>Tukain</a></p>
+                          </footer>
+                          "))
 
 ;; https://www.reddit.com/r/emacs/comments/116yit2/help_me_configure_orgpublish_autositemap_to/
 (defun my-sitemap-entry (entry style project)
@@ -21,8 +49,6 @@
 
 (setq org-export-with-section-numbers	nil
       org-export-with-toc		3
-      org-html-preamble			nil
-      org-html-postamble		nil
       org-export-default-language       "pt-br"
       org-export-with-todo-keywords	t
       org-confirm-babel-evaluate        nil
