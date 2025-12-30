@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-br"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="pt-br" /><updated>2025-12-30T18:48:38-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tukain’s Blog</title><subtitle>O blog de um nerd de computador</subtitle><author><name>Tukain</name></author><entry><title type="html">Emacs - O meu novo computador</title><link href="http://localhost:4000/blog/posts/2025/12/25/emacs" rel="alternate" type="text/html" title="Emacs - O meu novo computador" /><published>2025-12-25T00:00:00-03:00</published><updated>2025-12-30T18:08:29-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/25/emacs</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/25/emacs"><![CDATA[<p>O Emacs é famoso por ser um programa que faz de <em>tudo</em>. E isso não é
+exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais
+básica que é editar texto, a planilhas, gestão de projetos, leitura de
+feeds RSS, comunicação via IRC, XMPP ou E-mail…</p>
+
+<p>Enfim, <strong>muita</strong> coisa.</p>
+
+<p>Óbviamente eu não faço tudo isso que listei acima, mas faço sim algumas
+coisas com ele e gostaria de escrever sobre. Bom, vamos começar!</p>
+
+<h1 id="minha-atual-configuração">Minha atual configuração</h1>
+<p>Depois de um tempo em hiato, eu voltei a desenvolver a minha
+configuração do Emacs. Agora ela além de estar mais robusta, configurei
+até mesmo o cliente de e-mail <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html">“Rmail”</a> (o “cliente de e-mail padrão do Emacs”) e o <a href="https://www.gnu.org/software/emacs/erc.html">Erc</a> (o cliente IRC pré-instalado do Emacs).</p>
+
+<p>Além disso, usei um snippet do pessoal do <a href="https://systemcrafters.net">System Crafters</a> para
+conseguir usar com mais facilidade a funcionalidade de leitura de
+arquivos <code class="language-plaintext highlighter-rouge">gpg</code>, o nome da função é meio estranho, mas basicamente, eu só
+preciso chamar ela e dar como um argumento uma chave presente no
+arquivo <code class="language-plaintext highlighter-rouge">.authinfo</code> e ela me retornará a senha correspondente à essa
+chave.</p>
+
+<p>Como por exemplo:</p>
+
+<div class="language-elisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">efs/lookup-password</span> <span class="ss">:machine</span> <span class="nv">irc.libera.chat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><a href="https://systemcrafters.net/emacs-tips/using-encrypted-passwords/">A função em si é essa aqui</a>:</p>
+
+  <div class="language-elisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">efs/lookup-password</span> <span class="p">(</span><span class="k">&amp;rest</span> <span class="nv">keys</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">result</span> <span class="p">(</span><span class="nb">apply</span> <span class="nf">#'</span><span class="nv">auth-source-search</span> <span class="nv">keys</span><span class="p">)))</span>
+    <span class="p">(</span><span class="k">if</span> <span class="nv">result</span>
+        <span class="p">(</span><span class="nb">funcall</span> <span class="p">(</span><span class="nv">plist-get</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">result</span><span class="p">)</span> <span class="ss">:secret</span><span class="p">))</span>
+      <span class="no">nil</span><span class="p">)))</span>
+</code></pre></div>  </div>
+
+</blockquote>
+
+<p>Eu também dei uma repaginada no alinhamento das coisas, afinal, não
+basta funcionar, tem que ser bonito de se ver, e a Elisp é uma
+linguagem ótima para fazer esse tipo de coisa! Porque ela:</p>
+
+<ul>
+  <li>Não se importa com a quantidade de espaços que existe entre uma
+função e um parâmetro;</li>
+  <li>Tem uma sintáxe bem simples de se ler (às vezes).</li>
+</ul>
+
+<p>Sendo assim, eu consigo fazer esse tipo de coisa aqui:</p>
+
+<div class="language-elisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">icomplete-mode</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">ido-mode</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">ido-everywhere</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">which-key-mode</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">delete-selection-mode</span>	               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-visual-line-mode</span>               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-auto-revert-mode</span>               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-prettify-symbols-mode</span>          	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-hl-line-mode</span>	               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-completion-preview-mode</span>        	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-display-line-numbers-mode</span>       <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">fido-vertical-mode</span>			<span class="no">t</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>“Perfeitamente equilibrado, como tudo deve ser.”</p>
+</blockquote>
+
+<p><img src="https://i.redd.it/qpbqimfqx4p71.jpg" alt="" /></p>
+
+<h1 id="organização-financeira">Organização financeira</h1>
+<p>O <a href="https://orgmode.org"><code class="language-plaintext highlighter-rouge">org-mode</code></a> tem a funcionalidade de gerar planilhas, com
+fórmulas e tudo!</p>
+
+<p>Por exemplo, digamos que eu esteja gerendo uma planilha contendo os
+meus gastos mensais com planos de assinatura/contas recorrentes. Eu
+poderia fazer isso aqui:</p>
+
+<pre><code class="language-org">| Nome        | Dia de cobrança | Valor (R$) |
+|-------------+-----------------+------------|
+| Netflix     |              22 |      20.90 |
+| Crunchyroll |              11 |      14.99 |
+|-------------+-----------------+------------|
+| Total       |                 |   35.89 R$ |
+#+TBLFM: @&gt;$3=string("R$")vsum(@I$3..@II$3)
+</code></pre>
+
+<p>É, a sintáxe não é lá aquelas coisas… mas é funcional. Para coisas
+simples ela é relativamente intuitiva (+/- né). O maneiro mesmo é
+escrever essas tabelas, por quê? Porque o Emacs formata
+automagicamente elas! É só começar uma tabela com <code class="language-plaintext highlighter-rouge">| nome</code> e apertar
+<code class="language-plaintext highlighter-rouge">tab</code>!</p>
+
+<p>Além disso, também existe a tecla de atalho =Ctrl c }= que exibe alguns
+marcadores na tabela para poder facilitar o processo de escrever as
+fórmulas.</p>
+
+<p>Ficando +/- assim:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   1| Nome        | Dia de cobrança | Valor (R$) |
+I*1 |-------------+-----------------+------------|
+   2| Netflix     |              22 | 20.90      |
+   3| Crunchyroll |              11 | 14.99      |
+I*2 |-------------+-----------------+------------|
+   4| Total       |                 | 35.89 R$   |
+   5| Média       |                 | 17.945 R$  |
+#+TBLFM: @4$3=string("R$")vsum(@I$3..@II$3)::@5$3=string("R$")vmean(@I$3..@II$3)
+</code></pre></div></div>
+
+<p>Como eu estou tentando diminuir o meu uso no celular, isso pode ser
+o tipo de coisa que pode me ajudar. Dessa forma eu vou ter um jeito
+de gerenciar as minhas finanças sem depender de aplicativos no meu
+celular. Até porque eu posso criar <em>deadlines</em> no <code class="language-plaintext highlighter-rouge">org-mode</code> e
+visualizar meus afazeres usando a agenda integrada dele!</p>
+
+<blockquote>
+  <p>Devo que admitir que não sei ainda como se usa o <code class="language-plaintext highlighter-rouge">org-agenda</code>, mas pelo o que
+eu li no <a href="https://orgmode.org/features.html#agendas">site oficial</a> parece ser muito bacana!</p>
+</blockquote>
+
+<h1 id="workflow-de-programação">Workflow de programação</h1>
+<p>O Emacs é primariamente um editor de código (por mais incrível que pareça).
+Sendo assim, ele possui <em>várias</em> funções e configurações para deixar a
+usabilidade na hora de programar melhor.</p>
+
+<p>Uma das coisas mais maneiras do Emacs é a Elisp, a linguagem que ele é
+configurado, interpreta e é em boa parte <a href="/blog/posts/2025/06/30/elisp">escrito nela também</a>. A parte de “interpretar” é que é a mais interessante, porquê isso permite que você teste
+um “plugin” sem a necessidade de instalar ele! Você só precisa criar um buffer
+ou abrir o “<em>scratch buffer</em>” e apertar <code class="language-plaintext highlighter-rouge">Ctrl c</code> <code class="language-plaintext highlighter-rouge">Ctrl e</code>. Isso vai fazer o Emacs
+interpretar o buffer inteiro, e dessa forma, você pode testar o “plugin” à
+vontade enquanto o Emacs estiver aberto!</p>
+
+<p>Então você pode, por exemplo, testar um “plugin” que dá <em>syntax highlighting</em>
+(colorização de código) para alguma linguagem de programação que não é
+suportada por padrão pelo Emacs, como a <a href="https://harelang.org">Hare</a>, por exemplo.</p>
+
+<p>Também tem o <code class="language-plaintext highlighter-rouge">compile-mode</code>… Meu Deus, por que isso não é um padrão de
+indústria?</p>
+
+<p>Basicamente, o <code class="language-plaintext highlighter-rouge">compile-mode</code> serve para executar um comando especificado por
+você no diretório em que você estava e, caso aconteça erros, ele cria “links”
+com base nas linhas/colunas especificadas pela mensagem de erro.</p>
+
+<p>Por exemplo…</p>
+
+<pre><code class="language-Hare">// Eu não incluí o módulo "fmt", necessário para usar a função "println"
+
+export fn main() void = {
+	println("Olá, mundo!")!;
+};
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>teste.ha:2:16: error: Unknown object 'println'
+
+2 |		println("Olá, mundo!")!;
+  |	               ^
+
+
+harec for /tmp/teste.ha exited with status 4
+</code></pre></div></div>
+
+<p>A parte escrita com <code class="language-plaintext highlighter-rouge">teste.ha:2:16:</code> viraria um link, onde se eu clicar, o Emacs
+abriria o arquivo onde o erro ocorreu e deixaria o ponteiro do editor na linha
+e na coluna especificada pelo erro.</p>
+
+<p>Depois de corrigir o erro, eu só preciso apertar uma tecla de atalho para que
+o comando usado para compilar o programa seja re-executado. Sem a necessidade
+de ir até onde o arquivo do programa está!</p>
+
+<p>Particularmente isso é bem útil para mim, já que eu sou bem iniciante no mundo
+de programação, e isso é uma mão na roda na hora de escrever algo.</p>
+
+<blockquote>
+  <p>Principalmente na hora de desenvolver as <a href="https://codeberg.org/tukain/raylib.ha">minhas bindings</a> para a <a href="https://github.com/raysan5/raylib">Raylib</a>.</p>
+
+  <p>Com uma sintáxe dessas aqui a última coisa que eu quero é ter que fazer todo
+esse processo na mão:</p>
+
+  <pre><code class="language-hare">@symbol("TakeScreenshot") fn TakeScreenshot(filename: *c::char) void;
+export fn take_screenshot(filename: str) void = TakeScreenshot(c::fromstr(filename: str)!);
+</code></pre>
+</blockquote>
+
+<h1 id="conclusão">Conclusão</h1>
+
+<p>Enfim, acho que já deu para entender um pouco sobre algumas das coisas que eu
+faço (e coisas que dá para fazer) com o Emacs. Faz um bom tempo que eu não
+escrevo um post tão longo, já estava com saudades!</p>
+
+<p>Até o próximo post!</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[O Emacs é famoso por ser um programa que faz de tudo. E isso não é exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais básica que é editar texto, a planilhas, gestão de projetos, leitura de feeds RSS, comunicação via IRC, XMPP ou E-mail…]]></summary></entry><entry><title type="html">Blog.sh - O meu próprio SSG</title><link href="http://localhost:4000/blog/posts/2025/12/20/blog-sh" rel="alternate" type="text/html" title="Blog.sh - O meu próprio SSG" /><published>2025-12-20T00:00:00-03:00</published><updated>2025-12-30T17:04:36-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/20/blog.sh</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/20/blog-sh"><![CDATA[<p>Ok, SSG é exagero. Esse carinha só serve para gerar um blog (por isso o nome blog.sh, quem diria).</p>
+
+<p>Ele é basicamente um Shell Script (o mais POSIX que eu conseguir) que gera snippets de HTML a partir de certos parâmetros, usa o smu para converter Markdown para HTML e no fim, junta os dois para criar páginas para posts e lista essas páginas em uma index organizada por ordem crescente.</p>
+
+<p>Ele é um projeto antigo meu e que eu ressuscitei essa semana.</p>
+
+<p>Motivo? Tédio.</p>
+
+<p>Eu tava dando uma olhada em alguns repositórios antigos meus e ele tava no meio deles. Então eu quis dar uma repaginada no garoto e cá está ele, novinho em folha e com funcionalidades que ele não possuia antes, como:</p>
+
+<ul>
+  <li>mostrar as datas dos posts</li>
+  <li>categorizar os posts em múltiplas pastas com base na data deles (que nem o Jekyll!)</li>
+  <li>gerar um feed RSS</li>
+</ul>
+
+<p>Enfim, ainda tem muito o que eu posso fazer para melhorar esse Script.</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Ok, SSG é exagero. Esse carinha só serve para gerar um blog (por isso o nome blog.sh, quem diria).]]></summary></entry><entry><title type="html">Gambiarras mostruosas com o Codeberg</title><link href="http://localhost:4000/blog/posts/2025/12/16/codeberg" rel="alternate" type="text/html" title="Gambiarras mostruosas com o Codeberg" /><published>2025-12-16T00:00:00-03:00</published><updated>2025-12-16T17:03:03-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/16/codeberg</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/16/codeberg"><![CDATA[<p>Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do
+Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de
+repositórios.</p>
+
+<p>Mas, você já imaginou ter um repositório que faz um <code class="language-plaintext highlighter-rouge">git push</code> para outros
+repositórios de outros serviços de <em><a href="https://git-scm.com/tools/hosting">git hosting</a></em>?</p>
+
+<p>Esse é o tipo de coisa que você consegue fazer com o Codeberg/Forgejo!</p>
+
+<p>Eu acabei de redescobrir essa funcionalidade e já tô fazendo a festa com ela!</p>
+
+<p>Esse site por exemplo, eu faço uma modificação no repositório (como criar um
+novo post), mando as mudanças para o Codeberg, e então, o Codeberg vai usar as
+credenciais que eu providenciei (no caso, a url do outro repositório e um token
+de acesso) e vai mandar as mudanças do repositório do Codeberg para os outros
+repositórios que eu registrei!</p>
+
+<p>Ou seja, eu consigo fazer uma espécie de backup dos meus repositórios. Bastando
+eu registrar outros repositórios de destino.</p>
+
+<p>Ainda usando esse site como exemplo, ele está hospedado no Codeberg, Github e
+mais outro local, as mudanças são passadas de um para o outro, e no final,
+todos eles são clones do repositório do Codeberg. E além disso, o meu site fica
+hospedado tanto no Codeberg quanto no Neocities, já que o Codeberg possui o
+serviço "<a href="https://codeberg.page">Codeberg Pages</a>" (equivalente ao
+<a href="https://github.io">Github Pages</a>) e no Github eu deixei um <em>Workflow</em> para
+mandar o site contruído para o Neocities.</p>
+
+<blockquote>
+  <p>Resumindo, dá para criar uma corrente de repositórios ligados a um
+repositório principal que são idênticos.</p>
+</blockquote>
+
+<p>Já tô configurando meus outros repositórios para funcionarem da mesma forma, já
+que aí eu vou ter uma certa redundância com cada um, então em caso de um
+banimento por conta de moderação automática (tô falando de você Github, perdi
+umas 4 contas nessa brincadeira) eu ainda vou ter um backup do repositório em
+outro local.</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de repositórios.]]></summary></entry><entry><title type="html">Niri - O WM mais diferenciado que já usei</title><link href="http://localhost:4000/blog/posts/2025/12/15/niri" rel="alternate" type="text/html" title="Niri - O WM mais diferenciado que já usei" /><published>2025-12-15T00:00:00-03:00</published><updated>2025-12-15T16:15:28-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/15/niri</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/15/niri"><![CDATA[<p>Eu sou um usuário Linux a um bom tempo, a pelo menos uns 6/7 anos agora, e eu
+já usei diversos tipos de Desktop Environments e Window Managers. Desde o
+clássico <a href="https://xfce.org">XFCE4</a> ao <a href="https://dwm.suckless.org">DWM</a> no X11, e
+no Wayland, do <a href="https://kde.org">KDE</a> ao <a href="https://swaywm.org">Sway</a>.</p>
+
+<p>Mas todos eles seguem certos arquétipos de ambientes de trabalho semelhantes ao
+Windows ou ao macOS (no caso dos WM’s, eles seguem um padrão bem similar em
+relação a como eles gerenciam janelas, a diferença fica em o que você consegue
+modificar e como). Agora o Niri...</p>
+
+<p>Ele parece uma junção do Sway com o <a href="https://www.gnome.org/">GNOME</a>.</p>
+
+<p>Ele gerencia janelas de forma semelhante a outros gerenciadores de janelas, mas
+não completamente. Nenhuma janela se sobrepõe à outra, a menos que essa janela
+seja flutuante. Sempre que uma nova janela aparece, ela surgirá no lado direito
+da tela, e se ela não couber dentro da tela, o foco irá "deslizar" para essa
+janela.</p>
+
+<p>Imagine que as suas janelas estão em uma fita infinita, todas as janelas irão
+aparecer nessa fita e nenhuma delas vai se sobrepôr uma com a outra. É
+basicamente esse o diferencial do Niri.</p>
+
+<p>As áreas de trabalho são basicamente outras "fitas infinitas" que ficam
+organizadas abaixo umas das outras, e você pode facilmente navegar entre elas e
+enviar janelas para cada uma. Há também um <em>overview</em> de todas as janelas e
+áreas de trabalho ("exposé" para os usuários de macOS) que é acessível com
+uma simples tecla de atalho (<code class="language-plaintext highlighter-rouge">Win + o</code> por padrão).</p>
+
+<blockquote>
+  <p>Para facilitar a sua vida,
+<a href="https://github.com/YaLTeR/niri#video-demo">aqui está um vídeo mostrando como isso tudo funciona</a></p>
+</blockquote>
+
+<p>Eu tô amando a minha experiência com o Niri. É basicamente a junção das
+coisas que eu mais amo do Sway com as coisas que mais amo do GNOME.</p>
+
+<ul>
+  <li>Áreas de trabalho dinâmicas</li>
+  <li>Overview de todas as janelas</li>
+  <li>Organização automática de janelas</li>
+  <li>Um arquivo de configuração poderosíssimo</li>
+  <li>Roda liso numa batata (meu notebook é um Celeron com 4Gb de RAM)</li>
+</ul>
+
+<p><img src="/assets/img/blog/Screenshot from 2025-12-15 11-22-12.png" alt="" /></p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Eu sou um usuário Linux a um bom tempo, a pelo menos uns 6/7 anos agora, e eu já usei diversos tipos de Desktop Environments e Window Managers. Desde o clássico XFCE4 ao DWM no X11, e no Wayland, do KDE ao Sway.]]></summary></entry><entry><title type="html">Boku no Hero acabou</title><link href="http://localhost:4000/blog/posts/2025/12/14/bnha-acabou" rel="alternate" type="text/html" title="Boku no Hero acabou" /><published>2025-12-14T00:00:00-03:00</published><updated>2025-12-14T01:29:06-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/14/bnha-acabou</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/14/bnha-acabou"><![CDATA[<p>Cara... eu não consigo nem acreditar nisso... finalmente acabou!</p>
+
+<p>Eu não sei nem o que dizer direito, o sentimento está sendo o mesmo de quando
+eu terminei Fullmetal Alchemist Brotherhood, a ficha não caiu ainda.</p>
+
+<p>Eu acompanho o anime de Boku no Hero desde o lançamento da segunda temporada,
+eu tinha uns 12 anos de idade, hoje em dia eu já tenho 20. Posso facilmente
+dizer que esse foi o anime da minha adolescência.</p>
+
+<p>Assisti todos os episódios religiosamente (eita que exagero) e todos os filmes
+(quando chegaram aos sete mares).</p>
+
+<p>E hoje, eu assisti o último episódio, da última temporada.</p>
+
+<p>É oficialmente um fim de um cíclo para mim. E foi algo prazeroso. Vou sentir
+saudades de aguardar todo final de semana para poder assistir um episódio novo.</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Cara... eu não consigo nem acreditar nisso... finalmente acabou!]]></summary></entry><entry><title type="html">Learn You A Haskell</title><link href="http://localhost:4000/blog/posts/2025/12/10/lyah" rel="alternate" type="text/html" title="Learn You A Haskell" /><published>2025-12-10T00:00:00-03:00</published><updated>2025-12-14T01:29:09-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/10/lyah</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/10/lyah"><![CDATA[<p>Deixei um dos meus projetos hospedado aqui no meu site. O lyah (Learn You A Haskell)!</p>
+
+<p>Ele é uma restauração do site do livro "Learn You A Haskell For Great Good", só que feita usando o Jekyll.</p>
+
+<p>Tentei deixar ele o mais próximo do site original (quando ele ainda estava de pé, pelo menos).</p>
+
+<p>Se você quiser ver ele, é só acessar "<a href="tukainpng.neocities.org/lyah">tukainpng.neocities.org/lyah</a>"!</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Deixei um dos meus projetos hospedado aqui no meu site. O lyah (Learn You A Haskell)!]]></summary></entry><entry><title type="html">Fiz minha própria “tela inicial” de navegador</title><link href="http://localhost:4000/blog/posts/2025/12/09/homepage" rel="alternate" type="text/html" title="Fiz minha própria “tela inicial” de navegador" /><published>2025-12-09T00:00:00-03:00</published><updated>2025-12-14T01:29:09-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/09/homepage</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/09/homepage"><![CDATA[<p>Hoje de manhã, vi alguns vídeos sobre customização do Firefox, e em um deles, o cara mostra uma forma de configurar uma tela inicial customizada usando uma extenção.</p>
+
+<p>O que me chamou a atenção foi a tela inicial escolhida. Bem minimalista, do jeitinho que eu gosto.</p>
+
+<p>Olhando isso, eu fiquei inspirado, e quis fazer a minha própria. É possível ver ela digitando:</p>
+
+<p><a href="https://tukainpng.neocities.org/homepage">https://tukainpng.neocities.org/homepage</a></p>
+
+<p>Sim, eu deixei ela pública, até porquê a ideia e deixar ela de fácil acesso a quem quiser definir ela como tela inicial, basta baixar a página e editar os links.</p>
+
+<p>Assim como a tela inicial mostrada no vídeo que vi (que inclusive, é do canal No Text To Speech), essa tela inicial é bem simples. Tendo só 3 colunas com itens e uma imagem à direita.</p>
+
+<p>Ela é "responsiva". No caso, o layout se adapta para algumas resoluções, assim ela funciona tanto no meu computador quanto no meu celular.</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Hoje de manhã, vi alguns vídeos sobre customização do Firefox, e em um deles, o cara mostra uma forma de configurar uma tela inicial customizada usando uma extenção.]]></summary></entry><entry><title type="html">The Game Awards 2025</title><link href="http://localhost:4000/blog/posts/2025/12/06/tga-2025" rel="alternate" type="text/html" title="The Game Awards 2025" /><published>2025-12-06T00:00:00-03:00</published><updated>2025-12-13T21:56:43-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/06/tga-2025</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/06/tga-2025"><![CDATA[<ul>
+  <li>Valve lança uma linha de Hardware</li>
+  <li>Valve já afirmou no passado que tem novos projetos de jogos em desenvolvimento</li>
+  <li>Referências a um certo jogo com as siglas “HEV” (Hazardous EnVironment Suit, a armadura do half-life) aparecem no código-fonte da Source 2</li>
+  <li>TGA 2025 já tá chegando</li>
+</ul>
+
+<h1 id="i-have-hope">I HAVE HOPE!!!</h1>
+
+<p>VALVE, LANÇA HALF-LIFE 3 PELO AMOR DE DEEEUUUSS 😭😭😭😭</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Valve lança uma linha de Hardware Valve já afirmou no passado que tem novos projetos de jogos em desenvolvimento Referências a um certo jogo com as siglas “HEV” (Hazardous EnVironment Suit, a armadura do half-life) aparecem no código-fonte da Source 2 TGA 2025 já tá chegando]]></summary></entry><entry><title type="html">Final de ano já tá chegando</title><link href="http://localhost:4000/blog/posts/2025/12/03/final-de-ano" rel="alternate" type="text/html" title="Final de ano já tá chegando" /><published>2025-12-03T00:00:00-03:00</published><updated>2025-12-14T01:29:09-03:00</updated><id>http://localhost:4000/blog/posts/2025/12/03/final-de-ano</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/12/03/final-de-ano"><![CDATA[<p>Nesse ano muita coisa aconteceu na minha vida (na de todo mundo na real né?), algumas boas, outras nem tanto. Mas num geral, acho que foi um ano relativamente bom. Principalmente se eu comparar com o tempo perdido que foi final de 2019, 2020, 2021 e o início de 2022.</p>
+
+<p>Fiz também bastante coisa nesse ano, criei muitas boas memórias.</p>
+
+<ul>
+  <li>Tive um reencontro com um amigo que conheci no SENAI (a gente não se via fazia mó tempo)</li>
+  <li>Comprei um Nintendo Switch Lite no início do ano, depois em Outubro eu comprei um Switch padrão e vendi o Lite</li>
+  <li>Fiz, refiz e fiz esse site de novo e de novo</li>
+  <li>Quase comprei uma bicicleta elétrica (ainda bem que não comprei, principalmente por conta dessa PL de pagar IPVA até em cadeira de roda)</li>
+  <li>Usei/Testei vários streamings diferentes (até agora, os únicos que duraram o ano todo foram o Spotify e a Crunchyroll)</li>
+  <li>Completei 2 anos de namoro com a minha namorada (te amo querida)</li>
+  <li>Criei uma conta no Twitter e me arrependi logo em seguida (eu vou deletar aquele treco, ô algoritimo que só recomenda desgraça)</li>
+  <li>Tive as minhas primeiras férias como um CLT (o condenado trabalha 1 ano inteiro para tirar 30 dias de descanço, é foda kkkkk)</li>
+</ul>
+
+<p>Enfim, é muita coisa para tentar resumir.</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Nesse ano muita coisa aconteceu na minha vida (na de todo mundo na real né?), algumas boas, outras nem tanto. Mas num geral, acho que foi um ano relativamente bom. Principalmente se eu comparar com o tempo perdido que foi final de 2019, 2020, 2021 e o início de 2022.]]></summary></entry><entry><title type="html">F One Punch Man 🪦</title><link href="http://localhost:4000/blog/posts/2025/11/28/f-one-frame-man" rel="alternate" type="text/html" title="F One Punch Man 🪦" /><published>2025-11-28T00:00:00-03:00</published><updated>2025-12-14T01:29:09-03:00</updated><id>http://localhost:4000/blog/posts/2025/11/28/f-one-frame-man</id><content type="html" xml:base="http://localhost:4000/blog/posts/2025/11/28/f-one-frame-man"><![CDATA[<p>Eu sei. Você sabe. Todos sabemos. A terceira
+temporada de One Punch Man está um completo desastre.</p>
+
+<p>Como que conseguiram a façanha de fazer uma animação pior que a da segunda?
+(ela já era uma bosta!)</p>
+
+<p>Não vou pôr a culpa inteira no estúdio em si, ele tem uma capacidade até que
+boa para fazer animações de baixo custo. Mas aí é que tá o problema: ANIMAÇÕES
+DE BAIXO CUSTO.</p>
+
+<p>Pelo amor de Deus, Bandai! É de One Punch Man que a gente tá falando! Como que
+você espera que isso vai dar certo? Passar da Mad FUCKING House na 1ª temporada
+para um estúdio que no máximo conseguiria fazer um Slice of Life mediano? É
+sério?</p>
+
+<p>Sinceramente, eu espero que esse treco seja cancelado. Dói só de ver os
+episódios lançando.</p>
+
+<p>Descarta essas 2 últimas temporadas, põe esse treco no congelador e só tira se
+for para tacar na mão de um estúdio como a Bones ou Mad House.</p>]]></content><author><name>Tukain</name></author><summary type="html"><![CDATA[Eu sei. Você sabe. Todos sabemos. A terceira temporada de One Punch Man está um completo desastre.]]></summary></entry></feed>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/assets/img/avatar.png" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/rouge.css" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Emacs - O meu novo computador | Tukain’s Blog</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Emacs - O meu novo computador" />
+<meta name="author" content="Tukain" />
+<meta property="og:locale" content="pt_br" />
+<meta name="description" content="O Emacs é famoso por ser um programa que faz de tudo. E isso não é exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais básica que é editar texto, a planilhas, gestão de projetos, leitura de feeds RSS, comunicação via IRC, XMPP ou E-mail…" />
+<meta property="og:description" content="O Emacs é famoso por ser um programa que faz de tudo. E isso não é exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais básica que é editar texto, a planilhas, gestão de projetos, leitura de feeds RSS, comunicação via IRC, XMPP ou E-mail…" />
+<link rel="canonical" href="http://localhost:4000/blog/posts/2025/12/25/emacs" />
+<meta property="og:url" content="http://localhost:4000/blog/posts/2025/12/25/emacs" />
+<meta property="og:site_name" content="Tukain’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-25T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Emacs - O meu novo computador" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tukain"},"dateModified":"2025-12-30T18:08:29-03:00","datePublished":"2025-12-25T00:00:00-03:00","description":"O Emacs é famoso por ser um programa que faz de tudo. E isso não é exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais básica que é editar texto, a planilhas, gestão de projetos, leitura de feeds RSS, comunicação via IRC, XMPP ou E-mail…","headline":"Emacs - O meu novo computador","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/posts/2025/12/25/emacs"},"url":"http://localhost:4000/blog/posts/2025/12/25/emacs"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="home_link">
+      <a class="image" href="/home"><img src="/assets/img/avatar.png"></a>
+      <a class="text" href="/home">Início</a>
+    </div>
+    <div id="nav_list" class="nav_items">
+      
+        <a href="/blog">Blog</a>
+      
+        <a href="/projects">Projetos</a>
+      
+        <a href="/books">Leitura</a>
+      
+        <a href="/games">Jogos</a>
+      
+        <a href="/authors">Autores</a>
+      
+    </div>
+    <button popovertarget="nav_menu" popovertargetaction="toggle" class="nav_menu">Menu</button>
+  </nav>
+  <div popover id="nav_menu">
+      
+        <a href="/blog">Blog</a>
+      
+        <a href="/projects">Projetos</a>
+      
+        <a href="/books">Leitura</a>
+      
+        <a href="/games">Jogos</a>
+      
+        <a href="/authors">Autores</a>
+      
+  </div>
+</header>
+
+  <div class="post">
+    <article>
+      
+        
+        <div class="profile">
+          <a href="/authors#tukain"><img src="/assets/img/authors/tukain.png"></a>
+          <div>
+            <h3>Tukain</h3>
+            <div class="social"><p>
+            
+              <br><a href="https://codeberg.org/Tukain" target="_blank" rel="noopener noreferrer">Codeberg</a>
+            
+            
+              <br><a href="https://github.com/Ventriloquo" target="_blank" rel="noopener noreferrer">Github</a>
+            
+            
+              <br><a href="https://neocities.org/site/tukainpng" target="_blank" rel="noopener noreferrer">Neocities</a>
+            
+            
+            
+              <br><a href="https://www.youtube.com/@tukainxyz" target="_blank" rel="noopener noreferrer">Youtube</a>
+            
+            
+              </p></div>
+            <time>
+              
+                25.12.2025
+              
+            </time>
+          </div>
+        </div>
+        
+      
+      
+      <small>Tempo de leitura: 4 minutos</small>
+      <h1>Emacs - O meu novo computador</h1>
+      <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#minha-atual-configura%C3%A7%C3%A3o">Minha atual configuração</a></li>
+<li class="toc-entry toc-h1"><a href="#organiza%C3%A7%C3%A3o-financeira">Organização financeira</a></li>
+<li class="toc-entry toc-h1"><a href="#workflow-de-programa%C3%A7%C3%A3o">Workflow de programação</a></li>
+<li class="toc-entry toc-h1"><a href="#conclus%C3%A3o">Conclusão</a></li>
+</ul>
+<p>O Emacs é famoso por ser um programa que faz de <em>tudo</em>. E isso não é
+exagero (antes fosse!). Com ele você consegue fazer desde a tarefa mais
+básica que é editar texto, a planilhas, gestão de projetos, leitura de
+feeds RSS, comunicação via IRC, XMPP ou E-mail…</p>
+
+<p>Enfim, <strong>muita</strong> coisa.</p>
+
+<p>Óbviamente eu não faço tudo isso que listei acima, mas faço sim algumas
+coisas com ele e gostaria de escrever sobre. Bom, vamos começar!</p>
+
+<h1 id="minha-atual-configuração">
+<a class="anchor" href="#minha-atual-configura%C3%A7%C3%A3o" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minha atual configuração</h1>
+<p>Depois de um tempo em hiato, eu voltei a desenvolver a minha
+configuração do Emacs. Agora ela além de estar mais robusta, configurei
+até mesmo o cliente de e-mail <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html" target="_blank" rel="noopener noreferrer">“Rmail”</a> (o “cliente de e-mail padrão do Emacs”) e o <a href="https://www.gnu.org/software/emacs/erc.html" target="_blank" rel="noopener noreferrer">Erc</a> (o cliente IRC pré-instalado do Emacs).</p>
+
+<p>Além disso, usei um snippet do pessoal do <a href="https://systemcrafters.net" target="_blank" rel="noopener noreferrer">System Crafters</a> para
+conseguir usar com mais facilidade a funcionalidade de leitura de
+arquivos <code class="language-plaintext highlighter-rouge">gpg</code>, o nome da função é meio estranho, mas basicamente, eu só
+preciso chamar ela e dar como um argumento uma chave presente no
+arquivo <code class="language-plaintext highlighter-rouge">.authinfo</code> e ela me retornará a senha correspondente à essa
+chave.</p>
+
+<p>Como por exemplo:</p>
+
+<div class="language-elisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">efs/lookup-password</span> <span class="ss">:machine</span> <span class="nv">irc.libera.chat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><a href="https://systemcrafters.net/emacs-tips/using-encrypted-passwords/" target="_blank" rel="noopener noreferrer">A função em si é essa aqui</a>:</p>
+
+  <div class="language-elisp highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">efs/lookup-password</span> <span class="p">(</span><span class="k">&amp;rest</span> <span class="nv">keys</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">result</span> <span class="p">(</span><span class="nb">apply</span> <span class="nf">#'</span><span class="nv">auth-source-search</span> <span class="nv">keys</span><span class="p">)))</span>
+    <span class="p">(</span><span class="k">if</span> <span class="nv">result</span>
+        <span class="p">(</span><span class="nb">funcall</span> <span class="p">(</span><span class="nv">plist-get</span> <span class="p">(</span><span class="nb">car</span> <span class="nv">result</span><span class="p">)</span> <span class="ss">:secret</span><span class="p">))</span>
+      <span class="no">nil</span><span class="p">)))</span>
+</code></pre></div>  </div>
+
+</blockquote>
+
+<p>Eu também dei uma repaginada no alinhamento das coisas, afinal, não
+basta funcionar, tem que ser bonito de se ver, e a Elisp é uma
+linguagem ótima para fazer esse tipo de coisa! Porque ela:</p>
+
+<ul>
+  <li>Não se importa com a quantidade de espaços que existe entre uma
+função e um parâmetro;</li>
+  <li>Tem uma sintáxe bem simples de se ler (às vezes).</li>
+</ul>
+
+<p>Sendo assim, eu consigo fazer esse tipo de coisa aqui:</p>
+
+<div class="language-elisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nv">icomplete-mode</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">ido-mode</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">ido-everywhere</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">which-key-mode</span>		               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">delete-selection-mode</span>	               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-visual-line-mode</span>               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-auto-revert-mode</span>               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-prettify-symbols-mode</span>          	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-hl-line-mode</span>	               	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-completion-preview-mode</span>        	<span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">global-display-line-numbers-mode</span>       <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">fido-vertical-mode</span>			<span class="no">t</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>“Perfeitamente equilibrado, como tudo deve ser.”</p>
+</blockquote>
+
+<p><img src="https://i.redd.it/qpbqimfqx4p71.jpg" alt=""></p>
+
+<h1 id="organização-financeira">
+<a class="anchor" href="#organiza%C3%A7%C3%A3o-financeira" aria-hidden="true"><span class="octicon octicon-link"></span></a>Organização financeira</h1>
+<p>O <a href="https://orgmode.org" target="_blank" rel="noopener noreferrer"><code class="language-plaintext highlighter-rouge">org-mode</code></a> tem a funcionalidade de gerar planilhas, com
+fórmulas e tudo!</p>
+
+<p>Por exemplo, digamos que eu esteja gerendo uma planilha contendo os
+meus gastos mensais com planos de assinatura/contas recorrentes. Eu
+poderia fazer isso aqui:</p>
+
+<pre><code class="language-org">| Nome        | Dia de cobrança | Valor (R$) |
+|-------------+-----------------+------------|
+| Netflix     |              22 |      20.90 |
+| Crunchyroll |              11 |      14.99 |
+|-------------+-----------------+------------|
+| Total       |                 |   35.89 R$ |
+#+TBLFM: @&gt;$3=string("R$")vsum(@I$3..@II$3)
+</code></pre>
+
+<p>É, a sintáxe não é lá aquelas coisas… mas é funcional. Para coisas
+simples ela é relativamente intuitiva (+/- né). O maneiro mesmo é
+escrever essas tabelas, por quê? Porque o Emacs formata
+automagicamente elas! É só começar uma tabela com <code class="language-plaintext highlighter-rouge">| nome</code> e apertar
+<code class="language-plaintext highlighter-rouge">tab</code>!</p>
+
+<p>Além disso, também existe a tecla de atalho =Ctrl c }= que exibe alguns
+marcadores na tabela para poder facilitar o processo de escrever as
+fórmulas.</p>
+
+<p>Ficando +/- assim:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   1| Nome        | Dia de cobrança | Valor (R$) |
+I*1 |-------------+-----------------+------------|
+   2| Netflix     |              22 | 20.90      |
+   3| Crunchyroll |              11 | 14.99      |
+I*2 |-------------+-----------------+------------|
+   4| Total       |                 | 35.89 R$   |
+   5| Média       |                 | 17.945 R$  |
+#+TBLFM: @4$3=string("R$")vsum(@I$3..@II$3)::@5$3=string("R$")vmean(@I$3..@II$3)
+</code></pre></div></div>
+
+<p>Como eu estou tentando diminuir o meu uso no celular, isso pode ser
+o tipo de coisa que pode me ajudar. Dessa forma eu vou ter um jeito
+de gerenciar as minhas finanças sem depender de aplicativos no meu
+celular. Até porque eu posso criar <em>deadlines</em> no <code class="language-plaintext highlighter-rouge">org-mode</code> e
+visualizar meus afazeres usando a agenda integrada dele!</p>
+
+<blockquote>
+  <p>Devo que admitir que não sei ainda como se usa o <code class="language-plaintext highlighter-rouge">org-agenda</code>, mas pelo o que
+eu li no <a href="https://orgmode.org/features.html#agendas" target="_blank" rel="noopener noreferrer">site oficial</a> parece ser muito bacana!</p>
+</blockquote>
+
+<h1 id="workflow-de-programação">
+<a class="anchor" href="#workflow-de-programa%C3%A7%C3%A3o" aria-hidden="true"><span class="octicon octicon-link"></span></a>Workflow de programação</h1>
+<p>O Emacs é primariamente um editor de código (por mais incrível que pareça).
+Sendo assim, ele possui <em>várias</em> funções e configurações para deixar a
+usabilidade na hora de programar melhor.</p>
+
+<p>Uma das coisas mais maneiras do Emacs é a Elisp, a linguagem que ele é
+configurado, interpreta e é em boa parte <a href="/blog/posts/2025/06/30/elisp">escrito nela também</a>. A parte de “interpretar” é que é a mais interessante, porquê isso permite que você teste
+um “plugin” sem a necessidade de instalar ele! Você só precisa criar um buffer
+ou abrir o “<em>scratch buffer</em>” e apertar <code class="language-plaintext highlighter-rouge">Ctrl c</code> <code class="language-plaintext highlighter-rouge">Ctrl e</code>. Isso vai fazer o Emacs
+interpretar o buffer inteiro, e dessa forma, você pode testar o “plugin” à
+vontade enquanto o Emacs estiver aberto!</p>
+
+<p>Então você pode, por exemplo, testar um “plugin” que dá <em>syntax highlighting</em>
+(colorização de código) para alguma linguagem de programação que não é
+suportada por padrão pelo Emacs, como a <a href="https://harelang.org" target="_blank" rel="noopener noreferrer">Hare</a>, por exemplo.</p>
+
+<p>Também tem o <code class="language-plaintext highlighter-rouge">compile-mode</code>… Meu Deus, por que isso não é um padrão de
+indústria?</p>
+
+<p>Basicamente, o <code class="language-plaintext highlighter-rouge">compile-mode</code> serve para executar um comando especificado por
+você no diretório em que você estava e, caso aconteça erros, ele cria “links”
+com base nas linhas/colunas especificadas pela mensagem de erro.</p>
+
+<p>Por exemplo…</p>
+
+<pre><code class="language-Hare">// Eu não incluí o módulo "fmt", necessário para usar a função "println"
+
+export fn main() void = {
+	println("Olá, mundo!")!;
+};
+</code></pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>teste.ha:2:16: error: Unknown object 'println'
+
+2 |		println("Olá, mundo!")!;
+  |	               ^
+
+
+harec for /tmp/teste.ha exited with status 4
+</code></pre></div></div>
+
+<p>A parte escrita com <code class="language-plaintext highlighter-rouge">teste.ha:2:16:</code> viraria um link, onde se eu clicar, o Emacs
+abriria o arquivo onde o erro ocorreu e deixaria o ponteiro do editor na linha
+e na coluna especificada pelo erro.</p>
+
+<p>Depois de corrigir o erro, eu só preciso apertar uma tecla de atalho para que
+o comando usado para compilar o programa seja re-executado. Sem a necessidade
+de ir até onde o arquivo do programa está!</p>
+
+<p>Particularmente isso é bem útil para mim, já que eu sou bem iniciante no mundo
+de programação, e isso é uma mão na roda na hora de escrever algo.</p>
+
+<blockquote>
+  <p>Principalmente na hora de desenvolver as <a href="https://codeberg.org/tukain/raylib.ha" target="_blank" rel="noopener noreferrer">minhas bindings</a> para a <a href="https://github.com/raysan5/raylib" target="_blank" rel="noopener noreferrer">Raylib</a>.</p>
+
+  <p>Com uma sintáxe dessas aqui a última coisa que eu quero é ter que fazer todo
+esse processo na mão:</p>
+
+  <pre><code class="language-hare">@symbol("TakeScreenshot") fn TakeScreenshot(filename: *c::char) void;
+export fn take_screenshot(filename: str) void = TakeScreenshot(c::fromstr(filename: str)!);
+</code></pre>
+</blockquote>
+
+<h1 id="conclusão">
+<a class="anchor" href="#conclus%C3%A3o" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusão</h1>
+
+<p>Enfim, acho que já deu para entender um pouco sobre algumas das coisas que eu
+faço (e coisas que dá para fazer) com o Emacs. Faz um bom tempo que eu não
+escrevo um post tão longo, já estava com saudades!</p>
+
+<p>Até o próximo post!</p>
+
+      <hr>
+      <div>
+        <a class="button" href="/blog">Voltar</a>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+- name: Raylib.ha
+  cover: raylib.ha.png
+  url: https://codeberg.org/tukain/raylib.ha
+  description: >
+    <p>Este é um projeto antigo meu. Ele é parte de alguns estudos pessoais de programação, já que eu tenho uma certa dificuldade de aprender só assistindo (ou lendo) algo relacionado ao assunto.</p>
+
+    <p>Não tive muito tempo para me dedicar a ele nem a área nos últimos meses, mas espero poder voltar ao desenvolvimento dele</p>
+
+- name: Learn You A Haskell
+  url: https://codeberg.org/tukain/lyah
+  cover: lyah.png
+  description: >
+    <p>Esse projeto é na verdade uma restauração do website <a href="https://learnyouahaskell.com">learnyouahaskell.com</a> que hoje em dia não é mais acessível.</p>
+
+    <p>Eu reconstruí ele usando Jekyll enquanto o original ainda estava de pé. Tentei deixar ele o mais próximo possível do original.</p>
+
+    <p>Se você quiser dar uma olhada, é só acessar: <a href="https://tukainpng.neocities.org/lyah">https://tukainpng.neocities.org/lyah</a></p>
+
+- name: Blog.sh
+  cover: blog.sh.png
+  url: https://codeberg.org/tukain/blog.sh
+  description: >
+    <p>Um gerador de blogs simples feito usando Shell Script.</p>
+
+    <p>Este é um projeto que eu comecei a muito tempo atrás e decidi revitalizá-lo. Coloquei novas funções (como geração automática de um feed RSS, por exemplo), deixei ele mais fácil de utilizar e de customizar.</p>

@@ -1,0 +1,108 @@
+.highlighter-rouge {
+  position: relative;
+  max-width: 960px;
+}
+
+div.highlighter-rouge::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: .3em;
+  padding-left: 1em;
+  padding-right: 0;
+  width: calc(100% - 16px);
+  background-color: var(--orange);
+  color: var(--bg-0);
+}
+
+div.highlight {
+  padding-top: 2em;
+  padding-bottom: 0;
+}
+
+.highlight table td {
+  padding: 5px;
+}
+
+.highlight table pre {
+  margin: 0;
+}
+
+.highlight, .highlight .w {
+  color: var(--fg-1);
+  background-color: var(--bg-0);
+}
+
+.highlight .err {
+  color: var(--red);
+  background-color: var(--bg-2);
+  font-weight: bold;
+}
+
+.highlight .c, .highlight .ch,
+.highlight .cd, .highlight .cm,
+.highlight .cpf, .highlight .c1,
+.highlight .cs {
+  color: var(--bg-2);
+  font-style: italic;
+}
+
+.highlight .p, .highlight .pi,
+.highlight .py, .highlight .kc,
+.highlight .no {
+  color: var(--purple);
+}
+
+.highlight .gh {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.highlight .s, .highlight .sb,
+.highlight .sc, .highlight .dl,
+.highlight .sd, .highlight .s2,
+.highlight .sh, .highlight .sx,
+.highlight .s1, .highlight .si,
+.highlight .sr {
+  color: var(--green);
+  font-style: italic;
+}
+
+.highlight .na {
+  color: var(--green);
+}
+
+.highlight .k, .highlight .kd,
+.highlight .kn, .highlight .kp,
+.highlight .kr, .highlight .kv,
+.highlight .nb,.highlight .se,
+.highlight .kt {
+  color: var(--yellow);
+}
+
+.highlight .nf, .highlight .nd,
+.highlight .m, .highlight .mb,
+.highlight .mf, .highlight .mh,
+.highlight .mi, .highlight .il,
+.highlight .mo, .highlight .mx {
+  color: var(--orange);
+}
+
+.highlight .ss, .highlight .nn,
+.highlight .nc, .highlight .cp,
+.highlight .nt {
+  color: var(--cyan);
+}
+
+/* languages */
+
+div.language-c.highlighter-rouge::after { content: "C" }
+div.language-css.highlighter-rouge::after { content: "CSS" }
+div.language-rust.highlighter-rouge::after { content: "Rust/Hare" }
+div.language-django.highlighter-rouge::after { content: "HTML Django" }
+div.language-elisp.highlighter-rouge::after { content: "Emacs Lisp" }
+div.language-javascript.highlighter-rouge::after { content: "JavaScript" }
+div.language-liquid.highlighter-rouge::after { content: "Liquid" }
+div.language-markdown.highlighter-rouge::after { content: "Markdown" }

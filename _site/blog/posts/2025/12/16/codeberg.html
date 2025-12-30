@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="/assets/img/avatar.png" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/rouge.css" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Gambiarras mostruosas com o Codeberg | Tukain’s Blog</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Gambiarras mostruosas com o Codeberg" />
+<meta name="author" content="Tukain" />
+<meta property="og:locale" content="pt_br" />
+<meta name="description" content="Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de repositórios." />
+<meta property="og:description" content="Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de repositórios." />
+<link rel="canonical" href="http://localhost:4000/blog/posts/2025/12/16/codeberg" />
+<meta property="og:url" content="http://localhost:4000/blog/posts/2025/12/16/codeberg" />
+<meta property="og:site_name" content="Tukain’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-16T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gambiarras mostruosas com o Codeberg" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Tukain"},"dateModified":"2025-12-16T17:03:03-03:00","datePublished":"2025-12-16T00:00:00-03:00","description":"Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de repositórios.","headline":"Gambiarras mostruosas com o Codeberg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/posts/2025/12/16/codeberg"},"url":"http://localhost:4000/blog/posts/2025/12/16/codeberg"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="home_link">
+      <a class="image" href="/home"><img src="/assets/img/avatar.png"></a>
+      <a class="text" href="/home">Início</a>
+    </div>
+    <div id="nav_list" class="nav_items">
+      
+        <a href="/blog">Blog</a>
+      
+        <a href="/projects">Projetos</a>
+      
+        <a href="/books">Leitura</a>
+      
+        <a href="/games">Jogos</a>
+      
+        <a href="/authors">Autores</a>
+      
+    </div>
+    <button popovertarget="nav_menu" popovertargetaction="toggle" class="nav_menu">Menu</button>
+  </nav>
+  <div popover id="nav_menu">
+      
+        <a href="/blog">Blog</a>
+      
+        <a href="/projects">Projetos</a>
+      
+        <a href="/books">Leitura</a>
+      
+        <a href="/games">Jogos</a>
+      
+        <a href="/authors">Autores</a>
+      
+  </div>
+</header>
+
+  <div class="post">
+    <article>
+      
+        
+        <div class="profile">
+          <a href="/authors#tukain"><img src="/assets/img/authors/tukain.png"></a>
+          <div>
+            <h3>Tukain</h3>
+            <div class="social"><p>
+            
+              <br><a href="https://codeberg.org/Tukain" target="_blank" rel="noopener noreferrer">Codeberg</a>
+            
+            
+              <br><a href="https://github.com/Ventriloquo" target="_blank" rel="noopener noreferrer">Github</a>
+            
+            
+              <br><a href="https://neocities.org/site/tukainpng" target="_blank" rel="noopener noreferrer">Neocities</a>
+            
+            
+            
+              <br><a href="https://www.youtube.com/@tukainxyz" target="_blank" rel="noopener noreferrer">Youtube</a>
+            
+            
+              </p></div>
+            <time>
+              
+                16.12.2025
+              
+            </time>
+          </div>
+        </div>
+        
+      
+      
+      <small>Tempo de leitura: 2 minutos</small>
+      <h1>Gambiarras mostruosas com o Codeberg</h1>
+      <ul id="toc" class="section-nav">
+</ul>
+<p>Se você, assim como eu, é um nerd que usa Linux, então você já ouviu falar do
+Github. Muito provavelmente você também tem uma conta lá e uma meia dúzia de
+repositórios.</p>
+
+<p>Mas, você já imaginou ter um repositório que faz um <code class="language-plaintext highlighter-rouge">git push</code> para outros
+repositórios de outros serviços de <em><a href="https://git-scm.com/tools/hosting" target="_blank" rel="noopener noreferrer">git hosting</a></em>?</p>
+
+<p>Esse é o tipo de coisa que você consegue fazer com o Codeberg/Forgejo!</p>
+
+<p>Eu acabei de redescobrir essa funcionalidade e já tô fazendo a festa com ela!</p>
+
+<p>Esse site por exemplo, eu faço uma modificação no repositório (como criar um
+novo post), mando as mudanças para o Codeberg, e então, o Codeberg vai usar as
+credenciais que eu providenciei (no caso, a url do outro repositório e um token
+de acesso) e vai mandar as mudanças do repositório do Codeberg para os outros
+repositórios que eu registrei!</p>
+
+<p>Ou seja, eu consigo fazer uma espécie de backup dos meus repositórios. Bastando
+eu registrar outros repositórios de destino.</p>
+
+<p>Ainda usando esse site como exemplo, ele está hospedado no Codeberg, Github e
+mais outro local, as mudanças são passadas de um para o outro, e no final,
+todos eles são clones do repositório do Codeberg. E além disso, o meu site fica
+hospedado tanto no Codeberg quanto no Neocities, já que o Codeberg possui o
+serviço "<a href="https://codeberg.page" target="_blank" rel="noopener noreferrer">Codeberg Pages</a>" (equivalente ao
+<a href="https://github.io" target="_blank" rel="noopener noreferrer">Github Pages</a>) e no Github eu deixei um <em>Workflow</em> para
+mandar o site contruído para o Neocities.</p>
+
+<blockquote>
+  <p>Resumindo, dá para criar uma corrente de repositórios ligados a um
+repositório principal que são idênticos.</p>
+</blockquote>
+
+<p>Já tô configurando meus outros repositórios para funcionarem da mesma forma, já
+que aí eu vou ter uma certa redundância com cada um, então em caso de um
+banimento por conta de moderação automática (tô falando de você Github, perdi
+umas 4 contas nessa brincadeira) eu ainda vou ter um backup do repositório em
+outro local.</p>
+
+      <hr>
+      <div>
+        <a class="button" href="/blog">Voltar</a>
+      </div>
+    </article>
+  </div>
+</body>
+</html>

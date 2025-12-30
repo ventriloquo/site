@@ -1,0 +1,46 @@
+:root {
+  --bg-0:         #262626;
+  --bg-1:         #1C1B19;
+  --bg-2:         #303030;
+  --fg-0:         #FCE8C3;
+  --fg-1:         #BAA67F;
+
+  --red:          #EF2F27;
+  --green:        #519F50;
+  --yellow:       #FBB829;
+  --blue:         #2C78BF;
+  --purple:       #E02C6D;
+  --orange:       #FF5F00;
+
+  --cyan:         #008080;
+  --grey:         var(--bg-1);
+
+  --accent-1:     var(--blue);
+  --accent-2:     var(--cyan);
+  --link:         var(--accent-1);
+  --link-hover:   var(--accent-2);
+  --heading:      var(--yellow);
+
+  --border: solid 2px var(--bg-0);
+}
+
+time {
+  color: var(--green) !important;
+}
+
+pre {
+  background-color: var(--bg-0) !important;
+  color: var(--fg-0) !important;
+}
+
+body:has(.post) {
+  background-color: var(--bg-0) !important;
+}
+
+.post article {
+  background-color: var(--bg-1);
+}
+
+.post q, .post blockquote {
+  background-color: var(--bg-0);
+}
