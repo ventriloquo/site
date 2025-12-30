@@ -13,7 +13,7 @@
            </div>
            <div id='nav_list' class='nav_items'>
            "
-           (with-temp-buffer (insert-file-contents "src/assets/links") (buffer-string))
+           (with-temp-buffer (insert-file-contents "src/assets/links.html") (buffer-string))
            "
            </div>
            <button
@@ -24,7 +24,7 @@
          <div popover='' id='nav_menu'>
            <a href='/'>Início</a>
            "
-           (with-temp-buffer (insert-file-contents "src/assets/links") (buffer-string))
+           (with-temp-buffer (insert-file-contents "src/assets/links.html") (buffer-string))
            "
          </div>
        </header>
