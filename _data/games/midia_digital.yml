@@ -1,3 +1,25 @@
+- title: Outlast
+  description: >
+    O primeiro jogo de terror que comprei para o meu Switch... E justo o
+    jogo que mais me dava medo na infância. Eita joguinho para se comprar
+    em plena véspera de natal!
+  buy_date: "24/12/2025"
+  cover: /assets/img/games/outlast.jpeg
+
+- title: Untitled Goose Game
+  description: >
+    O jogo do "psico-pato" (que na verdade é um ganço). Comprei esse joguinho
+    por um único motivo: para jogar com a minha namorada.
+  buy_date: "29/11/2025"
+  cover: /assets/img/games/untitled_goose_game.jpeg
+
+- title: Doom (2016)
+  description: >
+    Um port milagroso e também um jogo extremamente... Cristão? Sei lá, não
+    acho que exista algo mais cristão do que moer o capeta na porrada kkkkk
+  buy_date: "29/11/2025"
+  cover: /assets/img/games/doom.jpeg
+
 - title: "The Legend of Zelda: Breath of the Wild"
   description: >
     Acho que não preciso falar muita coisa sobre esse jogo...
