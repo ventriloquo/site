@@ -338,9 +338,9 @@ p {
 
 @media only screen and (prefers-color-scheme: dark) {
     :root {
-	--fg: #DCD7BA;
-	--bg: #1F1F28;
-	--ac: #957FB8;
+	--bg: #282828;
+	--fg: #ebdbb2;
+	--ac: #98971a;
     }
     
     th, .src {
@@ -358,8 +358,8 @@ p {
 
 @media only screen and (prefers-color-scheme: light) {
     :root {
-	--bg: #f2ebbc;
-	--fg: #1F1F28;
-	--ac: #4e8ca1;
+	--bg: #fbf1c7;
+	--fg: #3c3836;
+	--ac: #458588;
     }
 }

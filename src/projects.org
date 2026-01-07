@@ -1,7 +1,6 @@
 #+TITLE: Meus Projetos
 
 #+HTML: <style>
-#+HTML: .outline-2 { border-bottom: solid .1em var(--ac)}
 #+HTML: .outline-2 {
 #+HTML:     display: flex; flex-direction: column;
 #+HTML:     flex-wrap: no-wrap;
