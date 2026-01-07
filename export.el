@@ -1,7 +1,9 @@
 (setq org-html-head-extra
-      (concat "<style>"
-	      (with-temp-buffer (insert-file-contents "src/assets/styles.css") (buffer-string))
-	      "</style>"))
+      (concat
+       "<head><link rel='icon' href='/assets/fav.png'></head>"
+       "<style>"
+       (with-temp-buffer (insert-file-contents "src/assets/styles.css") (buffer-string))
+       "</style>"))
 
 (setq org-html-preamble
       (concat
