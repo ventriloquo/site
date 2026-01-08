@@ -4,7 +4,7 @@
 
 Deixei um dos meus projetos hospedado aqui no meu site. O lyah (Learn You A Haskell)!
 
-Ele é uma restauração do site do livro "Lear You A Haskell For Great Good", só que feita usando o Jekyll.
+Ele é uma restauração do site do livro "Learn You A Haskell For Great Good", só que feita usando o Jekyll.
 
 Tentei deixar ele o mais próximo do site original (quando ele ainda estava de pé, pelo menos).
 

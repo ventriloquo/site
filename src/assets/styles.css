@@ -18,15 +18,12 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
-    color: var(--fg);
     font-family: 'rubik', system-ui, Sans-Serif;
     font-size: large;
 }
 
 a {
     text-decoration: none;
-    color: var(--ac);
     text-decoration: underline;
     text-underline-offset: .3em;
 }
@@ -45,7 +42,6 @@ nav {
     top: 0;
     z-index: 20;
     max-width: 100vw;
-    background-color: rgba(0,0,0,0.05);
     position: relative;
     z-index: 2000;
 }
@@ -88,8 +84,6 @@ nav a[href^="http"]::after {
     margin: 1em;
     padding: 1em;
     border-radius: 5px;
-    background: var(--bg);
-    color: var(--ac);
     text-decoration: none;
     text-align: center;
 }
@@ -98,8 +92,6 @@ nav a[href^="http"]::after {
     display: none;
     border: none;
     padding: 1em;
-    color: var(--fg);
-    background-color: transparent;
     border-radius: 5px;
 }
 
@@ -111,7 +103,6 @@ nav a[href^="http"]::after {
 #preamble a {
     padding: 10px;
     margin: 5px;
-    color: var(--fg);
     transition: all 100ms;
     border-radius: 5px;
     text-decoration: none;
@@ -120,8 +111,6 @@ nav a[href^="http"]::after {
 #preamble a:hover {
     text-decoration: underline;
     text-underline-offset: .2em;
-    background-color: var(--ac);
-    color: var(--fg);
 }
 
 #preamble a:active {
@@ -135,7 +124,6 @@ nav a[href^="http"]::after {
 }
 
 #postamble {
-    background-color: rgba(0,0,0,0.05);
     padding: 1em;
 }
 
@@ -148,22 +136,12 @@ img {
 
 table {
     width: 100%;
-    background-color: rgba(0,0,0,.015);
-    border-color: var(--fg);
     margin: 1em 0;
     border: solid 1px;
 }
 
 td {
-    border: solid 1px var(--fg);
-}
-
-th {
-    background-color: rgba(0,0,0,.15);
-}
-
-tr:nth-child(even) {
-    background-color: rgba(0,0,0,.1);
+    border: solid 1px;
 }
 
 .title {
@@ -171,14 +149,8 @@ tr:nth-child(even) {
     font-size: xx-large;
 }
 
-.timestamp {
-    color: var(--fg);
-}
-
 .src, .example {
-    background-color: rgba(0,0,0,.03);
-    color: var(--fg);
-    border: solid .1em var(--fg);
+    border: solid .1em;
     border-radius: 3px;
     margin: 0;
 }
@@ -195,21 +167,13 @@ tr:nth-child(even) {
     border-top: none;
 }
 
-.example {
-    background-color: var(--ac);
-}
-
 pre.src:hover:before {
     display: inline;
     margin-top: 14px;
-    background-color: var(--fg);
-    color: var(--bg);
     border-radius: 5px;
 }
 
 p code {
-    background-color: var(--fg);
-    color: var(--bg);
     border-radius: 5px;
     padding: 2px 6px;
     display: inline-block;
@@ -225,8 +189,6 @@ li:has(a) {
 }
 
 li:has(.timestamp) a {
-    color: var(--bg);
-    background-color: var(--fg);
     padding: 3px 10px;
     border-radius: 5px;
     transition: all 300ms;
@@ -241,11 +203,6 @@ li:has(.timestamp) {
     list-style: none;
 }
 
-li:has(.timestamp) a:hover, a:hover {
-    background-color: var(--ac);
-    color: var(--fg);
-}
-
 li:has(.timestamp) a:active {
     border-radius: 0;
 }
@@ -255,7 +212,6 @@ nav#table-of-contents h2 {
 }
 
 nav#table-of-contents {
-    background-color: rgba(0,0,0,.03);
     padding: 5px;
     border-radius: 5px;
     display: block;
@@ -264,8 +220,6 @@ nav#table-of-contents {
 }
 
 blockquote {
-    color: var(--ac);
-    background-color: rgba(0,0,0,.03);
     margin: 1em 0;
     padding: .3em 1em;
     border-radius: 3px;
@@ -336,30 +290,77 @@ p {
     }
 }
 
-@media only screen and (prefers-color-scheme: dark) {
-    :root {
-	--bg: #282828;
-	--fg: #ebdbb2;
-	--ac: #98971a;
-    }
-    
-    th, .src {
-	background-color: rgba(0,0,0,0.3);
-    }
+/* Colorscheme */
 
-    tr:nth-child(even), blockquote, nav#table-of-contents {
-	background-color: rgba(0,0,0,0.2);
-    }
-    
-    .example {
-	color: var(--bg);
-    }
+:root {
+    --bg-0:	#282828;
+    --bg-1:	#1d2021;
+    --fg:	#ebdbb2;
+    --ac:	#98971a;
 }
 
-@media only screen and (prefers-color-scheme: light) {
-    :root {
-	--bg: #fbf1c7;
-	--fg: #3c3836;
-	--ac: #458588;
-    }
+.src,
+.example,
+td,
+table {
+    border-color: var(--fg);
+}
+
+body,
+.src,
+#preamble a:hover,
+#preamble a,
+.nav_menu,
+.timestamp {
+    color: var(--fg);
+}
+
+nav,
+.src,
+.nav_menu,
+#postamble,
+table,
+tr:nth-child(even),
+blockquote,
+nav#table-of-contents {
+    background-color: var(--bg-0);
+}
+
+blockquote,
+#nav_menu a,
+a {
+    color: var(--ac);
+}
+
+th,
+.example {
+    background-color: var(--ac);
+}
+
+#preamble a:hover,
+li:has(.timestamp) a:hover,
+a:hover {
+    background-color: var(--ac);
+}
+
+.example,
+#preamble a:hover,
+li:has(.timestamp) a:hover,
+li:has(.timestamp) a,
+a:hover,
+p code,
+th,
+pre.src:hover:before {
+    color: var(--bg-1);
+}
+
+li:has(.timestamp) a,
+p code,
+pre.src:hover:before {
+    background-color: var(--fg);
+}
+
+body,
+#nav_menu a {
+    background-color: var(--bg-1);
 }

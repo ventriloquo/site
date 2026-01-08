@@ -16,7 +16,6 @@
 #+HTML:     left: -250px;
 #+HTML:     top: 0;
 #+HTML: }
-#+HTML: a:hover { background-color: transparent }
 #+HTML: @media only screen and (max-width: 1280px) {
 #+HTML:     .outline-2 {
 #+HTML:         flex-wrap: wrap;

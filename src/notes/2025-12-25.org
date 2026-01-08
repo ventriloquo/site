@@ -30,7 +30,7 @@ Como por exemplo:
 (efs/lookup-password :machine irc.libera.chat)
 #+end_src
 #+begin_quote
-[[https://systemcrafters.net/emacs-tips/using-encrypted-passwords/][A função em si é essa aqui]]:
+[[https://systemcrafters.net/emacs-tips/using-encrypted-passwords/#accessing-passwords-outside-of-emacs][A função em si é essa aqui]]:
 
 #+begin_src elisp
 (defun efs/lookup-password (&rest keys)
