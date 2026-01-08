@@ -3,6 +3,12 @@
        "<head><link rel='icon' href='/assets/fav.png'></head>"
        "<style>"
        (with-temp-buffer (insert-file-contents "src/assets/styles.css") (buffer-string))
+       ":root {"
+           "--bg-1:"    (face-attribute 'default :background)			";"
+           "--bg-0:"    (face-attribute 'hl-line :background nil 'default)	";"
+           "--fg:"	(face-attribute 'default :foreground)			";"
+           "--ac:"	(face-attribute 'cursor  :background nil 'default)	";"
+       "}"
        "</style>"))
 
 (setq org-html-preamble

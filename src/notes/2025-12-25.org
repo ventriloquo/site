@@ -105,6 +105,28 @@ Ah, mais uma coisa que eu lembrei agora: cada página desse site
 funciona de forma "independente" das outras. Basicamente, todas as
 páginas já incluem toda a estilização necessária para ter a aparência
 do site (todas elas incluem uma /tag/ ~<style>~ com o CSS do site :P).
+
+Além disso, eu também consigo integrar a paleta de cor do tema que eu estou
+usando no Emacs e aplicar ela no CSS do site!
+
+Ou seja, as cores que o site tem, são as mesmas que a do meu Emacs, sem que
+eu precise definir elas manualmente!
+
+#+begin_src emacs-lisp
+(setq org-html-head-extra
+      (concat
+       "<head><link rel='icon' href='/assets/fav.png'></head>"
+       "<style>"
+       (with-temp-buffer (insert-file-contents "src/assets/styles.css") (buffer-string))
+       ":root {"
+           "--bg-1:"    (face-attribute 'default :background)			";"
+           "--bg-0:"    (face-attribute 'hl-line :background nil 'default)	";"
+           "--fg:"	(face-attribute 'default :foreground)			";"
+           "--ac:"	(face-attribute 'cursor  :background nil 'default)	";"
+       "}"
+       "</style>"))
+#+end_src
+
 * Organização financeira
 O ~org-mode~ também tem a funcionalidade de gerir planilhas, com
 fórmulas e tudo!

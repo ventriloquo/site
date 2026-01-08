@@ -3,6 +3,11 @@
     font-family: 'rubik';
 }
 
+@font-face {
+    src: url('/assets/Iosevka-Regular.ttf');
+    font-family: 'iosevka';
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -66,7 +71,6 @@ nav a[href^="http"]::after {
 }
 
 #nav_menu:popover-open {
-    background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
     display: flex;
     flex-wrap: wrap;
@@ -150,6 +154,7 @@ td {
 }
 
 .src, .example {
+    font-family: "iosevka", monospace;
     border: solid .1em;
     border-radius: 3px;
     margin: 0;
@@ -174,6 +179,7 @@ pre.src:hover:before {
 }
 
 p code {
+    font-family: 'iosevka', monospace;
     border-radius: 5px;
     padding: 2px 6px;
     display: inline-block;
@@ -292,13 +298,6 @@ p {
 
 /* Colorscheme */
 
-:root {
-    --bg-0:	#282828;
-    --bg-1:	#1d2021;
-    --fg:	#ebdbb2;
-    --ac:	#98971a;
-}
-
 .src,
 .example,
 td,
@@ -320,14 +319,14 @@ nav,
 .nav_menu,
 #postamble,
 table,
-tr:nth-child(even),
 blockquote,
+#nav_menu:popover-open,
 nav#table-of-contents {
     background-color: var(--bg-0);
 }
 
 blockquote,
-#nav_menu a,
+#nav_menu a:hover,
 a {
     color: var(--ac);
 }
@@ -339,6 +338,7 @@ th,
 
 #preamble a:hover,
 li:has(.timestamp) a:hover,
+#nav_menu a,
 a:hover {
     background-color: var(--ac);
 }
@@ -350,17 +350,19 @@ li:has(.timestamp) a,
 a:hover,
 p code,
 th,
+#nav_menu a,
 pre.src:hover:before {
     color: var(--bg-1);
 }
 
 li:has(.timestamp) a,
 p code,
+#nav_menu a:hover,
 pre.src:hover:before {
     background-color: var(--fg);
 }
 
 body,
-#nav_menu a {
+tr:nth-child(even) {
     background-color: var(--bg-1);
 }
