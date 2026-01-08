@@ -20,7 +20,7 @@ Porém a sintaxe é que é a parte intrigante dos dialetos de Lisp.
 
 Tudo (eu não tô de sacanagem) tem base em /[[https://en.wikipedia.org/wiki/S-expression][S-Expressions]]/, o que faz com que uma declaração que seria escrita assim em C:
 #+begin_src C
-int soma(x, y)
+int soma(int x, int y)
 {
   return x + y;
 }
