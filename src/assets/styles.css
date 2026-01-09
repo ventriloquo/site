@@ -144,6 +144,10 @@ table {
     border: solid 1px;
 }
 
+th {
+    padding: .3em 0;
+}
+
 td {
     border: solid 1px;
 }
