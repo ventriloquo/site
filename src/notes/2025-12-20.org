@@ -1,0 +1,18 @@
+#+TITLE: Blog.sh - O meu próprio SSG
+#+DATE: <2025-12-20 sáb>
+
+Ok, SSG é exagero. Esse carinha só serve para gerar um blog (por isso o nome blog.sh, quem diria).
+
+Ele é basicamente um Shell Script (o mais POSIX que eu conseguir) que gera snippets de HTML a partir de certos parâmetros, usa o smu para converter Markdown para HTML e no fim, junta os dois para criar páginas para posts e lista essas páginas em uma index organizada por ordem crescente.
+
+Ele é um projeto antigo meu e que eu ressuscitei essa semana.
+
+Motivo? Tédio.
+
+Eu tava dando uma olhada em alguns repositórios antigos meus e ele tava no meio deles. Então eu quis dar uma repaginada no garoto e cá está ele, novinho em folha e com funcionalidades que ele não possuia antes, como:
+
+- mostrar as datas dos posts
+- categorizar os posts em múltiplas pastas com base na data deles (que nem o Jekyll!)
+- gerar um feed RSS
+
+Enfim, ainda tem muito o que eu posso fazer para melhorar esse Script.

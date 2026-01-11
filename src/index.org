@@ -1,0 +1,14 @@
+#+TITLE: Caderno do Tukain
+#+AUTHOR: tukain
+
+Aqui é um lugar onde eu gosto de compartilhar um pouco do meu cotidiano. Também
+é um lugar onde eu ponho em prática algumas coisas que eu aprendi, seja elas
+relacionadas à tecnologia, programação ou qualquer outro assunto que eu achar
+pertinente.
+#+begin_quote
+"The strength of JavaScript is that you can do anything. The weakness is that
+you will." - Reg Braithwaite
+#+end_quote
+
+Últimos posts:
+#+INCLUDE: notes/sitemap.org :lines "-6" :only-contents t

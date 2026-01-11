@@ -1,0 +1,39 @@
+#+TITLE: Epoch
+#+DATE: <1970-01-01 qui>
+
+Rapaz...
+
+Eu tenho que tomar cuidado para não mudar de ideia de novo e reescrever
+o meu site usando o Emacs no lugar do [[https://codeberg.org/tukain/blog.sh][blog.sh]].
+
+O Emacs tem muitas funções que o blog.sh não tem, como por exemplo
+
+#+begin_src C
+#include <stdio.h>
+
+int main() {
+  printf("Syntax Highlighting!\n");
+}
+#+end_src
+
+Mas eu planejo adicionar cada vez mais coisas para o meu script.
+Afinal de contas, ele é um projeto que *eu* fiz, então sou *eu* quem tem
+que se ferrar pra conseguir fazer algo decente.
+
+#+begin_quote
+Apesar que o =ox-publish= é muito conveniente...
+#+end_quote
+
+| As     | Tabelas |
+| Também | São     |
+| Muito  | Fodas   |
+
+| Item         | Peso  | Valor (R$) |
+|--------------+-------+------------|
+| Pera         | 1Kg   |         28 |
+| Uva          | 500g  |         12 |
+| Maçã         | 1Kg   |         19 |
+| Salada mista | 150g  |         10 |
+|--------------+-------+------------|
+|              | *Total* |      69 R$ |
+#+TBLFM: @>$3=string("R$")vsum(@I..@II)
