@@ -172,6 +172,10 @@ td {
     border-bottom: none;
 }
 
+.org-src-container:has(+ .org-src-container) .src {
+    margin-bottom: 1em;
+}
+
 .org-src-container + .example {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -301,6 +305,8 @@ p {
 	font-size: large;
     }
 }
+/* Programming Languages */
+pre.src-simphare:before { content: 'Hare'; }
 
 /* Colorscheme */
 

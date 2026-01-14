@@ -6,14 +6,23 @@ Rapaz...
 Eu tenho que tomar cuidado para não mudar de ideia de novo e reescrever
 o meu site usando o Emacs no lugar do [[https://codeberg.org/tukain/blog.sh][blog.sh]].
 
-O Emacs tem muitas funções que o blog.sh não tem, como por exemplo
+O Emacs tem muitas funções que o blog.sh não tem, como por exemplo /Syntax Highlighting/:
 
-#+begin_src C
-#include <stdio.h>
+#+begin_src simphare
+use fmt;
 
-int main() {
-  printf("Syntax Highlighting!\n");
-}
+export fn main() void = {
+	const greetings = [
+		"Hello, world!",
+		"¡Hola Mundo!",
+		"Γειά σου Κόσμε!",
+		"Привіт, світе!",
+		"こんにちは世界！",
+	];
+	for (let greeting .. greetings) {
+		fmt::println(greeting)!;
+	};
+};
 #+end_src
 
 Mas eu planejo adicionar cada vez mais coisas para o meu script.

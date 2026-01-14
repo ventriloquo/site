@@ -8,7 +8,7 @@
            "--bg-0:"    (face-attribute 'hl-line :background nil 'default)	";"
            "--fg:"	(face-attribute 'default :foreground)			";"
            "--ac:"	(face-attribute 'cursor  :background nil 'default)	";"
-       "} /* " (format "%s" custom-enabled-themes) " */" 
+       "} /* " (format "%s" (nth 0 custom-enabled-themes)) " */" 
        "</style>"))
 
 (setq org-html-preamble
