@@ -307,6 +307,7 @@ p {
 }
 /* Programming Languages */
 pre.src-simphare:before { content: 'Hare'; }
+pre.src-elisp:before	{ content: 'Emacs Lisp'; }
 
 /* Colorscheme */
 
