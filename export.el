@@ -7,16 +7,22 @@
 	    entry
 	    (org-publish-find-title entry project))))
 
-(setq org-html-head-extra (concat
+(setq current_theme (format " %s " (nth 0 custom-enabled-themes))
+      accent_color (face-attribute 'cursor  :background nil 'default)
+      background_00 (face-attribute 'hl-line :background nil 'default)
+      background_01 (face-attribute 'default :background)
+      foreground (face-attribute 'default :foreground)
+
+      org-html-head-extra (concat
 			   "<head><link rel='icon' href='/assets/fav.png'></head>"
 			   "<style>"
 			   (with-temp-buffer (insert-file-contents "src/assets/styles.css") (buffer-string))
 			   "\n:root {\n"
-			   "\t--bg-1:\t"	(face-attribute 'default :background)			";\n"
-			   "\t--bg-0:\t"	(face-attribute 'hl-line :background nil 'default)	";\n"
-			   "\t--fg:\t"		(face-attribute 'default :foreground)			";\n"
-			   "\t--ac:\t"		(face-attribute 'cursor  :background nil 'default)	";\n"
-			   "} /*"		(format " %s " (nth 0 custom-enabled-themes))		"*/\n" 
+			   "\t--bg-1:\t" background_01	";\n"
+			   "\t--bg-0:\t" background_00	";\n"
+			   "\t--fg:\t"   foreground	";\n"
+			   "\t--ac:\t"   accent_color	";\n"
+			   "} /*"        current_theme	"*/\n" 
 			   "</style>")
 
       org-html-preamble (concat
@@ -40,6 +46,14 @@
 			  "<footer>"
 			  "<p>Criado com: %c</p>"
 			  "<p>Por: <a href='https://codeberg.org/tukain/'>Tukain</a></p>"
+			  "<p>"
+			  "Tema: " current_theme
+			  " "
+			  "<span class='color_block' style='background-color:" background_00 "'></span>"
+			  "<span class='color_block' style='background-color:" background_01 "'></span>"
+			  "<span class='color_block' style='background-color:" foreground    "'></span>"
+			  "<span class='color_block' style='background-color:" accent_color  "'></span>"
+			  "</p>"
 			  "</footer>")
 
       org-export-with-section-numbers	nil

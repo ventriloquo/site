@@ -310,6 +310,15 @@ pre.src-simphare:before { content: 'Hare'; }
 
 /* Colorscheme */
 
+.color_block {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: solid 1px var(--fg);
+    margin: 0;
+    padding: 0;
+}
+
 .src,
 .example,
 td,
