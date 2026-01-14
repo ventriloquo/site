@@ -1,0 +1,61 @@
+:root {
+  --bg-0:         #feedf3;
+  --bg-1:         #f8e2e7;
+  --bg-2:         var(--bg-0);
+  --fg-0:         #564448;
+  --fg-1:         #42383a;
+
+  --red:          #df2d52;
+  --green:        #2e916d;
+  --blue:         #006e93;
+  --yellow:       #c29461;
+  --purple:       #5e2180;
+  --cyan:         #1d8991;
+  --orange:       #f6661e;
+
+  --grey:         #755f64;
+
+  --accent-1:     var(--green);
+  --accent-2:     var(--cyan);
+  --link:         var(--accent-1);
+  --link-hover:   var(--accent-2);
+  --heading:      var(--cyan);
+
+  --border: solid 2px var(--bg-0);
+}
+
+time {
+  color: var(--cyan) !important;
+}
+
+pre {
+  background-color: var(--bg-0) !important;
+}
+
+blockquote pre {
+  background-color: var(--bg-1) !important;
+}
+
+body:has(.post) {
+  background-color: var(--bg-0) !important;
+}
+
+.post article {
+  background-color: var(--bg-1) !important;
+}
+
+.post q, .post blockquote {
+  background-color: var(--bg-0) !important;
+}
+
+.blog_item {
+  user-select: none;
+}
+
+div.highlighter-rouge::after {
+  background-color: var(--red) !important;
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
