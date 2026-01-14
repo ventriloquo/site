@@ -1,4 +1,4 @@
-@import url("/assets/css/themes/everforest.css");
+@import url("/assets/css/themes/sakura.css");
 @import url("/assets/css/reset.css");
 @import url("/assets/css/rouge.css");
 
@@ -326,7 +326,7 @@ nav a {
   background-color: var(--link-hover);
 }
 
-.button:active, .blog_item:active {
+.button:active, .blog_item:has(a:active) {
   box-shadow: 0px 1px 3px 0px black inset;
 }
 
