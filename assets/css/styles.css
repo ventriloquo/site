@@ -343,12 +343,12 @@ table:has(.blog_item) {
 
 .blog_item:hover {
   padding: 1em;
-  background-color: var(--link);
+  background-color: var(--link) !important;
   color: var(--bg-2);
 }
 
 .blog_item:hover a {
-  color: var(--bg-2);
+  color: var(--bg-2) !important;
   text-decoration: underline;
 }
 

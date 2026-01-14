@@ -32,6 +32,10 @@ pre {
   background-color: var(--bg-0) !important;
 }
 
+blockquote, q {
+  background-color: var(--bg-0) !important;
+}
+
 blockquote pre {
   background-color: var(--bg-1) !important;
 }
@@ -53,6 +57,18 @@ body:has(.post) {
   background-color: var(--bg-0) !important;
 }
 
+div.highlighter-rouge::after {
+  background-color: var(--red) !important;
+}
+
+table {
+  box-shadow: none !important;
+}
+
+table tr:nth-of-type(even) {
+  background-color: rgba(0,0,0,0.03) !important;
+}
+
 .post article {
   background-color: var(--bg-1) !important;
 }
@@ -63,10 +79,6 @@ body:has(.post) {
 
 .blog_item {
   user-select: none;
-}
-
-div.highlighter-rouge::after {
-  background-color: var(--red) !important;
 }
 
 ::-webkit-scrollbar {
