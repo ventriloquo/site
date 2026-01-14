@@ -7,11 +7,11 @@
 	    entry
 	    (org-publish-find-title entry project))))
 
-(setq current_theme (format " %s " (nth 0 custom-enabled-themes))
-      accent_color (face-attribute 'cursor  :background nil 'default)
-      background_00 (face-attribute 'hl-line :background nil 'default)
-      background_01 (face-attribute 'default :background)
-      foreground (face-attribute 'default :foreground)
+(setq current_theme	(format " %s " (nth 0 custom-enabled-themes))
+      accent_color	(face-attribute 'cursor  :background nil 'default)
+      background_00	(face-attribute 'hl-line :background nil 'default)
+      background_01	(face-attribute 'default :background)
+      foreground	(face-attribute 'default :foreground)
 
       org-html-head-extra (concat
 			   "<head><link rel='icon' href='/assets/fav.png'></head>"
