@@ -1,7 +1,7 @@
 :root {
-  --bg-0:         #feedf3;
-  --bg-1:         #f8e2e7;
-  --bg-2:         var(--bg-0);
+  --bg-1:         #feedf3;
+  --bg-0:         #f8e2e7;
+  --bg-2:         var(--bg-1);
   --fg-0:         #564448;
   --fg-1:         #42383a;
 
@@ -34,6 +34,19 @@ pre {
 
 blockquote pre {
   background-color: var(--bg-1) !important;
+}
+
+del {
+  color: var(--yellow) !important;
+}
+
+p code {
+  background-color: var(--red) !important;
+  color: var(--bg-0) !important;
+}
+
+hr {
+  border-color: var(--cyan) !important;
 }
 
 body:has(.post) {
