@@ -12,7 +12,7 @@ tema (por exemplo, [[https://github.com/sainnhe/everforest][everforest]]) e usar
 dor de cabeça de sair ajustando as cores de todos os programas que eu uso era
 grande demais para que eu fizesse isso com mais frequência.
 
-Porém, como dito no meu [[file:~/git/site/src/2025-12-25.org][post anterior]]:
+Porém, como dito no meu [[file:2025-12-25.org][post anterior]]:
 #+begin_quote
 […] eu também consigo integrar a paleta de cor do tema que eu estou usando no
 Emacse aplicar ela no CSS do site!
