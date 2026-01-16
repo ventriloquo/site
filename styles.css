@@ -236,18 +236,6 @@ progress {
   border: solid 1px var(--bg-1);
 }
 
-progress::-webkit-progress-bar {
-  background-color: var(--bg-1);
-}
-
-progress::-webkit-progress-value {
-  background-color: var(--ac);
-}
-
-progress::-moz-progress-bar {
-  background-color: var(--ac);
-}
-
 @view-transition {
     navigation: auto;
 }
@@ -351,6 +339,8 @@ th,
     background-color: var(--ac);
 }
 
+progress::-webkit-progress-value,
+progress::-moz-progress-bar,
 header a:hover,
 li:has(.blog_entry) a:hover,
 #nav_menu a,
@@ -377,6 +367,7 @@ pre.src:hover:before {
     background-color: var(--fg);
 }
 
+progress::-webkit-progress-bar,
 body,
 tr:nth-child(even) {
     background-color: var(--bg-1);
