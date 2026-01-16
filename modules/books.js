@@ -27,6 +27,7 @@ export function books() {
     set_attribute(`${slug(book.title)}_cover`, "loading", "lazy")
     set_attribute(`${slug(book.title)}_cover`, "style", "width: 180px; height: 280px")
     set_attribute(`${slug(book.title)}_cover`, "src", `/assets/${book.cover}`)
+    set_attribute(`${slug(book.title)}_cover`, "alt", `${slug(book.title)}`)
 
     create_element("progress", `${slug(book.title)}_progress`, `${slug(book.title)}_container`)
     set_attribute(`${slug(book.title)}_progress`, "value", `${book.progress.current}`)
