@@ -13,7 +13,7 @@ import {
 
 export function list_entries() {
   create_page("blog", "Anotações");
-  create_element("ul", "entry_list", "blog")
+  create_element("ul", "entry_list", "blog");
 
   for (let post of posts) {
     const id = `${slug(post.date)}_${slug(post.title)}`;

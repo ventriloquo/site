@@ -228,6 +228,26 @@ p {
   display: none;
 }
 
+progress {
+  border-radius: 0;
+  border: none;
+  background-color: var(--bg-0);
+  width: 100%;
+  border: solid 1px var(--bg-1);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--bg-1);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--ac);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--ac);
+}
+
 @view-transition {
     navigation: auto;
 }

@@ -12,14 +12,14 @@ import {
 import { projects } from "./db/projects.js";
 
 export function project_list() {
-  create_page("projetos", "Projetos")
+  create_page("projetos", "Projetos");
 
   for (let project of projects) {
-    create_element("hr", "ruler", "projetos")
+    create_element("hr", "ruler", "projetos");
 
-    const cover = `${slug(project.title)}_cover`
-    const title = `${slug(project.title)}_title`
-    const content = `${slug(project.title)}_content`
+    const cover = `${slug(project.title)}_cover`;
+    const title = `${slug(project.title)}_title`;
+    const content = `${slug(project.title)}_content`;
 
     create_element("img", cover, "projetos");
     set_attribute(cover, "loading", "lazy");

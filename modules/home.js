@@ -1,6 +1,6 @@
 "use strict";
 
-import { create_priv_page } from "../index.js"
+import { create_priv_page } from "../index.js";
 
 export function home() {
   create_priv_page(
@@ -16,5 +16,5 @@ que eu achar pertinente.
 <blockquote>
   <p>"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite</p>
 </blockquote>
-`)
+`);
 }

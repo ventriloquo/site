@@ -4,6 +4,7 @@ import { list_entries, create_post } from "./modules/blog.js";
 import { project_list } from "./modules/projects.js";
 import { home } from "./modules/home.js";
 import { menu } from "./modules/menu.js";
+import { books } from "./modules/books.js";
 
 export const page_list = [];
 
@@ -16,6 +17,10 @@ export function slug(text) {
              .replaceAll("<", "")
              .replaceAll("-", "")
              .replaceAll("+", "")
+             .replaceAll(":", "")
+             .replaceAll(";", "")
+             .replaceAll("?", "")
+             .replaceAll("!", "")
              .replaceAll("__", "_")
              .replaceAll("___", "_")
              .replaceAll("á", "a")
@@ -44,30 +49,32 @@ export function set_attribute(id, name, value) {
 }
 
 export function add_text(element, text) {
-  return document.getElementById(element).innerText = text;
+  document.getElementById(element).innerText = text;
 }
 
 export function add_html(element, HTML) {
-  return document.getElementById(element).innerHTML = HTML;
+  document.getElementById(element).innerHTML = HTML;
 }
 
 export function create_page(name, title, content) {
-  if (title === undefined) {
+  if (title == undefined) {
     const title = name;
   }
 
-  create_element("section", name, "body");
-  create_element("h1", `${name}_title`, name);
-  add_text(`${name}_title`, title);
+  const id = slug(name);
+
+  create_element("section", id, "body");
+  create_element("h1", `${id}_title`, id);
+  add_text(`${id}_title`, title);
 
   if (content) {
-    create_element("p", `${name}_content`, `${name}`);
-    add_html(`${name}_content`, content);
-  };
+    create_element("p", `${id}_content`, `${id}`);
+    add_html(`${id}_content`, content);
+  }
 
   page_list.push(
     {
-      id: `#${name}`,
+      id: `#${id}`,
       title: `${title}`
     }
   );
@@ -78,14 +85,16 @@ export function create_priv_page(name, title, content) {
     const title = name;
   }
 
-  create_element("section", name, "body");
-  create_element("h1", `${name}_title`, name);
-  add_text(`${name}_title`, title);
+  const id = slug(name);
+
+  create_element("section", id, "body");
+  create_element("h1", `${id}_title`, id);
+  add_text(`${id}_title`, title);
 
   if (content) {
-    create_element("p", `${name}_content`, `${name}`);
-    add_html(`${name}_content`, content);
-  };
+    create_element("p", `${id}_content`, `${id}`);
+    add_html(`${id}_content`, content);
+  }
 }
 
 function blog() {
@@ -96,6 +105,7 @@ function blog() {
 function main() {
   home();
   project_list();
+  books();
   blog();
   menu();
 }
