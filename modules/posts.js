@@ -568,6 +568,6 @@ E de primeira, isso é estranho para um cacete, mas depois de um tempo… contin
 Principalmente porquê, como eu já disse, a Elisp é parte do Emacs, então onde o Emacs pode ser usado, eu posso brincar com ela (ou até mesmo criar coisas úteis, o que é difícil de se imaginar vindo de mim).
     `
   },
-]
+];
 
 export default posts;
