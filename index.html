@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="tukain" />
-  <meta name="description" content="Um blog simples" />
+  <meta name="description" content="Um blog simples, feito com Vanilla JavaScript" />
   <meta name="generator" content="JavaShit" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="/assets/fav.png" />
@@ -13,80 +13,13 @@
 <body>
   <header>
     <nav>
-      <div class='home_link'>
-        <a class='text' href='#home'>Início</a>
-      </div>
-      <div>
-        <a href="#projects">Projetos</a>
-        <a href="#notes">Anotações</a>
-      </div>
+      <div><a href='#home'>Início</a></div>
+      <div id="desktop_menu"></div>
+      <div class="mobile_menu"><a href="#mobile_menu">Menu</a></div>
     </nav>
   </header>
   <main id="body">
-    <section id="home">
-      <h1 class="title">Caderno do Tukain </h1>
-      <p>
-        Aqui é um lugar onde eu gosto de compartilhar um pouco do meu cotidiano. Também
-        é um lugar onde eu ponho em prática algumas coisas que eu aprendi, seja elas
-        relacionadas à tecnologia, programação ou qualquer outro assunto que eu achar
-        pertinente.
-      </p>
-      <blockquote>
-        <p> "The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite </p>
-      </blockquote>
-    </section>
-    <section id="projects">
-      <h1>Projetos</h1>
-      <p> Esta é uma lista de alguns dos projetos pessoais em que estou trabalhando/trabalhei. </p>
-
-      <h2><a href="https://codeberg.org/tukain/raylib.ha">Raylib.ha</a></h2>
-      <br>
-      <p>
-        <img src="../assets/raylib.ha.png" alt="raylib.ha.png">
-        Este é um projeto antigo meu. Ele é parte de alguns estudos pessoais de
-        programação, já que eu tenho uma certa dificuldade de aprender só assistindo
-        (ou lendo) algo relacionado ao assunto.
-      </p>
-      <p>
-        Não tive muito tempo para me dedicar a ele nem a área nos últimos meses,
-        mas espero poder voltar ao desenvolvimento dele
-      </p>
-
-      <h2><a href="https://codeberg.org/tukain/lyah">Learn You A Haskell</a></h2>
-      <br>
-      <p>
-        <img src="../assets/lyah.png" alt="lyah.png">
-        Esse projeto é na verdade uma restauração do website <a href="https://learnyouahaskell.com">learnyouahaskell.com</a> que
-        hoje em dia não é mais acessível.
-      </p>
-      <p>
-        Eu reconstruí ele usando Jekyll enquanto o original ainda estava de pé.
-        Tentei deixar ele o mais próximo possível do original.
-      </p>
-      <p>
-        Se você quiser dar uma olhada, é só acessar:
-        <a href="https://tukainpng.neocities.org/lyah">https://tukainpng.neocities.org/lyah</a>
-      </p>
-
-      <h2><a href="https://codeberg.org/tukain/blog.sh">Blog.sh</a></h2>
-      <br>
-      <p>
-        <img src="../assets/blog.sh.png" alt="blog.sh.png">
-        Um gerador de blogs simples feito usando Shell Script.
-      </p>
-      <p>
-        Este é um projeto que eu comecei a muito tempo atrás e decidi revitalizá-lo.
-      </p>
-      <p>
-        Coloquei novas funções (como geração automática de um feed RSS, por exemplo),
-        deixei ele mais fácil de utilizar e de customizar.
-      </p>
-    </section>
-    <section id="notes">
-      <h1>Anotações</h1>
-      <ul id='entry_list'></ul>
-      <script type="module" src="index.js"></script>
-    </section>
+    <script type="module" src="index.js"></script>
   </main>
 </body>
 </html>
