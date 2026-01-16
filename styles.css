@@ -36,18 +36,17 @@
     border-left: none;
 }
 
-pre,
-.example,
+pre.src,
+pre.example,
 td,
 table {
     border-color: var(--fg) !important;
 }
 
 body,
-.src,
+pre.src,
 header a:hover,
 header a,
-.nav_menu,
 .blog_entry {
     color: var(--fg) !important;
 }
@@ -56,52 +55,46 @@ progress,
 progress::-webkit-progress-bar,
 nav,
 .src,
-.nav_menu,
 footer,
 table,
-blockquote,
-#nav_menu:popover-open,
-nav#table-of-contents {
+blockquote {
     background-color: var(--bg-0) !important;
 }
 
 blockquote,
-#nav_menu a:hover,
 a {
     color: var(--ac) !important;
 }
 
 progress::-moz-progress-bar,
 th,
-.example {
+pre.example {
     background-color: var(--ac) !important;
 }
 
 progress::-webkit-progress-value,
 header a:hover,
 li:has(.blog_entry) a:hover,
-#nav_menu a,
+pre.example,
 a:hover {
     background-color: var(--ac) !important;
 }
 
-.example,
+pre.src,
+pre.example,
 header a:hover,
 li:has(.blog_entry) a:hover,
 li:has(.blog_entry) a,
 a:hover,
 p code,
-pre,
 th,
-#nav_menu a,
 pre.src:hover:before {
     color: var(--bg-1) !important;
 }
 
 li:has(.blog_entry) a,
 p code,
-pre,
-#nav_menu a:hover,
+pre.src,
 pre.src:hover:before {
     background-color: var(--fg) !important;
 }
@@ -215,7 +208,7 @@ img {
     margin: 1em auto;
 }
 
-pre {
+pre.src, pre.example {
     font-family: "iosevka", monospace;
     border: solid .1em;
     border-radius: 3px;
@@ -224,18 +217,18 @@ pre {
     padding: 10px;
 }
 
-pre:has(+ pre) {
+pre.src:has(+ pre.src) {
     margin-bottom: 1em;
 }
 
-pre:has(+ .example) {
+pre.src:has(+ pre.example) {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: none;
     margin-bottom: 0;
 }
 
-pre + .example {
+pre.src + pre.example {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;

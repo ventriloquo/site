@@ -37,7 +37,7 @@ export function create_post() {
       <hr>
       ${post.content
         .replaceAll("\n", "<br>")
-        .replaceAll("#+begin_src<br>", "<pre>")
+        .replaceAll("#+begin_src<br>", "<pre class='src'>")
         .replaceAll("<br>#+end_src<br>", "</pre>")
         .replaceAll("#+begin_example<br>", "<pre class='example'>")
         .replaceAll("<br>#+end_example<br>", "</pre>")
@@ -47,7 +47,7 @@ export function create_post() {
         .replaceAll("<br>", "</li><br>")
         .replaceAll("<br>* ", "<h2>")
         .replaceAll("<br>", "</h2><br>")
-        .replaceAll("[[", "<a href='")
+        .replaceAll("[[", "<a target='_blank' href='")
         .replaceAll("][", "'>")
         .replaceAll("]]", "</a>")}`
     );
