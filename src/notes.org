@@ -1,3 +1,0 @@
-#+TITLE: Anotações
-
-#+INCLUDE: "./notes/sitemap.org" :lines "3-"

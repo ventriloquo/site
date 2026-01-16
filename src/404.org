@@ -1,4 +1,0 @@
-#+TITLE: Erro 404
-#+OPTIONS: toc:nil
-* Página não encontrada
-A página solicitada não existe ou o endereço está incorreto
