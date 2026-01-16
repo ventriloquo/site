@@ -14,8 +14,8 @@ import { bookshelf } from "./db/books.js";
 export function books() {
   create_page("bookshelf", "Lista de Leitura");
 
-  create_element("p", "description", "bookshelf");
-  add_text("description", "Essa é a minha coleção de livros e mangás");
+  create_element("p", "books_description", "bookshelf");
+  add_text("books_description", "Essa é a minha coleção de livros e mangás");
 
   create_element("div", "shelf", "bookshelf")
   set_attribute("shelf", "style", "display: flex; flex-wrap: wrap")
