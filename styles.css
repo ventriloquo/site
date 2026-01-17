@@ -22,20 +22,6 @@
 }
 
 /* Colorscheme */
-.color_block {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: solid 1px var(--fg);
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-}
-
-.color_block + .color_block {
-    border-left: none;
-}
-
 pre.src,
 pre.example,
 td,
@@ -342,15 +328,15 @@ hr {
       font-size: larger;
     }
 
-    li:has(.blog_entry) {
-      text-align: center;
-      border-bottom: solid .1em var(--fg);
+    li:has(.blog_entry) + li:has(.blog_entry) {
+      border-top: solid .2em var(--bg-0);
     }
 
     li:has(.blog_entry) a {
       font-size: small;
       padding-top: .7em;
       padding-bottom: .7em;
+      margin-top: .7em;
     }
 
 }

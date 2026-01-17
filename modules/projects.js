@@ -13,6 +13,8 @@ import { projects } from "./db/projects.js";
 
 export function project_list() {
   create_page("projetos", "Projetos");
+  create_element("p", "projetos_description", "projetos");
+  add_text("projetos_description", "Esses são alguns dos projetos em que eu já trabalhei/estou desenvolvendo.")
 
   for (let project of projects) {
     create_element("hr", "ruler", "projetos");

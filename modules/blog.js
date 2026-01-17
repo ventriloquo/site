@@ -33,7 +33,7 @@ export function create_post() {
     create_priv_page(
       `${slug(post.date)}_${slug(post.title)}_page`,
       `${post.title}`,
-      `<h3>${post.date}</h3>
+      `<h3>${post.date} - Palavras: ~<span id="${slug(post.date)}_${slug(post.title)}_page_wordcount"></span>.</h3>
       <hr>
       ${post.content
         .replaceAll("\n", "<br>")
@@ -51,6 +51,8 @@ export function create_post() {
         .replaceAll("][", "'>")
         .replaceAll("]]", "</a>")}`
     );
+    const wordcount = post.content.split(" ").length;
+    add_text(`${slug(post.date)}_${slug(post.title)}_page_wordcount`, `${wordcount}`)
   }
 }
 

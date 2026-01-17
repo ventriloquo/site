@@ -17,7 +17,7 @@ export function games() {
   add_text("jogos_description", "Minha coleção de jogos")
 
   create_element("div", "game_library", "jogos")
-  set_attribute("game_library", "style", "display: flex; flex-wrap: wrap")
+  set_attribute("game_library", "style", "display: flex; flex-wrap: wrap; justify-content: center")
   for (let game of game_colection) {
     create_element("div", `${slug(game.title)}_container`, "game_library")
     set_attribute(`${slug(game.title)}_container`, "style", "margin: 5px")

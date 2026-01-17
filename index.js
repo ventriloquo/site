@@ -22,6 +22,11 @@ export function slug(text) {
              .replaceAll(";", "")
              .replaceAll("?", "")
              .replaceAll("!", "")
+             .replaceAll("/", "")
+             .replaceAll("%", "")
+             .replaceAll("#", "")
+             .replaceAll("*", "")
+             .replaceAll("&", "")
              .replaceAll("__", "_")
              .replaceAll("___", "_")
              .replaceAll("á", "a")
@@ -58,10 +63,6 @@ export function add_html(element, HTML) {
 }
 
 export function create_page(name, title, content) {
-  if (title == undefined) {
-    const title = name;
-  }
-
   const id = slug(name);
 
   create_element("section", id, "body");
@@ -82,10 +83,6 @@ export function create_page(name, title, content) {
 }
 
 export function create_priv_page(name, title, content) {
-  if (title === undefined) {
-    const title = name;
-  }
-
   const id = slug(name);
 
   create_element("section", id, "body");
