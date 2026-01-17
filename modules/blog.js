@@ -33,7 +33,7 @@ export function create_post() {
     create_priv_page(
       `${slug(post.date)}_${slug(post.title)}_page`,
       `${post.title}`,
-      `<h3>${post.date} - Palavras: ~<span id="${slug(post.date)}_${slug(post.title)}_page_wordcount"></span>.</h3>
+      `<h3>${post.date} - ~<span id="${slug(post.date)}_${slug(post.title)}_page_wordcount"></span>palavras.</h3>
       <hr>
       ${post.content
         .replaceAll("\n", "<br>")
