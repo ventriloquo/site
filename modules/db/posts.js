@@ -15,7 +15,7 @@ Porém, como dito no meu post anterior:
 […] eu também consigo integrar a paleta de cor do tema que eu estou usando no Emacse aplicar ela no CSS do site!
 #+end_quote
 
-Isso se dá graças ao fato de que o Emacs consegue "descrever" as cores dos componentes do /buffer/, como cor, tipo de fonte, transparência e etc. Ou seja, basta você pedir ao Emacs que ele dê a cor do background dele e ele vai te dar uma string com a cor!
+Isso se dá graças ao fato de que o Emacs consegue "descrever" as cores dos componentes do <i>buffer</i>, como cor, tipo de fonte, transparência e etc. Ou seja, basta você pedir ao Emacs que ele dê a cor do background dele e ele vai te dar uma string com a cor!
 
 #+begin_src
 (face-attribute 'default :background)
@@ -151,7 +151,7 @@ Sendo assim, eu consigo fazer esse tipo de coisa aqui:
 
 Também reescrevi meu site usando o <code>ox-publish</code>, a funcionalidade de publicação de documentos nativa do Emacs! Quando configurado de uma certa forma, ele não fica muito diferente de um [[https://jekyllrb.com][SSG]] ou [[https://codeberg.org/tukain/blog.sh][algo do gênero]].
 
-Dentre vários facilitadores dados pelo [[https://orgmode.org/][org-mode]], acho que a que eu mais gosto é o /syntax highlighting/. Ele usa as cores do tema que você está usando no Emacs! Além disso, você também consegue executar os blocos de códigos presentes no documento e exibir o resultado desses blocos!
+Dentre vários facilitadores dados pelo [[https://orgmode.org/][org-mode]], acho que a que eu mais gosto é o <i>syntax highlighting</i>. Ele usa as cores do tema que você está usando no Emacs! Além disso, você também consegue executar os blocos de códigos presentes no documento e exibir o resultado desses blocos!
 
 #+begin_src
 (message "Maneiro, né?")
