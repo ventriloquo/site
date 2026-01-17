@@ -1,5 +1,15 @@
 export const game_colection = [
   {
+    title: "Saints Row IV: Re-Elected",
+    cover: "saints_row_IV.jpeg"
+  },
+
+  {
+    title: "Saints Row: The Third",
+    cover: "saints_row_III.jpeg"
+  },
+
+  {
     title: "Outlast",
     cover: "outlast.jpeg"
   },
