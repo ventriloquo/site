@@ -15,7 +15,7 @@ export function list_entries() {
   create_page("blog", "Anotações");
   create_element("ul", "entry_list", "blog");
 
-  for (let post of posts) {
+  for (const post of posts) {
     const id = `${slug(post.date)}_${slug(post.title)}`;
     const id_link = `${slug(post.date)}_entry`;
 
@@ -29,7 +29,7 @@ export function list_entries() {
 }
 
 export function create_post() {
-  for (let post of posts) {
+  for (const post of posts) {
     create_priv_page(
       `${slug(post.date)}_${slug(post.title)}_page`,
       `${post.title}`,

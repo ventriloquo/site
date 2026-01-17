@@ -4,7 +4,6 @@ import {
   create_page,
   create_element,
   add_text,
-  add_html,
   set_attribute,
   slug
 } from "../index.js";
@@ -19,7 +18,7 @@ export function books() {
 
   create_element("div", "shelf", "bookshelf");
   set_attribute("shelf", "style", "display: flex; flex-wrap: wrap; justify-content: center");
-  for (let book of bookshelf) {
+  for (const book of bookshelf) {
     create_element("div", `${slug(book.title)}_container`, "shelf");
     set_attribute(`${slug(book.title)}_container`, "style", "margin: 10px");
 

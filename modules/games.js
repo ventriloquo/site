@@ -4,7 +4,6 @@ import {
   create_page,
   create_element,
   add_text,
-  add_html,
   set_attribute,
   slug
 } from "../index.js";
@@ -18,7 +17,7 @@ export function games() {
 
   create_element("div", "game_library", "jogos");
   set_attribute("game_library", "style", "display: flex; flex-wrap: wrap; justify-content: center");
-  for (let game of game_colection) {
+  for (const game of game_colection) {
     create_element("div", `${slug(game.title)}_container`, "game_library");
     set_attribute(`${slug(game.title)}_container`, "style", "margin: 5px");
 

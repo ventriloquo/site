@@ -13,7 +13,7 @@ export function menu() {
   create_element("ul", "menu_list", "mobile_menu");
 
   let i = 0;
-  for (let page of page_list) {
+  for (const page of page_list) {
     create_element("li", `menu_item_${i}`, "menu_list");
     create_element("a", `${page.id}`, `menu_item_${i}`);
     set_attribute(`${page.id}`, "href", `${page.id}`);
