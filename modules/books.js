@@ -7,7 +7,7 @@ import {
   add_html,
   set_attribute,
   slug
-} from "../index.js"
+} from "../index.js";
 
 import { bookshelf } from "./db/books.js";
 

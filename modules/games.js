@@ -7,27 +7,27 @@ import {
   add_html,
   set_attribute,
   slug
-} from "../index.js"
+} from "../index.js";
 
 import { game_colection } from "./db/games.js";
 
 export function games() {
   create_page("jogos", "Jogos");
-  create_element("p", "jogos_description", "jogos")
-  add_text("jogos_description", "Minha coleção de jogos")
+  create_element("p", "jogos_description", "jogos");
+  add_text("jogos_description", "Minha coleção de jogos");
 
-  create_element("div", "game_library", "jogos")
-  set_attribute("game_library", "style", "display: flex; flex-wrap: wrap; justify-content: center")
+  create_element("div", "game_library", "jogos");
+  set_attribute("game_library", "style", "display: flex; flex-wrap: wrap; justify-content: center");
   for (let game of game_colection) {
-    create_element("div", `${slug(game.title)}_container`, "game_library")
-    set_attribute(`${slug(game.title)}_container`, "style", "margin: 5px")
+    create_element("div", `${slug(game.title)}_container`, "game_library");
+    set_attribute(`${slug(game.title)}_container`, "style", "margin: 5px");
 
-    create_element("img", `${slug(game.title)}_cover`, `${slug(game.title)}_container`)
-    set_attribute(`${slug(game.title)}_cover`, "loading", "lazy")
-    set_attribute(`${slug(game.title)}_cover`, "style", "margin: 0; width: 180px; height: 180px")
-    set_attribute(`${slug(game.title)}_cover`, "src", `/assets/${game.cover}`)
-    set_attribute(`${slug(game.title)}_cover`, "alt", `${slug(game.title)}`)
-    set_attribute(`${slug(game.title)}_cover`, "title", `${game.title}`)
+    create_element("img", `${slug(game.title)}_cover`, `${slug(game.title)}_container`);
+    set_attribute(`${slug(game.title)}_cover`, "loading", "lazy");
+    set_attribute(`${slug(game.title)}_cover`, "style", "margin: 0; width: 180px; height: 180px");
+    set_attribute(`${slug(game.title)}_cover`, "src", `/assets/${game.cover}`);
+    set_attribute(`${slug(game.title)}_cover`, "alt", `${slug(game.title)}`);
+    set_attribute(`${slug(game.title)}_cover`, "title", `${game.title}`);
   }
 }
 

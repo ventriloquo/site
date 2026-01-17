@@ -49,10 +49,10 @@ export function create_post() {
         .replaceAll("<br>", "</h2><br>")
         .replaceAll("[[", "<a target='_blank' href='")
         .replaceAll("][", "'>")
-        .replaceAll("]]", "</a>")}`
+        .replaceAll("]]", "</a>")
+      }`
     );
     const wordcount = post.content.split(" ").length;
-    add_text(`${slug(post.date)}_${slug(post.title)}_page_wordcount`, `${wordcount}`)
+    add_text(`${slug(post.date)}_${slug(post.title)}_page_wordcount`, `${wordcount}`);
   }
 }
-
