@@ -6,7 +6,7 @@ import {
   set_attribute,
   add_text,
   slug
-} from "../index.js";
+} from "./common.js";
 
 import { posts } from "./db/posts.js";
 

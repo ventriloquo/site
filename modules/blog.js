@@ -9,10 +9,10 @@ import {
   create_page,
   create_priv_page,
   add_text
-} from "../index.js";
+} from "./common.js";
 
 export function list_entries() {
-  create_page("blog", "Anotações");
+  create_page("blog", "Blog");
   create_element("ul", "entry_list", "blog");
 
   for (const post of posts) {

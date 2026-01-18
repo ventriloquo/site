@@ -7,7 +7,7 @@ import {
   create_page,
   add_text,
   add_html
-} from "../index.js";
+} from "./common.js";
 
 import { projects } from "./db/projects.js";
 

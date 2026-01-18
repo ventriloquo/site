@@ -6,7 +6,7 @@ import {
   add_text,
   set_attribute,
   slug
-} from "../index.js";
+} from "./common.js";
 
 import { bookshelf } from "./db/books.js";
 

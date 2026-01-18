@@ -6,7 +6,7 @@ import {
   set_attribute,
   add_text,
   page_list
-} from "../index.js";
+} from "./common.js";
 
 export function menu() {
   create_priv_page("mobile_menu", "Menu");
