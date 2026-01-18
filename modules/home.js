@@ -1,7 +1,13 @@
 "use strict";
 
 import {
-  create_priv_page, create_element, slug } from "../index.js";
+  create_priv_page,
+  create_element,
+  set_attribute,
+  add_text,
+  slug
+} from "../index.js";
+
 import { posts } from "./db/posts.js";
 
 export function home() {
@@ -20,17 +26,21 @@ que eu achar pertinente.
 </blockquote>
 
 <h2>Últimos posts</h2>
+<br>
 `);
 
-  // for (let i = 0; i < 2; i++) {
-  //   const id = `${slug(posts[i].date)}_${slug(posts[i].title)}`;
-  //   const id_link = `${slug(posts[i].date)}_entry`;
+  let i = 0;
+  for (const post of posts) {
+    if (i === 3) break;
+    const id = `${slug(post.date)}_${slug(post.title)}`;
+    const id_link = `${slug(post.date)}_entry`;
 
-  //   create_element("li", `${id}`, "entry_list");
-  //   create_element("a", `${id_link}`, `${id}`);
+    create_element("li", `${id}_recent`, "home");
+    create_element("a", `${id_link}_recent`, `${id}_recent`);
 
-  //   set_attribute(`${id_link}`, "href", `#${id}_page`);
-  //   set_attribute(`${id_link}`, "class", "blog_entry");
-  //   add_text(`${id_link}`, `${posts[i].date} - ${posts[i].title}`);
-  // }
+    set_attribute(`${id_link}_recent`, "href", `#${id}_page`);
+    set_attribute(`${id_link}_recent`, "class", "blog_entry");
+    add_text(`${id_link}_recent`, `${post.date} - ${post.title}`);
+    i++;
+  }
 }
