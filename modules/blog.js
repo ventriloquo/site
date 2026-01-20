@@ -14,6 +14,12 @@ import {
 export function list_entries() {
   create_page("blog", "Blog");
   create_element("ul", "entry_list", "blog");
+  
+  set_attribute("blog_title", "style", "position: relative");
+  
+  create_element("span", "entry_count", "blog_title");
+  set_attribute("entry_count", "style", "position: absolute; right: 0");
+  add_text("entry_count", `${posts.length} posts`);
 
   for (const post of posts) {
     const id = `${slug(post.date)}_${slug(post.title)}`;
@@ -33,7 +39,8 @@ export function create_post() {
     create_priv_page(
       `${slug(post.date)}_${slug(post.title)}_page`,
       `${post.title}`,
-      `<h3>${post.date} - ~<span id="${slug(post.date)}_${slug(post.title)}_page_wordcount"></span> palavras.</h3>
+      `<h3>${post.date}</h3>
+      <span id="${slug(post.date)}_${slug(post.title)}_readinfo"></span>
       <hr>
       ${post.content
         .replaceAll("\n", "<br>")
@@ -53,6 +60,7 @@ export function create_post() {
       }`
     );
     const wordcount = post.content.split(" ").length;
-    add_text(`${slug(post.date)}_${slug(post.title)}_page_wordcount`, `${wordcount}`);
+    const read_time = Math.floor(wordcount/200) <= 1 ? "~1 minuto para ler" : `~${Math.floor(wordcount/200)} minutos para ler`;
+    add_text(`${slug(post.date)}_${slug(post.title)}_readinfo`, `~${wordcount} palavras, ${read_time}`);
   }
 }
