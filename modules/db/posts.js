@@ -73,6 +73,10 @@ export fn main() void = {
 Agora que eu tô vendo aqui, por quê que um retorna 11 e o outro retorna 12? Eu hein.
 #+end_quote
 
+#+begin_note
+Como apontado pelo [[https://neocities.org/site/sob-o-sol][sob-o-sol]] ([[https://neocities.org/site/tukainpng?event_id=6239969][aqui]]), a razão disso se deve ao fato de que o <code>len</code> da Hare calcula o tamanho de uma string byte por byte, e por conta disso o valor retornado é 12 ao invés de 11, já que caracteres como "á" são representados com mais de 1 byte.
+#+end_note
+
 Ok, não é tãooo similar assim, mas ainda assim é o suficiente para que eu não tenha muitas dificuldades na hora de escrever em ambas.
 
 E outra coisa né, se eu me dei o trabalho de fazer uma "[[/modules/common.js][imitação do React]]" só para criar esse site (com o markup dos [[/modules/db/posts.js][posts]] sendo copiado do [[https://orgmode.org][Orgmode]]), eu consigo fazer umas <i>bindings</i> >:(.
@@ -224,7 +228,7 @@ Sendo assim, eu consigo fazer esse tipo de coisa aqui:
 "Perfeitamente equilibrado, como tudo deve ser."
 #+end_quote
 
-[[https://i.redd.it/qpbqimfqx4p71.jpg]]
+<img loading="lazy" src="https://i.redd.it/qpbqimfqx4p71.jpg">
 
 * Meu novo site
 

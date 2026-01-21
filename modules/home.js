@@ -21,7 +21,7 @@ seja elas relacionadas à tecnologia, programação ou qualquer outro assunto
 que eu achar pertinente.
 </p>
 
-<blockquote>
+<blockquote class="quote">
   <p>"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite</p>
 </blockquote>
 

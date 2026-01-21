@@ -18,7 +18,7 @@ export function list_entries() {
   set_attribute("blog_title", "style", "position: relative");
   
   create_element("span", "entry_count", "blog_title");
-  set_attribute("entry_count", "style", "position: absolute; right: 0");
+  set_attribute("entry_count", "style", "position: absolute; right: 0; bottom: 0; font-size: large");
   add_text("entry_count", `${posts.length} posts`);
 
   for (const post of posts) {
@@ -45,11 +45,13 @@ export function create_post() {
       ${post.content
         .replaceAll("\n", "<br>")
         .replaceAll("#+begin_src<br>", "<pre class='src'>")
-        .replaceAll("<br>#+end_src<br>", "</pre>")
+        .replaceAll("#+end_src<br>", "</pre>")
         .replaceAll("#+begin_example<br>", "<pre class='example'>")
-        .replaceAll("<br>#+end_example<br>", "</pre>")
-        .replaceAll("#+begin_quote<br>", "<blockquote><p>")
+        .replaceAll("#+end_example<br>", "</pre>")
+        .replaceAll("#+begin_quote<br>", "<blockquote class='quote'><p>")
         .replaceAll("#+end_quote<br>", "</p></blockquote>")
+        .replaceAll("#+begin_note<br>", "<blockquote class='note'><p>")
+        .replaceAll("<br>#+end_note<br>", "</p></blockquote>")
         .replaceAll("<br>- ", "<li>")
         .replaceAll("<br>", "</li><br>")
         .replaceAll("<br>* ", "<h2>")
@@ -60,7 +62,8 @@ export function create_post() {
       }`
     );
     const wordcount = post.content.split(" ").length;
-    const read_time = Math.floor(wordcount/200) <= 1 ? "~1 minuto para ler" : `~${Math.floor(wordcount/200)} minutos para ler`;
+    const minutes = Math.floor(wordcount/200);
+    const read_time = minutes <= 1 ? "~1 minuto para ler" : `~${minutes} minutos para ler`;
     add_text(`${slug(post.date)}_${slug(post.title)}_readinfo`, `~${wordcount} palavras, ${read_time}`);
   }
 }
