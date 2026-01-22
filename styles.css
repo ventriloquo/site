@@ -357,3 +357,31 @@ hr {
     }
 
 }
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+    --fg:   #FCE8C3;
+    --bg-0: #1C1B19;
+    --bg-1: #121212;
+    --ac-0: 251, 184, 41;
+    --ac-1: 44, 120, 191;
+  }
+  
+  li:has(.blog_entry) a {
+    background-color: var(--bg-0);
+    color: var(--fg);
+  }  
+  
+  li:has(.blog_entry) a:hover {
+    color: var(--bg-0);
+  }
+  
+  pre.src {
+    background-color: var(--bg-0);
+    color: var(--fg);
+  }
+  
+  pre.src, pre.example {
+    border-color: rgba(var(--ac-0), 1);
+  }
+}
