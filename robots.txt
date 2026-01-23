@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /*.css$
+Sitemap: https://tukainpng.neocities.org/sitemap.xml
