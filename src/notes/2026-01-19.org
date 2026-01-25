@@ -1,0 +1,80 @@
+#+TITLE: Que preguiça
+
+Que preguiçaaaaaaaaaa
+
+Cara, eu nem tenho muito o que dizer aqui, só sei que a minha preguiça hoje tá em níveis jamais alcançados antes por este que vos escreve.
+
+Nas últimas 48 horas eu estou fazendo alguns updates no meu "pequeno" projeto de [[https://codeberg.org/tukain/raylib.ha][/bindings/ da Raylib para a Hare]]. Em grande parte, colocando documentação (até agora me arrependo de não ter adicionado os benditos comentários desde o início). Quando dá na telha, eu também adiciono novas bindings.
+
+Mas Jesus amado, a preguiça que bate é tanta que eu faço qualquer outra coisa, menos isso.
+
+Pelo menos quando eu tenho a força de vontade para fazer algo com o projeto, eu sempre experimento coisas novas e acabo aprendendo algo diferente ou tenho uma ideia de como posso implementar X coisa.
+
+Mas, além disso, eu também estou tentando fazer algo que espero ter sucesso até o fim deste ano:
+
+* Me distanciar o máximo possível de redes sociais.
+
+Eu já não sou tão ligado nelas em comparação com até mesmo amigos meus, porém eu ainda tenho aquele bendito reflexo de checar as notificações do celular (ele é tão forte que às vezes eu faço isso para "olhar que horas são", sendo que eu tenho um relógio no pulso!).
+
+No meu caso (na real acho que uns 70% da população) não é viável eu eliminar completamente esses venenos da minha vida. Tenho amigos dos quais só consigo ter algum contato por elas, a prefeitura da minha cidade só dá atualizações por elas basicamente, enfim, não dá para eliminar completamente elas. Mas eu posso reduzir o uso delas.
+
+O Youtube mesmo é uma coisa que eu *tenho* que diminuir o uso. Eu tô passando coisa de 3 a 4 horas por dia assistindo esse treco, em troca de meia grama de conhecimento útil, uma live onde eu realmente aprendo algo que é do meu interesse (vlw [[https://youtube.com/@tsodingdaily][Tsoding]]) e o resto do tempo eu fico num Doom Scroll cheio de coisas irrelevantes ou chocantes.
+
+Isso não é nem um pouco bom para a minha saúde e muito menos para o meu [[https://pt.wikipedia.org/wiki/Limiar_de_aten%C3%A7%C3%A3o][/Attention Span/]]. Além disso, eu sinto que esse treco está afetando o meu psicológico de uma forma tão negativa que eu já nem consigo acreditar mais quando alguém diz que eu sou bom em tal coisa ou outra, na minha cabeça a primeira coisa que aparece é algo em torno de
+
+#+begin_quote
+Como que um cara que passa o dia todo assistindo shorts é capaz de fazer algo?
+#+end_quote
+
+
+É. Tá ruim assim.
+
+Pelo menos eu tenho a sorte de ter uma família que me ama e uma namorada que sempre levanta o meu astral (te amo querida), sinceramente não sei como seria minha vida sem isso.
+
+Minha namorada inclusive já conversou comigo em relação a isso, e é algo que é simplesmente ilógico mesmo. Tipo, eu não sou a volta de Einstein nem nada, mas as coisas que eu sei fazer com Linux, programação e etc, com base em alguns forúns e manuais que eu já li não são tão fáceis de se fazer ou entender, a menos que você tenha algum interesse e força de vontade para compreender (o que a maior parte das pessoas acaba não tendo. A menos que você tenha um site aqui no Neocities, aí você já assinou o seu certificado de Nerd de Computador.)
+
+* A minha preguiça chega até mesmo a ser paradoxal.
+
+Um exemplo disso é o setup do meu computador. Ele tem [[https://alpinelinux.org/][Alpine Linux]] e eu uso o [[https://swaywm.org/][Sway]]. Motivo? Porque para mim, é mais eficiente eu ter um ambiente onde eu posso integrar [[https://pt.wikipedia.org/wiki/Shell_script][/Shell Scripts/]] com facilidade para automatizar tarefas extremamente complexas como *TOCAR UMA PLAYLIST DE MÚSICAS LO-FI QUE EU TENHO BAIXADA NO MEU COMPUTADOR*.
+
+Eu queria tá de sacanagem, mas eu não tô kkkkkk
+
+Além de claro, o fato de que eu refaço esse site do 0 sempre que eu fico enjoado com como ele está. E eu não posso nem dizer que eu não sou tão ativo no desenvolvimento das /bindings/ porquê a sintáxe da [[https://harelang.org/][Hare]] é complicada ou algo do gênero. Eu não ironicamente já usei e customizei um /Window Manager/ que é configurado com [[https://pt.wikipedia.org/wiki/XML][XML]], e gostei! ([[https://labwc.github.io/][Labwc]]).
+
+E também a sintáxe da Hare lembra um pouco a sintáxe do JavaScript. Um pouco.
+#+begin_src javascript
+const string = "Olá, mundo!";
+console.log(string.length);
+#+end_src
+#+begin_example
+11
+#+end_example
+
+#+begin_src simphare
+use fmt;
+
+export fn main() void = {
+  const string: str = "Olá, mundo!";
+  fmt::printfln("{}", len(string))!;
+};
+#+end_src
+#+begin_example
+12
+#+end_example
+
+#+begin_quote
+Agora que eu tô vendo aqui, por quê que um retorna 11 e o outro retorna 12? Eu hein.
+#+end_quote
+
+#+begin_quote
+**NOTA**
+
+Como apontado pelo [[https://neocities.org/site/sob-o-sol][sob-o-sol]] ([[https://neocities.org/site/tukainpng?event_id=6239969][aqui]]), a razão disso se deve ao fato de que o len da Hare calcula o tamanho de uma string byte por byte, e por conta disso o valor retornado é 12 ao invés de 11, já que caracteres como "á" são representados com mais de 1 byte.
+#+end_quote
+
+
+Ok, não é tãooo similar assim, mas ainda assim é o suficiente para que eu não tenha muitas dificuldades na hora de escrever em ambas.
+
+E outra coisa né, se eu me dei o trabalho de fazer uma "[[https://tukainpng.neocities.org/modules/common.js][imitação do React]]" só para criar esse site (com o markup dos [[https://tukainpng.neocities.org/modules/db/posts.js][posts]] sendo copiado do [[https://orgmode.org/][Org mode]]), eu consigo fazer umas bindings >:(.
+
+Enfim, acho que já tá de bom tamanho por hoje. Até o próximo post!

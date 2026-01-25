@@ -1,13 +1,7 @@
 #+TITLE: Epoch
 #+DATE: <1970-01-01 qui>
 
-Rapaz...
-
-Eu tenho que tomar cuidado para não mudar de ideia de novo e reescrever
-o meu site usando o Emacs no lugar do [[https://codeberg.org/tukain/blog.sh][blog.sh]].
-
-O Emacs tem muitas funções que o blog.sh não tem, como por exemplo /Syntax Highlighting/:
-
+* Source code
 #+begin_src simphare
 use fmt;
 
@@ -25,17 +19,32 @@ export fn main() void = {
 };
 #+end_src
 
-Mas eu planejo adicionar cada vez mais coisas para o meu script.
-Afinal de contas, ele é um projeto que *eu* fiz, então sou *eu* quem tem
-que se ferrar pra conseguir fazer algo decente.
+#+begin_src C
+#include <stdio.h>
+
+int main(void) {
+  printf("Hello, World!\n");
+  return 0
+}
+#+end_src
+
+#+begin_src emacs-lisp :eval yes :exports both
+(message "Hello, World!")
+#+end_src
+
+* Quotes
 
 #+begin_quote
-Apesar que o =ox-publish= é muito conveniente...
+"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
 #+end_quote
 
-| As     | Tabelas |
-| Também | São     |
-| Muito  | Fodas   |
+#+begin_quote
+**TEST**
+
+"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
+#+end_quote
+
+* Tables
 
 | Item         | Peso  | Valor (R$) |
 |--------------+-------+------------|
