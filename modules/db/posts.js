@@ -1,6 +1,43 @@
 "use strict";
 
 export const posts = [
+	{
+		title: "Chrome Devtools",
+		date: "25.01.2026",
+		content: `
+Vem cá, desde quando os navegadores que a gente usa todo santo dia se tornaram uma IDE também?
+
+Eu não tô brincando, se você tem um site escrito à mão (HTML, CSS e JS sem um processo de build, como em um SSG) você pode fazer esse teste:
+- Abrir o site no navegador
+- Apertar a tecla <code>F12</code>
+- Clicar em "Sources", depois Workspace
+- "Add folder manually"
+- Colocar a pasta do site, e... pronto, você tem uma IDE para editar o seu site. Sem precisar instalar mais nenhum programa externo.
+
+#+begin_quote
+<span>Detalhe</span>
+No Chrome, você consegue até mesmo habilitar uma função similar ao Github Copilot!
+#+end_quote
+
+Isso é um treco que eu já havia visto anteriormente, mas não havia parado para pensar em <b>quando</b> isso ficou dessa forma. Sinceramente estou curioso para saber, mas não quero ter que me enfiar em um <i>Rabbit Hole</i> só por conta de algo besta como esse.
+
+Se você tem alguma noção de quando os navegadores ficaram assim, sinta-se à vontade para comentar na [[https://neocities.org/site/tukainpng][minha página do Neocities]].
+
+Isso é melhor do que o VSCode, Vim ou Emacs? Não. Nem de longe. Não tem o mínimo de comparação. O editor de texto em si é bem simples, o que é "atraente" é todo o resto das ferramentas que tem por aqui.
+
+Debugger, Análise de uso de memória/rede, monitor de performance, enfim, é uma IDE.
+
+Se comparar com o editor do Neocities aí sim isso aqui se torna algo foderoso. Você tem basicamente aquele <i>Workflow</i> de Ver, Editar, Ver de novo. Algo que você tem também no editor do Neocities, com a diferença sendo que você não está ativamente alterando o seu site que está no ar.
+
+#+begin_quote
+<span>Resumo da ópera</span>
+Um site simples é infinitas vezes mais versátil do que qualquer outra coisa.
+#+end_quote
+
+A parte mais maneira desse <i>Workflow</i> é que você pode literalmente selecionar qualquer elemento do site, e ficar modificando o CSS, e então, salvar o arquivo! Para um site em que o CSS é extremamente relevante (como esse) isso é uma <i>Killer Feature</i>.
+<img loading='lazy' src='/assets/chrome_devtools_screenshot.png'>
+`
+	},
   {
     title: "Que preguiça",
     date: "19.01.2026",
@@ -48,7 +85,7 @@ Além de claro, o fato de que eu refaço esse site do 0 sempre que eu fico enjoa
 E também a sintáxe da Hare lembra um pouco a sintáxe do JavaScript. Um pouco.
 
 #+begin_src
-// JavaScript
+<span>JavaScript</span>
 const string = "Olá, mundo!";
 console.log(string.length);
 #+end_src
@@ -57,7 +94,7 @@ console.log(string.length);
 #+end_example
 
 #+begin_src
-// Hare
+<span>Hare</span>
 use fmt;
 
 export fn main() void = {
@@ -79,7 +116,7 @@ Como apontado pelo [[https://neocities.org/site/sob-o-sol][sob-o-sol]] ([[https:
 
 Ok, não é tãooo similar assim, mas ainda assim é o suficiente para que eu não tenha muitas dificuldades na hora de escrever em ambas.
 
-E outra coisa né, se eu me dei o trabalho de fazer uma "[[/modules/common.js][imitação do React]]" só para criar esse site (com o markup dos [[/modules/db/posts.js][posts]] sendo copiado do [[https://orgmode.org][Orgmode]]), eu consigo fazer umas <i>bindings</i> >:(.
+E outra coisa né, se eu me dei o trabalho de fazer uma "[[/modules/common.js][imitação do React]]" só para criar esse site (com o markup dos [[/modules/db/posts.js][posts]] sendo copiado do [[https://orgmode.org][Org mode]]), eu consigo fazer umas <i>bindings</i> >:(.
 
 Enfim, acho que já tá de bom tamanho por hoje. Até o próximo post!
 `
@@ -101,6 +138,7 @@ Porém, como dito no meu post anterior:
 Isso se dá graças ao fato de que o Emacs consegue "descrever" as cores dos componentes do <i>buffer</i>, como cor, tipo de fonte, transparência e etc. Ou seja, basta você pedir ao Emacs que ele dê a cor do background dele e ele vai te dar uma string com a cor!
 
 #+begin_src
+<span>Elisp</span>
 (face-attribute 'default :background)
 #+end_src
 #+begin_example
@@ -116,6 +154,7 @@ E então, depois de umas duas horas +/-, eu fiz um script em <code>Elisp</code> 
 A forma como ele funciona é bem simples: eu defini algumas variáveis contendo as cores que vou utilizar nas configurações (por exemplo, <code>red</code>) e escrevo o seguinte para criar os arquivos de configuração:
 
 #+begin_src
+<span>Elisp</span>
 (generate-config "~/.config/rofi/themes/colors.rasi"
 		 "* {\\n"
 		 "  col1: "	background	";\\n"
@@ -131,6 +170,7 @@ A forma como ele funciona é bem simples: eu defini algumas variáveis contendo 
 A definição dessa função é a seguinte:
 
 #+begin_src
+<span>Elisp</span>
 (defun new-buffer (name &optional content filepath)
   (if (not (stringp name))
       (error "\`%s' is not a string." name)
@@ -149,6 +189,7 @@ Sim, eu sei, esse treco tá feio que dói. Maaass, funciona. Essa função funci
 A definição do <i>Macro</i> é bem simples:
 
 #+begin_src
+<span>Elisp</span>
 (defmacro generate-config (buffer-name &rest lines)
   \`(new-buffer ,buffer-name (concat ,@lines) ,buffer-name))
 #+end_src
@@ -185,12 +226,14 @@ Além disso, usei um snippet do pessoal do [[https://systemcrafters.net][System 
 Como por exemplo:
 
 #+begin_src
+<span>Elisp</span>
 (efs/lookup-password :machine irc.libera.chat)
 #+end_src
 #+begin_quote
 [[https://systemcrafters.net/emacs-tips/using-encrypted-passwords/#accessing-passwords-outside-of-emacs][A função em si é essa aqui]]:
 
 #+begin_src
+<span>Elisp</span>
 (defun efs/lookup-password (&rest keys)
   (let ((result (apply #'auth-source-search keys)))
     (if result
@@ -210,6 +253,7 @@ linguagem ótima para fazer esse tipo de coisa! Porque ela:
 Sendo assim, eu consigo fazer esse tipo de coisa aqui:
 
 #+begin_src
+<span>Elisp</span>
 (icomplete-mode		               	t)
 (ido-mode		               	t)
 (ido-everywhere		               	t)
@@ -237,6 +281,7 @@ Também reescrevi meu site usando o <code>ox-publish</code>, a funcionalidade de
 Dentre vários facilitadores dados pelo [[https://orgmode.org/][org-mode]], acho que a que eu mais gosto é o <i>syntax highlighting</i>. Ele usa as cores do tema que você está usando no Emacs! Além disso, você também consegue executar os blocos de códigos presentes no documento e exibir o resultado desses blocos!
 
 #+begin_src
+<span>Elisp</span>
 (message "Maneiro, né?")
 #+end_src
 #+begin_example
@@ -254,6 +299,7 @@ Além disso, eu também consigo integrar a paleta de cor do tema que eu estou us
 Ou seja, as cores que o site tem, são as mesmas que a do meu Emacs, sem que eu precise definir elas manualmente!
 
 #+begin_src
+<span>Elisp</span>
 (setq org-html-head-extra
       (concat
        "&lt;head&gt;&lt;link rel='icon' href='/assets/fav.png'&gt;&lt;/head&gt;"
@@ -275,6 +321,7 @@ O <code>org-mode</code> também tem a funcionalidade de gerir planilhas, com fó
 Por exemplo, digamos que eu esteja gerendo uma planilha contendo os meus gastos mensais com planos de assinatura/contas recorrentes. Eu poderia fazer isso aqui:
 
 #+begin_src
+<span>Org-mode</span>
 | Nome        | Dia de cobrança | Valor (R$) |
 |-------------+-----------------+------------|
 | Netflix     |              22 |      20.90 |
@@ -290,6 +337,7 @@ Além disso, também existe a tecla de atalho =Ctrl c }= que exibe alguns marcad
 
 Ficando +/- assim:
 #+begin_src
+<span>Org-mode</span>
    1| Nome        | Dia de cobrança | Valor (R$) |
 I*1 |-------------+-----------------+------------|
    2| Netflix     |              22 | 20.90      |
@@ -321,6 +369,7 @@ Basicamente, o <code>compile-mode</code> serve para executar um comando especifi
 Por exemplo...
 
 #+begin_src
+<span>Hare</span>
 // Eu não incluí o módulo "fmt", necessário para usar a função "println"
 
 export fn main() void = {
@@ -349,6 +398,7 @@ Principalmente na hora de desenvolver as [[https://codeberg.org/tukain/raylib.ha
 Com uma sintáxe dessas aqui a última coisa que eu quero é ter que fazer todo esse processo na mão:
 
 #+begin_src
+<span>Hare</span>
 @symbol("TakeScreenshot") fn TakeScreenshot(filename: *c::char) void;
 export fn take_screenshot(filename: str) void = TakeScreenshot(c::fromstr(filename: str)!);
 #+end_src
@@ -530,6 +580,7 @@ Você pode, por exemplo, criar um elemento &lt;p&gt;, dar o <code>ID</code> "par
 +/- assim:
 
 #+begin_src
+<span>HTML</span>
 &lt;p id="paragrafo"&gt;&lt;/p&gt;
 &lt;script&gt;
   paragrafo.innerText = "Adicionando texto!"
@@ -629,6 +680,7 @@ Porém a sintaxe é que é a parte intrigante dos dialetos de Lisp.
 Tudo (eu não tô de sacanagem) tem base em S-Expressions, o que faz com que uma declaração que seria escrita assim em C:
 
 #+begin_src
+<span>C</span>
 int soma(int x, int y)
 {
   return x + y;
@@ -638,6 +690,7 @@ int soma(int x, int y)
 Virar isso aqui:
 
 #+begin_src
+<span>Elisp</span>
 (defun soma (x y)
   (+ x y))
 #+end_src
