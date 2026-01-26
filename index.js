@@ -5,11 +5,12 @@ import {
   create_post
 } from "./modules/blog.js";
 
-import { project_list } from "./modules/projects.js";
+import { projects } from "./modules/projects.js";
 import { home } from "./modules/home.js";
 import { menu } from "./modules/menu.js";
 import { books } from "./modules/books.js";
 import { games } from "./modules/games.js";
+import { links } from "./modules/links.js";
 
 function blog() {
   list_entries();
@@ -18,10 +19,11 @@ function blog() {
 
 function main() {
   home();
-  project_list();
+  projects();
   books();
   games();
   blog();
+  links();
   menu();
 }
 

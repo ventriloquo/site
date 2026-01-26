@@ -34,7 +34,7 @@ export function books() {
 
     create_element("p", `${slug(book.title)}_progress_text`, `${slug(book.title)}_container`);
     add_text(`${slug(book.title)}_progress_text`, `${book.progress.current}/${book.progress.maximum}`);
-    set_attribute(`${slug(book.title)}_progress_text`, "style", "margin: 0");
+    set_attribute(`${slug(book.title)}_progress_text`, "style", "margin: 0; text-align: center");
   }
 }
 

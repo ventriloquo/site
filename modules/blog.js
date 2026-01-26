@@ -8,7 +8,8 @@ import {
   set_attribute,
   create_page,
   create_priv_page,
-  add_text
+  add_text,
+  markup,
 } from "./common.js";
 
 export function list_entries() {
@@ -42,24 +43,7 @@ export function create_post() {
       `<h3>${post.date}</h3>
       <span id="${slug(post.date)}_${slug(post.title)}_readinfo"></span>
       <hr>
-      ${post.content
-        .replaceAll("\n", "<br>")
-        .replaceAll("#+begin_src<br>", "<pre class='src'>")
-        .replaceAll("#+end_src<br>", "</pre>")
-        .replaceAll("#+begin_example<br>", "<pre class='example'>")
-        .replaceAll("#+end_example<br>", "</pre>")
-        .replaceAll("#+begin_quote<br>", "<blockquote class='quote'><p>")
-        .replaceAll("#+end_quote<br>", "</p></blockquote>")
-        .replaceAll("#+begin_note<br>", "<blockquote class='note'><p>")
-        .replaceAll("<br>#+end_note<br>", "</p></blockquote>")
-        .replaceAll("<br>- ", "<li>")
-        .replaceAll("<br>", "</li><br>")
-        .replaceAll("<br>* ", "<h2>")
-        .replaceAll("<br>", "</h2><br>")
-        .replaceAll("[[", "<a target='_blank' href='")
-        .replaceAll("][", "'>")
-        .replaceAll("]]", "</a>")
-      }`
+      ${markup(post.content)}`
     );
     const wordcount = post.content.split(" ").length;
     const minutes = Math.floor(wordcount/200);

@@ -5,7 +5,8 @@ import {
   create_element,
   set_attribute,
   add_text,
-  slug
+  slug,
+  markup,
 } from "./common.js";
 
 import { posts } from "./db/posts.js";
@@ -14,20 +15,14 @@ export function home() {
   create_priv_page(
     "home",
     "Caderno do Tukain",
-`<p>
-Aqui é um lugar onde eu gosto de compartilhar um pouco do meu cotidiano.
-Também é um lugar onde eu ponho em prática algumas coisas que eu aprendi,
-seja elas relacionadas à tecnologia, programação ou qualquer outro assunto
-que eu achar pertinente.
-</p>
+    markup(`Aqui é um lugar onde eu gosto de compartilhar um pouco do meu cotidiano. Também é um lugar onde eu ponho em prática algumas coisas que eu aprendi, seja elas relacionadas à tecnologia, programação ou qualquer outro assunto que eu achar pertinente.
+#+begin_quote
+<span>Reg Braithwaite</span>
+"The strength of JavaScript is that you can do anything. The weakness is that you will."
+#+end_quote
 
-<blockquote class="quote">
-  <p>"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite</p>
-</blockquote>
-
-<h2>Últimos posts</h2>
-<br>
-`);
+* Últimos posts
+`));
 
   let i = 0;
   for (const post of posts) {

@@ -9,14 +9,14 @@ import {
   add_html
 } from "./common.js";
 
-import { projects } from "./db/projects.js";
+import { projects as project_list } from "./db/projects.js";
 
-export function project_list() {
+export function projects() {
   create_page("projetos", "Projetos");
   create_element("p", "projetos_description", "projetos");
   add_text("projetos_description", "Esses são alguns dos projetos em que eu já trabalhei/estou desenvolvendo.");
 
-  for (const project of projects) {
+  for (const project of project_list) {
     create_element("hr", "ruler", "projetos");
 
     const cover = `${slug(project.title)}_cover`;
@@ -40,4 +40,4 @@ export function project_list() {
 
 }
 
-export default project_list;
+export default projects;

@@ -36,6 +36,26 @@ export function slug(text) {
              .replaceAll("ç", "c");
 }
 
+export function markup(text) {
+  return text
+        .replaceAll("\n", "<br>")
+        .replaceAll("#+begin_src<br>", "<pre class='src'>")
+        .replaceAll("#+end_src<br>", "</pre>")
+        .replaceAll("#+begin_example<br>", "<pre class='example'>")
+        .replaceAll("#+end_example<br>", "</pre>")
+        .replaceAll("#+begin_quote<br>", "<blockquote class='quote'><p>")
+        .replaceAll("#+end_quote<br>", "</p></blockquote>")
+        .replaceAll("#+begin_note<br>", "<blockquote class='note'><p>")
+        .replaceAll("<br>#+end_note<br>", "</p></blockquote>")
+        .replaceAll("<br>- ", "<li>")
+        .replaceAll("<br>", "</li><br>")
+        .replaceAll("<br>* ", "<h2>")
+        .replaceAll("<br>", "</h2><br>")
+        .replaceAll("[[", "<a target='_blank' href='")
+        .replaceAll("][", "'>")
+        .replaceAll("]]", "</a>");
+}
+
 export function create_element(name, id, appendTo) {
   const element = document.createElement(name);
   element.setAttribute("id", id);
