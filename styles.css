@@ -1,11 +1,11 @@
 @font-face {
-    src: url('/assets/Rubik-Regular.ttf');
+    src: url('/fonts/Rubik-Regular.ttf');
     font-family: 'rubik';
     font-display: swap;
 }
 
 @font-face {
-    src: url('/assets/Iosevka-Regular.ttf');
+    src: url('/fonts/Iosevka-Regular.ttf');
     font-family: 'iosevka';
     font-display: swap;
 }
