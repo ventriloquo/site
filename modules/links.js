@@ -22,7 +22,7 @@ export function links() {
     create_element("a", link_index, "links_container");
     set_attribute(link_index, "target", "_blank");
     set_attribute(link_index, "href", link.url);
-    set_attribute(link_index, "style", "margin: 3px 5px");
+    set_attribute(link_index, "class", "link_button");
     
     if (link.button === undefined) {
       create_element("p", `${link_index}_placeholder`, link_index);

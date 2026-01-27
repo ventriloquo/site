@@ -10,6 +10,7 @@ import {
 } from "./common.js";
 
 import { posts } from "./db/posts.js";
+import { list_entries } from "./blog.js";
 
 export function home() {
   create_priv_page(
@@ -24,18 +25,6 @@ export function home() {
 * Últimos posts
 `));
 
-  let i = 0;
-  for (const post of posts) {
-    if (i === 3) break;
-    const id = `${slug(post.date)}_${slug(post.title)}`;
-    const id_link = `${slug(post.date)}_entry`;
+  list_entries("home", 3, "recent");
 
-    create_element("li", `${id}_recent`, "home");
-    create_element("a", `${id_link}_recent`, `${id}_recent`);
-
-    set_attribute(`${id_link}_recent`, "href", `#${id}_page`);
-    set_attribute(`${id_link}_recent`, "class", "blog_entry");
-    add_text(`${id_link}_recent`, `${post.date} - ${post.title}`);
-    i++;
-  }
 }

@@ -15,7 +15,7 @@ export function slug(text) {
              .replaceAll(";", "")
              .replaceAll("?", "")
              .replaceAll("!", "")
-             .replaceAll("/", "")
+            // .replaceAll("/", "")
              .replaceAll("%", "")
              .replaceAll("#", "")
              .replaceAll("*", "")
@@ -75,7 +75,7 @@ export function add_html(element, HTML) {
   document.getElementById(element).innerHTML = HTML;
 }
 
-export function create_page(name, title, content) {
+export function create_page(name, title, content, priv = false) {
   const id = slug(name);
 
   create_element("section", id, "body");
@@ -87,23 +87,16 @@ export function create_page(name, title, content) {
     add_html(`${id}_content`, content);
   }
 
-  page_list.push(
-    {
-      id: `#${id}`,
-      title: `${title}`
-    }
-  );
+  if (!priv) {
+    page_list.push(
+      {
+        id: `#${id}`,
+        title: `${title}`
+      }
+    );
+  }
 }
 
 export function create_priv_page(name, title, content) {
-  const id = slug(name);
-
-  create_element("section", id, "body");
-  create_element("h1", `${id}_title`, id);
-  add_text(`${id}_title`, title);
-
-  if (content) {
-    create_element("p", `${id}_content`, `${id}`);
-    add_html(`${id}_content`, content);
-  }
+  create_page(name, title, content, true);
 }

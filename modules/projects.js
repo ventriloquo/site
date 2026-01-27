@@ -35,9 +35,7 @@ export function projects() {
 
     create_element("p", content, "projetos");
     add_html(content, `${project.description.replaceAll("\n", "<br>")}`);
-
   }
-
 }
 
 export default projects;
