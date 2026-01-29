@@ -511,7 +511,7 @@ Ele é uma restauração do site do livro "Learn You A Haskell For Great Good", 
 
 Tentei deixar ele o mais próximo do site original (quando ele ainda estava de pé, pelo menos).
 
-Se você quiser ver ele, é só acessar "<a href="tukainpng.neocities.org/lyah">tukainpng.neocities.org/lyah</a>"!
+Se você quiser ver ele, é só acessar "[[https://tukainpng.neocities.org/lyah][tukainpng.neocities.org/lyah]]"!
 `
   },
   {
