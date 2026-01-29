@@ -2,7 +2,6 @@
 
 import {
   slug,
-  set_attribute,
   create_page,
   tag
 } from "./common.js";
@@ -23,7 +22,7 @@ export function projects() {
       tag("img", {"title":cover, "loading":"lazy", "style":"max-width: 200px; max-height: 300px", "src":project.icon}),
       tag("h2", {}, tag("a", {"href":project.repo, "target":"_blank"}, project.title)),
       tag("p", {}, project.description.replaceAll("\n", "<br>"))
-    ))
+    ));
   }
 }
 

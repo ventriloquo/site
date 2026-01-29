@@ -4,10 +4,7 @@ import { posts } from "./db/posts.js";
 
 import {
   slug,
-  set_attribute,
-  create_page,
   create_priv_page,
-  add_text,
   markup,
   page_list,
   tag
@@ -33,18 +30,18 @@ export function create_post() {
   for (const post of posts) {
     const post_iso_date = `${post.date.split(".")[2]}/${post.date.split(".")[1]}/${post.date.split(".")[0]}`;
     const post_link = `blog/${post_iso_date}/${slug(post.title)}/`;
-    create_priv_page(
-      post_link,
-      `${post.title}`,
-      `<h3>${post.date}</h3>
-      <span id="${post_link}_readinfo"></span>
-      <hr>
-      ${markup(post.content)}`
-    );
     const wordcount = post.content.split(" ").length;
     const minutes = Math.floor(wordcount/200);
     const read_time = minutes <= 1 ? "~1 minuto para ler" : `~${minutes} minutos para ler`;
-    add_text(`${post_link}_readinfo`, `~${wordcount} palavras, ${read_time}`);
+    
+    create_priv_page(
+      post_link,
+      `${post.title}`,
+      tag("div", {},
+        tag("h3", {"style":"font-weight: normal"}, post.date, tag("span", {}, ` - ~${wordcount} palavras, ${read_time}`)),
+        tag("hr"),
+        tag("p", {}, markup(post.content)))
+    );
   }
 }
 
@@ -61,6 +58,5 @@ export function blog() {
     tag("ul", {"id":"entry_list"}));
 
   list_entries();
-
   create_post();
 }

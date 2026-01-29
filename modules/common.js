@@ -75,18 +75,6 @@ export function tag(name, attributes, ...content) {
   return body.appendChild(element);
 }
 
-export function set_attribute(id, name, value) {
-  document.getElementById(id).setAttribute(name, value);
-}
-
-export function add_text(element, text) {
-  document.getElementById(element).innerText = text;
-}
-
-export function add_html(element, HTML) {
-  document.getElementById(element).innerHTML = HTML;
-}
-
 export function create_page(name, title, content, priv = false) {
   const id = slug(name);
 
