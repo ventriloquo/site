@@ -7,6 +7,7 @@ import { menu } from "./modules/menu.js";
 import { books } from "./modules/books.js";
 import { games } from "./modules/games.js";
 import { links } from "./modules/links.js";
+import { sitemap } from "./modules/sitemap.js";
 
 function main() {
   home();
@@ -16,6 +17,7 @@ function main() {
   blog();
   links();
   menu();
+  sitemap();
 }
 
 main();

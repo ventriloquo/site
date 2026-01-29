@@ -200,10 +200,14 @@ li + br {
   display: none;
 }
 
-ul:has(.blog_entry) {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+ul {
+  padding-inline-start: 0;
+  
+  &:has(.blog_entry) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
 
 li:has(.blog_entry) {

@@ -56,11 +56,23 @@ export function markup(text) {
         .replaceAll("]]", "</a>");
 }
 
-export function create_element(name, id, appendTo) {
+export function tag(name, attributes, ...content) {
   const element = document.createElement(name);
-  element.setAttribute("id", id);
-
-  document.getElementById(appendTo).appendChild(element);
+  if (attributes !== undefined) {
+    for (const attribute in attributes) {
+      element.setAttribute(attribute, attributes[attribute]);
+    }
+  }
+  for (const c of content) {
+    if (c !== undefined) {
+      if (typeof(c) === "string") {
+        element.innerHTML = c;
+      } else {
+        element.appendChild(c);
+      }
+    }
+  }
+  return body.appendChild(element);
 }
 
 export function set_attribute(id, name, value) {
@@ -78,19 +90,16 @@ export function add_html(element, HTML) {
 export function create_page(name, title, content, priv = false) {
   const id = slug(name);
 
-  create_element("section", id, "body");
-  create_element("h1", `${id}_title`, id);
-  add_text(`${id}_title`, title);
-
-  if (content) {
-    create_element("p", `${id}_content`, `${id}`);
-    add_html(`${id}_content`, content);
-  }
+  tag(
+    "section", {"id":id},
+    tag("h1", {"id":`${id}_title`}, title),
+    tag("div", {"id":`${id}_content`}, content)
+  );
 
   if (!priv) {
     page_list.push(
       {
-        id: `#${id}`,
+        id: `/#${id}`,
         title: `${title}`
       }
     );

@@ -4,16 +4,16 @@ import { posts } from "./db/posts.js";
 
 import {
   slug,
-  create_element,
   set_attribute,
   create_page,
   create_priv_page,
   add_text,
   markup,
+  page_list,
+  tag
 } from "./common.js";
 
-export function list_entries(appendTo, limit, list_name = "entry_list") {
-  create_element("ul", list_name, appendTo);
+export function list_entries(limit, list_name = "entry_list") {
   let l = 0;
   for (const post of posts) {
     if (l === limit) break;
@@ -21,12 +21,10 @@ export function list_entries(appendTo, limit, list_name = "entry_list") {
     const id =  `blog/${post_iso_date}/${slug(post.title)}/`;
     const id_index = `post_${posts.indexOf(post)}`;
 
-    create_element("li", `${list_name}_${id_index}`, list_name);
-    create_element("a", `${list_name}_${id_index}_link`, `${list_name}_${id_index}`);
-
-    set_attribute(`${list_name}_${id_index}_link`, "href", `#${id}`);
-    set_attribute(`${list_name}_${id_index}_link`, "class", "blog_entry");
-    add_text(`${list_name}_${id_index}_link`, `${post.date} - ${post.title}`);
+    document.getElementById(list_name).appendChild(
+      tag("li", {},
+        tag("a", {"class":"blog_entry", "href":`#${id}`}, `${post.date} - ${post.title}`))
+    );
     l++;
   }
 }
@@ -51,14 +49,18 @@ export function create_post() {
 }
 
 export function blog() {
-  create_page("blog", "Blog");
-  
-  set_attribute("blog_title", "style", "position: relative");
-  
-  create_element("span", "entry_count", "blog_title");
-  set_attribute("entry_count", "style", "position: absolute; right: 0; bottom: 0; font-size: large");
-  add_text("entry_count", `${posts.length} posts`);
-  
-  list_entries("blog", undefined);
+  page_list.push(
+    {
+      id: `/#blog`,
+      title: "Blog"
+    }
+  );
+  tag("section", {"id":"blog"},
+    tag("h1", {"id":"blog_title", "style":"position: relative"}, "Blog",
+      tag("span", {"id":"entry_count", "style":"position: absolute; right: 0; bottom: 0; font-size: large"}, `${posts.length} posts`)),
+    tag("ul", {"id":"entry_list"}));
+
+  list_entries();
+
   create_post();
 }

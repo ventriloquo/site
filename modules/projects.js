@@ -2,39 +2,28 @@
 
 import {
   slug,
-  create_element,
   set_attribute,
   create_page,
-  add_text,
-  add_html
+  tag
 } from "./common.js";
 
 import { projects as project_list } from "./db/projects.js";
 
 export function projects() {
-  create_page("projetos", "Projetos");
-  create_element("p", "projetos_description", "projetos");
-  add_text("projetos_description", "Esses são alguns dos projetos em que eu já trabalhei/estou desenvolvendo.");
+  create_page("projetos", "Projetos",
+    tag("div", {}, tag("p", {}, "Esses são alguns dos projetos em que eu já trabalhei/estou desenvolvendo.")));
 
   for (const project of project_list) {
-    create_element("hr", "ruler", "projetos");
-
     const cover = `${slug(project.title)}_cover`;
     const title = `${slug(project.title)}_title`;
     const content = `${slug(project.title)}_content`;
 
-    create_element("img", cover, "projetos");
-    set_attribute(cover, "loading", "lazy");
-    set_attribute(cover, "style", "max-width: 200px; max-height: 300px");
-    set_attribute(cover, "src", `${project.icon}`);
-
-    create_element("h2", title, "projetos");
-    create_element("a", `${title}_link`, title);
-    set_attribute(`${title}_link`, "href", `${project.repo}`);
-    add_text(`${title}_link`, `${project.title}`);
-
-    create_element("p", content, "projetos");
-    add_html(content, `${project.description.replaceAll("\n", "<br>")}`);
+    document.getElementById("projetos").appendChild(tag("div", {},
+      tag("hr"),
+      tag("img", {"title":cover, "loading":"lazy", "style":"max-width: 200px; max-height: 300px", "src":project.icon}),
+      tag("h2", {}, tag("a", {"href":project.repo, "target":"_blank"}, project.title)),
+      tag("p", {}, project.description.replaceAll("\n", "<br>"))
+    ))
   }
 }
 
