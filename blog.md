@@ -1,9 +1,11 @@
 ---
-title: Blog
 ---
 
-<ul>
+<div style="display: none">
 {% for post in site.posts %}
-<li><a class="blog_entry" href="{{post.url}}">{{post.date | date: "%d.%m.%Y"}} - {{post.title}}</a></li>
+    {% increment length %}
 {% endfor %}
-</ul>
+</div>
+
+<h1 style="position: relative">Blog <span style="position: absolute; right: 0; font-size: large; align-self: center">{{length}} posts</span></h1>
+{% include list_entries.html %}

@@ -1,0 +1,11 @@
+<ul>
+  {% unless include.limit %}
+    {% for post in site.posts %}
+    <li><a class="blog_entry" href="{{post.url}}">{{post.date | date: "%d.%m.%Y"}} - {{post.title}}</a></li>
+    {% endfor %}
+  {% else %}
+    {% for post in site.posts limit: include.limit %}
+    <li><a class="blog_entry" href="{{post.url}}">{{post.date | date: "%d.%m.%Y"}} - {{post.title}}</a></li>
+    {% endfor %}
+  {% endunless %}
+</ul>

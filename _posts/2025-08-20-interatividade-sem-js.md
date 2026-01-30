@@ -29,30 +29,16 @@ Um exemplo que posso fazer é o seguinte:
 
 {% raw %}
 ```django
-<div class="game_collection">
-{% for midia_digital in site.data.games.midia_digital %}
-    <div class="game" id="{{ midia_digital.title | slugify }}">
-    <a href="#{{ midia_digital.title | slugify }}">
-        <img
-            alt="{{ midia_digital.title }} cover art"
-            width="180"
-            height="180"
-            loading="lazy"
-            src="{{ midia_digital.cover }}">
-    </a>
-        <hgroup class="game_info">
-            <h2>{{ midia_digital.title }}</h2>
-            {% if midia_digital.description %}
-                <q>{{ midia_digital.description }}</q>
-            {% endif %}
-            {% if midia_digital.buy_date %}
-                <p><span style="color: var(--accent)">Quando foi comprado:</span> {{ midia_digital.buy_date }}</p>
-            {% endif %}
-            {% if midia_digital.url %}
-                <a href="{{ midia_digital.url }}" target="_blank">{{ midia_digital.url }}</a>
-            {% endif %}
-        </hgroup>
-    </div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+{% for game in site.data.games %}
+    <img
+        alt="{{game.title}}"
+        title="{{game.title}}"
+        src="/assets/{{game.cover}}"
+        width="200"
+        height="200"
+        style="margin: 0px"
+        >
 {% endfor %}
 </div>
 ```
@@ -79,7 +65,7 @@ biblioteca, olha aqui:
 </div>
 
 Bastou que eu adicionasse {% raw %}`limit: 2`{% endraw %} no final do for-loop ({% raw %}`{% for...`{% endraw %})
-e pronto! Eu tenho a mesma lista, só que com os primeiros 2 jogos!
+e pronto! Eu tenho a mesma lista, só que com os últimos 2 jogos!
 
 Essa facilidade é o que mais me atrai a usar o Jekyll.
 

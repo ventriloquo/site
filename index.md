@@ -12,8 +12,4 @@ achar pertinente.
 > The weakness is that you will."
 
 <h2>Últimos posts</h2>
-<ul>
-{% for post in site.posts limit: 3 %}
-<li><a class="blog_entry" href="{{post.url}}">{{post.title}}</a></li>
-{% endfor %}
-</ul>
+{% include list_entries.html limit="3" %}
