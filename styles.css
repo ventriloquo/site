@@ -1,3 +1,5 @@
+@import url("code.css");
+
 @font-face {
   src: url('/fonts/Rubik-Regular.ttf');
   font-family: 'rubik';
@@ -145,43 +147,27 @@ pre {
     display: none;
   }
   
-  &.src {
-    background-color: var(--fg);
-    color: var(--bg-1);
+  &.highlight {
     position: relative;
-  
     &:has(+ &) {
       margin-bottom: 1em;
     }
-  
-    & span {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(var(--ac-0), 1);
-      color: var(--bg-0);
-      font-weight: normal;
-      padding: .2em 10px;
-      border-end-end-radius: 5px;
-      line-height: 1;
-    }
   }
   
-  &.src:has(+ &.example) {
+  div.highlighter-rouge:has(+ &:has(code.language-example)) {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: none;
     margin-bottom: 0;
   }
   
-  &.src + &.example {
+  div.highlighter-rouge + pre {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top: none;
   }
   
-  &.example {
+  &:has(code.language-example) {
     background-color: rgba(var(--ac-0), 1);
     color: var(--bg-1);
   }
@@ -240,16 +226,15 @@ blockquote {
   line-height: 1.3;
   border-left: solid .3em;
   position: relative;
-
   color: rgba(var(--ac-0), 1);
   background-color: rgba(var(--ac-0), 0.05);
   border-color: rgba(var(--ac-0), 1);
 
-  & code {
+  & > code {
     background-color: rgba(var(--ac-0), 1);
   }
 
-  span {
+  & > p > span {
     padding-top: 2em;
     position: absolute;
     padding: .3em 1em;
@@ -270,12 +255,11 @@ h1, h3 {
 
 h2 {
   font-size: x-large;
-  margin-bottom: -1em;
 }
 
 p {
   line-height: 1.3;
-  
+
   code {
     font-family: 'iosevka', monospace;
     border-radius: 5px;
@@ -312,15 +296,19 @@ hr {
   color: var(--bg-0);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 @media only screen and (max-width: 1280px) {
   nav {
     align-items: center;
-  
+
     .mobile_menu {
       display: initial;
     }
   }
-  
+
   #desktop_menu {
     display: none;
   }
@@ -330,24 +318,24 @@ hr {
   body {
     font-size: medium;
   }
-  
+
   nav {
     font-size: large;
     flex-direction: row;
   }
-  
+
   h1 {
     font-size: xx-large;
   }
-  
+
   h3 {
     font-size: larger;
   }
-  
+
   li:has(.blog_entry) + li:has(.blog_entry) {
     border-top: solid .2em var(--bg-0);
   }
-  
+
   li:has(.blog_entry) a {
     font-size: small;
     padding-top: .7em;
@@ -365,22 +353,13 @@ hr {
     --ac-0: 251, 184, 41;
     --ac-1: 44, 120, 191;
   }
-  
+
   li:has(.blog_entry) a {
     background-color: var(--bg-0);
     color: var(--fg);
-  
+
     &:hover {
       color: var(--bg-0);
     }
-  }
-  
-  pre.src {
-    background-color: var(--bg-0);
-    color: var(--fg);
-  }
-  
-  pre.src, pre.example {
-    border-color: rgba(var(--ac-0), 1);
   }
 }

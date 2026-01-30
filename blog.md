@@ -1,0 +1,9 @@
+---
+title: Blog
+---
+
+<ul>
+{% for post in site.posts %}
+<li><a class="blog_entry" href="{{post.url}}">{{post.date | date: "%d.%m.%Y"}} - {{post.title}}</a></li>
+{% endfor %}
+</ul>

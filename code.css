@@ -1,0 +1,36 @@
+:root {
+  --black: #1C1B19;
+  --red: #EF2F27;
+  --green: #519F50;
+  --yellow: #FBB829;
+  --blue: #2C78BF;
+  --magenta: #E02C6D;
+  --cyan: #0AAEB3;
+  --white: #FCE8C3;
+}
+
+pre.highlight {
+  background-color: var(--black);
+  color: var(--white);
+
+  code {
+    .p, .nt, .cp, .kr {
+      color: var(--magenta);
+    }
+    .k, .o, .ow {
+      color: var(--red);
+    }
+    .nb, .nf, .na {
+      color: var(--yellow);
+    }
+    .s, .dl, .s2 {
+      color: var(--green);
+    }
+    .kt {
+      color: var(--cyan);
+    }
+    .nv {
+      color: var(--blue);
+    }
+  }
+}

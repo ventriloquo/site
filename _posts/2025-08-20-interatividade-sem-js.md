@@ -1,7 +1,5 @@
 ---
 title: Interatividade sem JavaScript
-modified: 2025-12-31
-toc: false
 ---
 
 Se você dar uma navegada no meu site, vai perceber que não existe 1 linha
@@ -64,37 +62,23 @@ Esse é o código reponsável por gerar a listagem de jogos de mídia digital na
 página da minha biblioteca de jogos. É basicamente HTML com ~~algumas~~ muitas
 funcionalidades extras.
 
-Eu posso até mesmo gerar uma lista com os 2 primeiros jogos da minha
+Eu posso até mesmo gerar uma lista com os 2 últimos jogos da minha
 biblioteca, olha aqui:
 
-<div class="game_collection">
-{% for midia_digital in site.data.games.midia_digital limit: 2 %}
-    <div class="game" id="{{ midia_digital.title | slugify }}">
-    <a href="#{{ midia_digital.title | slugify }}">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+{% for game in site.data.games limit: 2 %}
+    <div>
         <img
-            alt="{{ midia_digital.title }} cover art"
+            alt="{{ game.title }} cover art"
             width="180"
             height="180"
             loading="lazy"
-            src="{{ midia_digital.cover }}">
-    </a>
-        <hgroup class="game_info">
-            <h2>{{ midia_digital.title }}</h2>
-            {% if midia_digital.description %}
-                <q>{{ midia_digital.description }}</q>
-            {% endif %}
-            {% if midia_digital.buy_date %}
-                <p><span style="color: var(--accent)">Quando foi comprado:</span> {{ midia_digital.buy_date }}</p>
-            {% endif %}
-            {% if midia_digital.url %}
-                <a href="{{ midia_digital.url }}" target="_blank">{{ midia_digital.url }}</a>
-            {% endif %}
-        </hgroup>
+            src="/assets/{{ game.cover }}">
     </div>
 {% endfor %}
 </div>
 
-Bastou que eu adicionasse {% raw %}`| limit: 2`{% endraw %} no final do for-loop ({% raw %}`{% for...`{% endraw %})
+Bastou que eu adicionasse {% raw %}`limit: 2`{% endraw %} no final do for-loop ({% raw %}`{% for...`{% endraw %})
 e pronto! Eu tenho a mesma lista, só que com os primeiros 2 jogos!
 
 Essa facilidade é o que mais me atrai a usar o Jekyll.
