@@ -1,19 +1,11 @@
 <header>
   <nav>
-    <div class="home_link">
-      <a class="image" href="/home"><img src="/assets/img/avatar.png"></a>
-      <a class="text" href="/home">Início</a>
-    </div>
-    <div id="nav_list" class="nav_items">
-      {% for link in site.data.links %}
-        <a href="{{link.url}}">{{link.title}}</a>
+    <div><a href="/">Início</a></div>
+    <div id="desktop_menu">
+      {% for link in site.data.nav %}
+      <a href="{{link.url}}">{{link.title}}</a>
       {% endfor %}
     </div>
-    <button popovertarget="nav_menu" popovertargetaction="toggle" class="nav_menu">Menu</button>
+    <div class="mobile_menu"><a href="/mobile_menu">Menu</a></div>
   </nav>
-  <div popover id="nav_menu">
-      {% for link in site.data.links %}
-        <a href="{{link.url}}">{{link.title}}</a>
-      {% endfor %}
-  </div>
 </header>
