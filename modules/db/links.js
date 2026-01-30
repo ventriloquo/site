@@ -1,18 +1,23 @@
 export const links = [
   {
+    title: "Buteco do Dorival",
+    url: "https://dorival.neocities.org/",
+    button: "/assets/dorival-button.gif"
+  },
+  {
     title: "KuroiOS",
     url: "https://kuroi.neocities.org/",
-    button: "https://kuroi.com.br/img/button1.png",
+    button: "/assets/kuroi.png",
   },
   {
     title: "Dudalog",
     url: "https://dudalog.neocities.org/",
-    button: "https://dudalog.neocities.org/_astro/dudalog-button-main.CCn_KaWI.png",
+    button: "/assets/dudalog.png",
   },
   {
     title: "/Fidomanin/",
     url: "https://fi-do-manin.neocities.org/",
-    button: "https://fi-do-manin.neocities.org/button.png"
+    button: "/assets/fidomanin.png"
   },
   {
     title: "Sorzitos Lair",
@@ -25,7 +30,25 @@ export const links = [
   {
     title: "sqr's portfolio",
     url: "https://sqrsux.neocities.org/",
-    button: "https://sqrsux.neocities.org/gifs/sqr.gif"
+    button: "/assets/sqr.gif"
+  },
+  {
+    title: "penumbra99",
+    url: "https://penumbra99.neocities.org/"
+  },
+  {
+    title: "Deww.FM",
+    url: "https://dewwdew.neocities.org/"
+  },
+  {
+    title: "blanket fort",
+    url: "https://blanketfort.neocities.org/",
+    button: "/assets/blanket_fort.gif"
+  },
+  {
+    title: "Dabric",
+    url: "https://dabric.xyz",
+    button: "/assets/dabric.png"
   },
 ];
 

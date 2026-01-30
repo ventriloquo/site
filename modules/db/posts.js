@@ -132,7 +132,7 @@ Cada programa tem o seu próprio jeito de configurar, o tipo de sistema de cores
 Porém, como dito no meu post anterior:
 
 #+begin_quote
-[…] eu também consigo integrar a paleta de cor do tema que eu estou usando no Emacse aplicar ela no CSS do site!
+[…] eu também consigo integrar a paleta de cor do tema que eu estou usando no Emacs e aplicar ela no CSS do site!
 #+end_quote
 
 Isso se dá graças ao fato de que o Emacs consegue "descrever" as cores dos componentes do <i>buffer</i>, como cor, tipo de fonte, transparência e etc. Ou seja, basta você pedir ao Emacs que ele dê a cor do background dele e ele vai te dar uma string com a cor!
