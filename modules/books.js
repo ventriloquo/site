@@ -22,7 +22,7 @@ export function books() {
     tag("div", {},
       tag("p", {}, "Essa é a minha coleção de livros e mangás"),
       tag("h3", {}, "Status"),
-      tag("table", {},
+      tag("table", {"style":"margin-bottom: -3px; border-bottom: 0"},
         tag("tbody", {},
           tag("tr", {},
             tag("th", {}, "Livros lidos"),
@@ -35,7 +35,7 @@ export function books() {
             tag("td", {}, `${livros_nao_lidos}`)
           ),
         )),
-      tag("progress", {"value":`${livros_lidos}`, "max":`${total_de_livros}`}),
+      tag("progress", {"style":"border: solid .1em rgba(var(--ac-0), 1)", "value":`${livros_lidos}`, "max":`${total_de_livros}`}),
       tag("p", {"style":"margin: 0; text-align: center"},
         "Li "                                                                  +
         `<span style='color: rgba(var(--ac-1), 1)'>${livros_lidos}</span> `    +
