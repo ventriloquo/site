@@ -9,13 +9,13 @@ import {
 import { bookshelf } from "./db/books.js";
 
 export function books() {
-  let r = 0, s = 0, n = 0;
+  let livros_lidos = 0, livros_sendo_lidos = 0, livros_nao_lidos = 0;
   for (const b of bookshelf) {
-    if (b.progress.current === b.progress.maximum) r++;
-    if (Number(b.progress.current) > 0 && Number(b.progress.current) < Number(b.progress.maximum)) s++;
-    if (Number(b.progress.current) === 0) n++;
+    if (Number(b.progress.current) === Number(b.progress.maximum)) livros_lidos++;
+    if (Number(b.progress.current) > 0 && Number(b.progress.current) < Number(b.progress.maximum)) livros_sendo_lidos++;
+    if (Number(b.progress.current) === 0) livros_nao_lidos++;
   }
-  const t = bookshelf.length;
+  const total_de_livros = bookshelf.length;
 
   create_page(
     "bookshelf", "Lista de Leitura",
@@ -25,16 +25,29 @@ export function books() {
       tag("table", {},
         tag("tbody", {},
           tag("tr", {},
-            tag("th", {}, "Livros lidos"), tag("th", {}, "Livros sendo lidos"), tag("th", {}, "Livros não lidos")
+            tag("th", {}, "Livros lidos"),
+            tag("th", {}, "Livros sendo lidos"),
+            tag("th", {}, "Livros não lidos")
           ),
           tag("tr", {},
-            tag("td", {}, `${r}`), tag("td", {}, `${s}`), tag("td", {}, `${n}`)
+            tag("td", {}, `${livros_lidos}`),
+            tag("td", {}, `${livros_sendo_lidos}`),
+            tag("td", {}, `${livros_nao_lidos}`)
           ),
         )),
-      tag("progress", {"value":`${r}`, "max":`${t}`}),
-      tag("p", {"style":"margin: 0; text-align: center"}, `Li <span style='color: rgba(var(--ac-1), 1)'>${r}</span> de <span style='color: rgba(var(--ac-0), 1)'>${t}</span> livros da minha coleção.`),
+      tag("progress", {"value":`${livros_lidos}`, "max":`${total_de_livros}`}),
+      tag("p", {"style":"margin: 0; text-align: center"},
+        "Li "                                                                  +
+        `<span style='color: rgba(var(--ac-1), 1)'>${livros_lidos}</span> `    +
+        "de "                                                                  +
+        `<span style='color: rgba(var(--ac-0), 1)'>${total_de_livros}</span> ` +
+        "livros da minha coleção."
+      ),
       tag("h3", {}, "Coleção"),
-      tag("div", {"id":"shelf", "style":"display: flex; flex-wrap: wrap; justify-content: center"})
+      tag("div", {
+        "id":"shelf",
+        "style":"display: flex; flex-wrap: wrap; justify-content: center"
+      })
     )
   );
 
@@ -44,7 +57,9 @@ export function books() {
         tag("img", {
           "loading":"lazy",
           "alt":book.title,
-          "style":"width: 180px; height: 280px",
+          "title":book.title,
+          "width":"180",
+          "height":"280",
           "src":`/assets/${book.cover}`
         }),
       tag("progress", {"value":book.progress.current, "max":book.progress.maximum}),
