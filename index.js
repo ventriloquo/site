@@ -1,6 +1,6 @@
 "use strict";
 
-import { create_root, tag } from './modules/common.js';
+import { tag } from './modules/common.js';
 import { blog } from "./modules/blog.js";
 import { projects } from "./modules/projects.js";
 import { home } from "./modules/home.js";
@@ -11,9 +11,6 @@ import { links } from "./modules/links.js";
 import { sitemap } from "./modules/sitemap.js";
 
 function main() {
-  // Essa definitivamente é uma das maiores gambiarras que eu já fiz nesse
-  // site.
-  create_root("body");
   tag("header", {},
     tag("nav", {},
       tag("div", {}, tag("a", {"href":"/#home"}, "Início")),
@@ -21,7 +18,8 @@ function main() {
       tag("div", {"class":"mobile_menu"}, tag("a", {"href":"/#mobile_menu"}, "Menu")),
     ))
   tag("main", {"id":"body"});
-  document.getElementById("body").setAttribute("id", "")
+  // remove o id `body` do primeiro elemento com esse id.
+  document.getElementById("body").removeAttribute("id")
 
   home();
   projects();

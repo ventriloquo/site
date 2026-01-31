@@ -56,11 +56,11 @@ export function markup(text) {
         .replaceAll("]]", "</a>");
 }
 
-export function create_root(id) {
-  document.getElementsByTagName('body')[0].setAttribute("id", id);
-}
-
 export function tag(name, attributes, ...content) {
+  if (document.getElementById('body') === null) {
+    document.getElementsByTagName('body')[0].setAttribute("id", "body");
+  }
+
   const element = document.createElement(name);
   if (attributes !== undefined) {
     for (const attribute in attributes) {
