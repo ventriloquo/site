@@ -7,14 +7,15 @@ import {
   create_priv_page,
   markup,
   page_list,
+  invert_date,
   tag
 } from "./common.js";
 
 export function list_entries(limit, list_name = "entry_list") {
   let l = 0;
   for (const post of posts) {
-    if (l === limit) break;
-    const post_iso_date = `${post.date.split(".")[2]}/${post.date.split(".")[1]}/${post.date.split(".")[0]}`;
+    if (l === Number(limit)) break;
+    const post_iso_date = invert_date(post.date, ".").replaceAll(".", "/");
     const id =  `blog/${post_iso_date}/${slug(post.title)}/`;
     const id_index = `post_${posts.indexOf(post)}`;
 
@@ -28,12 +29,12 @@ export function list_entries(limit, list_name = "entry_list") {
 
 export function create_post() {
   for (const post of posts) {
-    const post_iso_date = `${post.date.split(".")[2]}/${post.date.split(".")[1]}/${post.date.split(".")[0]}`;
+    const post_iso_date = invert_date(post.date, ".").replaceAll(".", "/");
     const post_link = `blog/${post_iso_date}/${slug(post.title)}/`;
     const wordcount = post.content.split(" ").length;
     const minutes = Math.floor(wordcount/200);
     const read_time = minutes <= 1 ? "~1 minuto para ler" : `~${minutes} minutos para ler`;
-    
+
     create_priv_page(
       post_link,
       `${post.title}`,

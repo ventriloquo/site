@@ -34,7 +34,8 @@ export function books() {
             tag("td", {}, `${livros_sendo_lidos}`),
             tag("td", {}, `${livros_nao_lidos}`)
           ),
-        )),
+        )
+      ),
       tag("progress", {"style":"border: solid .1em rgba(var(--ac-0), 1)", "value":`${livros_lidos}`, "max":`${total_de_livros}`}),
       tag("p", {"style":"margin: 0; text-align: center"},
         "Li "                                                                  +
@@ -44,26 +45,30 @@ export function books() {
         "livros da minha coleção."
       ),
       tag("h3", {}, "Coleção"),
-      tag("div", {
-        "id":"shelf",
-        "style":"display: flex; flex-wrap: wrap; justify-content: center"
-      })
+      tag("div",
+        {
+          "id":"shelf",
+          "style":"display: flex; flex-wrap: wrap; justify-content: center"
+        }
+      )
     )
   );
 
   for (const book of bookshelf) {
     document.getElementById("shelf").appendChild(
       tag("div", {"style":"margin: 10px"},
-        tag("img", {
-          "loading":"lazy",
-          "alt":book.title,
-          "title":book.title,
-          "width":"180",
-          "height":"280",
-          "src":`/assets/${book.cover}`
-        }),
-      tag("progress", {"value":book.progress.current, "max":book.progress.maximum}),
-      tag("p", {"style":"margin: 0; text-align: center"}, `${book.progress.current}/${book.progress.maximum}`)
+        tag("img",
+          {
+            "loading":"lazy",
+            "alt":book.title,
+            "title":book.title,
+            "width":"180",
+            "height":"280",
+            "src":`/assets/${book.cover}`
+          }
+        ),
+        tag("progress", {"value":book.progress.current, "max":book.progress.maximum}),
+        tag("p", {"style":"margin: 0; text-align: center"}, `${book.progress.current}/${book.progress.maximum}`)
       )
     );
   }
