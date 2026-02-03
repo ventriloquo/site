@@ -13,10 +13,24 @@ import { sitemap } from "./modules/sitemap.js";
 function main() {
   tag("header", {},
     tag("nav", {},
-      tag("div", {}, tag("a", {"href":"/#home"}, "Início")),
-      tag("div", {"id":"desktop_menu"}),
-      tag("div", {"class":"mobile_menu"}, tag("a", {"href":"/#mobile_menu"}, "Menu")),
-    ))
+        tag("div", {"class":"desktop_menu"},
+          tag("a", {"href":"/#home"},
+            tag("img",
+              {
+                "loading":"lazy",
+                "src":"/assets/fav.png",
+                "style":"margin: 0 auto; border-radius: 5px",
+                "width":"80",
+                "height":"80",
+              }
+            )
+          )
+        ),
+        tag("div", {"class":"desktop_menu", "id":"desktop_menu"}),
+        tag("div", {"class":"mobile_menu"}, tag("a", {"href":"/#home"}, "Início")),
+        tag("div", {"class":"mobile_menu"}, tag("a", {"href":"/#mobile_menu"}, "Menu")),
+    )
+  )
   tag("main", {"id":"body"});
   // remove o id `body` do primeiro elemento com esse id.
   document.getElementById("body").removeAttribute("id")
