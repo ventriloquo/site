@@ -1,0 +1,150 @@
+:root {
+  --fg: #cdd6f4;
+  --bg: #11111b;
+  --ac: #cba6f7;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: "Playwrite AU TAS", cursive, system-ui;
+  background-image: url('./assets/background.png');
+  background-position: left;
+  background-position-y: -300px;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+  margin: 0;
+  padding: 0;
+  padding-top: 4em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  animation: fade-in 1s both;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: var(--ac);
+  border: solid .2em var(--ac);
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  animation: fade-in 500ms both;
+  animation-delay: 500ms;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Homemade Apple", system-ui;
+  font-size: xxx-large;
+  animation: fade-in 500ms both;
+  animation-delay: 800ms;
+
+  &:has(+ p) {
+    margin-bottom: 0;
+  }
+  
+  & + p {
+    margin-top: 0;
+  }
+}
+
+p {
+  font-size: x-large;
+  animation: fade-in 500ms both;
+  animation-delay: 1000ms;
+}
+
+div {
+  padding: 0;
+  padding-inline-start: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  position: relative;
+  justify-content: center;
+  background-color: var(--bg);
+}
+
+hr {
+  border-bottom: 0;
+  border-color: var(--ac);
+  margin: 0;
+  width: 100%;
+}
+
+a {
+  color: var(--ac);
+  text-decoration: none;
+  padding: 1em;
+  margin: 1em;
+  transition: all 300ms;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  animation: fade-in 1s both;
+  animation-delay: 1500ms;
+
+  &:hover {
+    background-color: var(--ac);
+    color: var(--bg);
+  }
+}
+
+iframe {
+  width: 400px;
+  margin: 1em;
+}
+
+@media only screen and (orientation: portrait) {
+  h1 {
+    font-size: xx-large;
+  }
+
+  p {
+    font-size: larger;
+  }
+  
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  div {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 94%;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
