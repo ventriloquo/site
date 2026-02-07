@@ -12,7 +12,7 @@ export function intro() {
         tag("div", {"class":"face face--right"}),
         tag("div", {"class":"face face--back"}),
       ),
-      tag("h1", {}, "Caderno do Tukain")
+      tag("h1", {}, "Bem-vindo!")
     )
   );
 }

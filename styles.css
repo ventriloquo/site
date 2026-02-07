@@ -541,6 +541,8 @@ body:has(#intro:target) {
   
     .face--front {
       transform: rotateX(-20deg) rotateY(-20deg) translateZ(100px);
+      background-image: url("/assets/fav.png");
+      background-position: center;
     }
   
     .face--right {
@@ -579,9 +581,18 @@ body:has(#intro:target) {
 @media only screen and (prefers-color-scheme: dark) {
   .intro {
     .cube {
+      .face {
+        background-color: gray;
+      }
+      
       .face--front {
-        background-image: url("/assets/fav_dark.png");
-        background-position: center;
+        filter: grayscale(1);
+      }
+      
+      &:hover {
+        .face--front {
+          filter: grayscale(0);
+        }
       }
     }
   }
@@ -590,9 +601,17 @@ body:has(#intro:target) {
 @media only screen and (prefers-color-scheme: light) {
   .intro {
     .cube {
+      .face {
+        background-color: #B09C7A;
+      }
       .face--front {
-        background-image: url("/assets/fav_light.png");
-        background-position: center;
+        filter: sepia(1);
+      }
+      
+      &:hover {
+        .face--front {
+          filter: sepia(0);
+        }
       }
     }
   }
