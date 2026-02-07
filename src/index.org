@@ -6,8 +6,9 @@ Aqui é um lugar onde eu gosto de compartilhar um pouco do meu cotidiano. També
 relacionadas à tecnologia, programação ou qualquer outro assunto que eu achar
 pertinente.
 #+begin_quote
+**Reg Braithwaite**
 "The strength of JavaScript is that you can do anything. The weakness is that
-you will." - Reg Braithwaite
+you will."
 #+end_quote
 
 Últimos posts:

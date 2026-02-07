@@ -81,9 +81,15 @@
 				    :publishing-directory "public/notes"
 				    :publishing-function org-html-publish-to-html
 				    :recusive nil)
+				   ("modules"
+				    :base-directory "src/modules"
+				    :base-extension "js"
+				    :recursive t
+				    :publishing-directory "public/modules"
+				    :publishing-function org-publish-attachment)
 				   ("static"
 				    :base-directory "src/assets"
-				    :base-extension "jpg\\|png\\|webp\\|ttf\\|gif\\|css\\|js\\|html"
+				    :base-extension "jpg\\|jpeg\\|png\\|webp\\|ttf\\|gif\\|css\\|js\\|html"
 				    :recusive t
 				    :publishing-directory "public/assets"
 				    :publishing-function org-publish-attachment)))

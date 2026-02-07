@@ -1,6 +1,48 @@
 #+TITLE: Epoch
 #+DATE: <1970-01-01 qui>
 
+
+* Text
+/Italic/ *Bold* _underline_ =Verbatim= +strikethrough+
+
+* Lists
+
+Unorganized
+- a
+  - b
+  - c
+- d
+
+Organized
+1. a
+   2. b
+   3. c
+2. d
+   
+* Quotes
+
+#+begin_quote
+"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
+#+end_quote
+
+#+begin_quote
+**TEST**
+
+"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
+#+end_quote
+
+* Tables
+
+| Item         | Peso  | Valor (R$) |
+|--------------+-------+------------|
+| Pera         | 1Kg   |         28 |
+| Uva          | 500g  |         12 |
+| Maçã         | 1Kg   |         19 |
+| Salada mista | 150g  |         10 |
+|--------------+-------+------------|
+|              | *Total* |      69 R$ |
+#+TBLFM: @>$3=string("R$")vsum(@I..@II)
+
 * Source code
 #+begin_src simphare
 use fmt;
@@ -32,26 +74,7 @@ int main(void) {
 (message "Hello, World!")
 #+end_src
 
-* Quotes
 
-#+begin_quote
-"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
-#+end_quote
-
-#+begin_quote
-**TEST**
-
-"The strength of JavaScript is that you can do anything. The weakness is that you will." - Reg Braithwaite
-#+end_quote
-
-* Tables
-
-| Item         | Peso  | Valor (R$) |
-|--------------+-------+------------|
-| Pera         | 1Kg   |         28 |
-| Uva          | 500g  |         12 |
-| Maçã         | 1Kg   |         19 |
-| Salada mista | 150g  |         10 |
-|--------------+-------+------------|
-|              | *Total* |      69 R$ |
-#+TBLFM: @>$3=string("R$")vsum(@I..@II)
+* Heading 1
+** Heading 2
+*** Heading 3

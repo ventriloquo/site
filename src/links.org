@@ -1,0 +1,4 @@
+#+HTML: <style>a[href^="http"]::after {content: ""}</style>
+#+HTML: <main id='body'></main>
+#+HTML: <script type="module" src="./modules/links.js"></script>
+#+HTML: <script type="module">import { links } from "./modules/links.js"; window.onload = links()</script>

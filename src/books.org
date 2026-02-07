@@ -1,0 +1,3 @@
+#+HTML: <div id="body"></div>
+#+HTML: <script type="module" src="./modules/books.js"></script>
+#+HTML: <script type="module">import { books } from "./modules/books.js"; window.onload = books()</script>

@@ -1,0 +1,58 @@
+#+TITLE: Voltando ao Emacs
+#+DATE: <2026-02-04 Wed>
+
+O experimento com um site feito "/inteiramente/" usando JavaScript foi ótimo, mas
+meu coração Nerd Anti-JavaScript© não me permite continuar utilizando tal
+tecnologia profana!
+
+Por isso, o site voltou a ser feito com o Org-mode, a única forma sana de
+desenvolver um site!
+
+-----
+
+Ok, sem zoeira agora, isso aqui não é para ser levado a sério nem nada do tipo.
+
+Mas se você estiver lendo esse post, é porquê eu consegui traduzir todas as
+funcionalidades que o meu site feito em JavaScript tinha (pelo menos as que são
+indispensáveis).
+
+#+begin_quote
+O que parando para pensar não é lá a tarefa mais difícil de todas, afinal de
+contas aquele site foi criado com a intenção de replicar *esse* site.
+#+end_quote
+
+Há coisas que simplesmente não tem preço.
+
+#+begin_src simphare
+const exemplo: str = "Como por exemplo isso aqui!";
+#+end_src
+
+Ou então
+
+| Isso | Aqui |
+|------+------|
+| B-)  |      |
+
+E claro, quem disse que eu não consigo misturar os dois? Eu posso usar o
+Org-mode para cuidar de coisas como o blog, e o JavaScript para coisas como a
+[[file:../books.org][minha lista de leitura]]!
+
+Dessa maneira, o JavaScript é utilizado somente quando necessário e também não
+impede a visualização de conteúdo relevante.
+
+Além disso, o processo de criação de posts é tão simples quanto escrever um
+arquivo de texto comúm. Ao invés de ter que editar uma tabela como essa aqui:
+
+#+begin_src js
+const posts = [
+    {
+	title: "Título",
+	data: "01.01.1970",
+	content: `Conteúdo`
+    },
+];
+#+end_src
+
+Mas... a maior desvantagem é o processo de "compilação" que eu tenho que fazer
+sempre que eu modifico qualquer coisa por aqui. O que com o site feito em JS
+não precisa, já que tudo fica por conta do runtime.

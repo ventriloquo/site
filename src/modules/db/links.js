@@ -1,0 +1,55 @@
+export const links = [
+  {
+    title: "Buteco do Dorival",
+    url: "https://dorival.neocities.org/",
+    button: "/assets/dorival-button.gif"
+  },
+  {
+    title: "KuroiOS",
+    url: "https://kuroi.neocities.org/",
+    button: "/assets/kuroi.png",
+  },
+  {
+    title: "Dudalog",
+    url: "https://dudalog.neocities.org/",
+    button: "/assets/dudalog.png",
+  },
+  {
+    title: "/Fidomanin/",
+    url: "https://fi-do-manin.neocities.org/",
+    button: "/assets/fidomanin.png"
+  },
+  {
+    title: "Sorzitos Lair",
+    url: "https://sor.neocities.org/",
+  },
+  {
+    title: "sob-o-sol",
+    url: "https://sob-o-sol.neocities.org/",
+  },
+  {
+    title: "sqr's portfolio",
+    url: "https://sqrsux.neocities.org/",
+    button: "/assets/sqr.gif"
+  },
+  {
+    title: "penumbra99",
+    url: "https://penumbra99.neocities.org/"
+  },
+  {
+    title: "Deww.FM",
+    url: "https://dewwdew.neocities.org/"
+  },
+  {
+    title: "blanket fort",
+    url: "https://blanketfort.neocities.org/",
+    button: "/assets/blanket_fort.gif"
+  },
+  {
+    title: "Dabric",
+    url: "https://dabric.xyz",
+    button: "/assets/dabric.png"
+  },
+];
+
+export default links;

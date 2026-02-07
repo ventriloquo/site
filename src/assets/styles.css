@@ -27,16 +27,24 @@ body {
     padding: 0;
     font-family: 'rubik', system-ui, Sans-Serif;
     font-size: large;
+    color: var(--fg);
+    background-color: var(--bg-1);
 }
 
 a {
-    text-decoration: none;
     text-decoration: underline;
     text-underline-offset: .3em;
-}
-
-a[href^="http"]::after {
-    content: "\2197";
+    color: var(--ac);
+    
+    &:hover {
+	color: var(--bg-1);
+	background-color: var(--ac);
+	text-decoration: none;
+    }
+    
+    &[href^="http"]::after {
+	content: "\2197";
+    }
 }
 
 nav {
@@ -51,7 +59,8 @@ nav {
     max-width: 100vw;
     position: relative;
     z-index: 2000;
-
+    background-color: var(--bg-0);
+    
     & a {
 	text-decoration: none;
 	display: inline-block;
@@ -64,7 +73,6 @@ nav {
 	&[href^="http"]::after {
 	    content: "";
 	}
-
     }    
 }
 
@@ -73,26 +81,42 @@ nav {
     flex-direction: row;
 }
 
-#nav_menu:popover-open {
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: right;
-    border: none;
-    z-index: 1000;
-    box-shadow: 0px 40px 100px 0 black;
-    width: 100vw;
-    height: 100vh;
-    padding: 5em 1em 1em 0em;
-}
+#nav_menu {
+    a {
+	margin: 1em;
+	padding: 1em;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: center;
+	color: var(--bg-1);
+	background-color: var(--ac);
 
-#nav_menu a {
-    margin: 1em;
-    padding: 1em;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
+	&:hover {
+	    color: var(--ac);
+	    background-color: var(--bg-0);
+	}
+   }
+    
+    &:popover-open {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	border: none;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	padding: 5em 1em 1em 0em;
+	background-color: var(--bg-1);
+
+	a {
+	    color: var(--bg-1);
+
+	    &:hover {
+		color: var(--ac);
+		background-color: var(--bg-0);
+	    }
+	}
+    }
 }
 
 .nav_menu {
@@ -100,6 +124,8 @@ nav {
     border: none;
     padding: 1em;
     border-radius: 5px;
+    color: var(--fg);
+    background-color: var(--bg-0);
 }
 
 #preamble {
@@ -112,10 +138,13 @@ nav {
 	transition: all 100ms;
 	border-radius: 5px;
 	text-decoration: none;
-
+	color: var(--fg);
+	
 	&:hover {
 	    text-decoration: underline;
 	    text-underline-offset: .2em;
+	    color: var(--bg-1);
+	    background-color: var(--ac);
 	}
 
 	&:active {
@@ -132,6 +161,7 @@ nav {
 
 #postamble {
     padding: 1em;
+    background-color: var(--bg-0);
 }
 
 img {
@@ -141,23 +171,37 @@ img {
     margin: 1em auto;
 }
 
+del {
+    opacity: .5;
+}
+
 table {
     width: 100%;
     margin: 1em 0;
     border: solid 1px;
-}
+    background-color: var(--bg-0);
+    border-color: var(--ac);
+    
+    tbody {
+	border-top: solid 1px;
+	border-color: var(--ac);
+    }
 
-tbody {
-    border-top: solid 1px;
-}
+    th {
+	color: var(--bg-1);
+	background-color: var(--ac);
+	padding: .3em 0;
+    }
 
-th {
-    padding: .3em 0;
-}
-
-td {
-    border-right: solid 1px;
-    padding: 0 .3em;
+    td {
+	border-right: solid 1px;
+	padding: 0 .3em;
+	border-color: var(--ac);
+    }
+    
+    tr:nth-child(even) {
+	background-color: var(--bg-1);
+    }
 }
 
 .title {
@@ -172,11 +216,39 @@ td {
     margin: 0;
     position: relative;
     transition: all 200ms;
+    border-color: var(--ac);
 }
 
-.src:hover {
-    padding-top: calc(2.5em + 16pt);
-    padding-bottom: calc(1em + 8pt);
+pre.src {
+    background-color: var(--bg-0);
+    color: var(--fg);
+    position: relative;
+
+    &:before {
+	margin-top: 0;
+    }
+    
+    &:hover {
+	padding-top: calc(2.5em + 16pt);
+	padding-bottom: calc(1em + 8pt);
+	
+	&:before {
+	    display: inline;
+	    margin: 0;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: calc(100% - 16pt);
+	    padding: 8pt;
+	    background-color: var(--ac);
+	    color: var(--bg-1);
+	}
+    }
+}
+
+.example {
+    color: var(--bg-1);
+    background-color: var(--ac);
 }
 
 .org-src-container:has(+ .example) .src {
@@ -196,17 +268,6 @@ td {
     border-top: none;
 }
 
-pre.src:hover:before {
-    display: inline;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 16pt);
-    background-color: var(--ac);
-    padding: 8pt;
-}
-
 ul:has(.timestamp) {
     padding: 0;
     margin: 0;
@@ -220,13 +281,13 @@ li:has(.timestamp) {
     margin: 10px 0;
     list-style: none;
 
-
     .timestamp {
 	font-family: 'iosevka', monospace;
 	display: inline-block;
 	width: 145px;
+	color: var(--ac);
     }
-	
+    
     & a {
 	padding: 3px 10px;
 	border-radius: 5px;
@@ -235,16 +296,18 @@ li:has(.timestamp) {
 	margin: 5px;
 	display: inline-block;
 	line-height: 2.0;
+	color: var(--fg);
+	background-color: var(--bg-0);
+
+	&:active {
+	    border-radius: 0;
+	}
+	
+	&:hover {
+	    color: var(--bg-1);
+	    background-color: var(--ac);
+	}
     }
-
-    & a:active {
-	border-radius: 0;
-    }
-}
-
-
-nav#table-of-contents h2 {
-    display: none;
 }
 
 nav#table-of-contents {
@@ -253,6 +316,15 @@ nav#table-of-contents {
     display: block;
     position: initial;
     margin-bottom: 0;
+    background-color: var(--bg-0);
+    
+    h2 {
+	display: none;
+    }
+}
+
+hr {
+    border: dashed .1em var(--ac);
 }
 
 blockquote {
@@ -261,7 +333,9 @@ blockquote {
     border-radius: 3px;
     border-left: solid .3em var(--ac);
     position: relative;
-
+    color: var(--fg);
+    background-color: var(--bg-0);
+    
     &:has(b > b) {
 	padding-top: 2em;
     }
@@ -279,6 +353,11 @@ blockquote {
 	}
     }
 
+    .org-src-container {
+	pre {
+	    background-color: var(--bg-1);
+	}
+    }
 }
 
 h1, h3 {
@@ -299,9 +378,10 @@ p {
 	border-radius: 5px;
 	padding: 2px 6px;
 	display: inline-block;
+	color: var(--bg-1);
+	background-color: var(--fg);
     }
 }
-
 
 @view-transition {
     navigation: auto;
@@ -347,6 +427,26 @@ p {
     }
 }
 
+progress {
+    -webkit-appearance: none;
+    border-radius: 0;
+    width: 100%;
+    border: none;
+    background-color: var(--bg-0);
+
+    &::-webkit-progress-bar {
+	background-color: var(--bg-0);
+    }
+
+    &::-webkit-progress-value {
+	background-color: var(--ac);
+    }
+
+    &::-moz-progress-bar {
+	background-color: var(--ac);
+    }
+}
+
 @media only screen and (max-width: 1280px) {
     nav {
 	align-items: center;
@@ -373,7 +473,8 @@ p {
 /* Programming Languages */
 pre.src-simphare:before		{ content: 'Hare'; }
 pre.src-elisp:before		{ content: 'Emacs Lisp'; }
-pre.src-javascript:before	{ content: 'JavaScript'; }
+pre.src-javascript:before,
+pre.src-js:before	        { content: 'JavaScript'; }
 
 /* Colorscheme */
 .color_block {
@@ -388,75 +489,4 @@ pre.src-javascript:before	{ content: 'JavaScript'; }
 
 .color_block + .color_block {
     border-left: none;
-}
-
-.src,
-.example,
-td,
-table,
-tbody {
-    border-color: var(--ac);
-}
-
-li:has(.timestamp) a,
-body,
-blockquote,
-.src,
-#preamble a:hover,
-#preamble a,
-.nav_menu,
-.timestamp {
-    color: var(--fg);
-}
-
-li:has(.timestamp) a,
-nav,
-.src,
-.nav_menu,
-#postamble,
-table,
-blockquote,
-#nav_menu:popover-open,
-nav#table-of-contents {
-    background-color: var(--bg-0);
-}
-
-li:has(.timestamp) .timestamp,
-#nav_menu a:hover,
-a {
-    color: var(--ac);
-}
-
-th,
-.example {
-    background-color: var(--ac);
-}
-
-#preamble a:hover,
-li:has(.timestamp) a:hover,
-#nav_menu a,
-pre.src:hover:before,
-a:hover {
-    background-color: var(--ac);
-}
-
-.example,
-#preamble a:hover,
-li:has(.timestamp) a:hover,
-a:hover,
-p code,
-th,
-#nav_menu a,
-pre.src:hover:before {
-    color: var(--bg-1);
-}
-
-p code,
-#nav_menu a:hover {
-    background-color: var(--fg);
-}
-
-body,
-tr:nth-child(even) {
-    background-color: var(--bg-1);
 }
