@@ -52,6 +52,15 @@ body {
   font-size: large;
   background-color: var(--bg-1);
   color: var(--fg);
+
+  &:has(section:target) {
+    section#intro {
+      display: none;
+    }
+    nav {
+      display: flex;
+    }
+  }
 }
 
 a {
@@ -84,7 +93,7 @@ a {
 }
 
 nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: var(--bg-0);
   position: fixed;
@@ -145,7 +154,7 @@ section {
   background-color: var(--bg-1);
   z-index: 5;
 
-  &#home, &:target {
+  &#intro, &:target {
     display: block;
   }
 }
@@ -391,6 +400,9 @@ table {
 }
 
 @media only screen and (max-width: 1280px) {
+  section#home {
+    display: block;
+  }
   nav {
     flex-direction: row;
     height: auto;
@@ -466,4 +478,101 @@ table {
   pre.src, pre.example {
     border-color: rgba(var(--ac-0), 1);
   }
+}
+
+body:has(#intro:target) {
+  header {
+    display: none;
+  }
+}
+
+.intro {
+  display: block;
+  margin: auto;
+  position: relative;
+  padding-top: 1em;
+  justify-items: center;
+
+  h1 {
+    opacity: 0;
+    transition: all 1s;
+    position: absolute;
+    bottom: -150%;
+  }
+
+  &:has(.cube:hover) {
+    h1 {
+      opacity: 1;
+    }
+  }
+
+  /* https://triangulo.dev/posts/atomo-como-criar-cubo-css/ */
+  .cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    align-content: center;
+  
+    transform-style: preserve-3d;
+  
+    .face {
+      transition: all 1s;
+      background: rgba(var(--ac-1), 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      font-size: 50px;
+      font-weight: bold;
+      color: #234e52;
+  
+      width: 200px;
+      height: 200px;
+      position: absolute;
+  
+      a:hover  {
+        background-color: transparent;
+      }
+    }
+  
+    .face--front {
+      transform: rotateX(-20deg) rotateY(-20deg) translateZ(100px);
+    }
+  
+    .face--right {
+      transform: rotateX(-20deg) rotateY(70deg) translateZ(100px);
+    }
+  
+    .face--back {
+      transform: rotateX(70deg) rotateY(0deg) rotateZ(20deg) translateZ(100px);
+    }
+  
+    &:hover {
+      .face {
+        background-color: rgba(var(--ac-0), 1);
+      }
+  
+      .face--front {
+        transform: rotateX(0deg) rotateY(0deg) translateZ(200px);
+      }
+  
+      .face--right {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(45deg) translateY(0px) translateX(-70px) translateZ(100px);
+        width: 300px;
+        height: 300px;
+      }
+  
+      .face--back {
+        transform: rotateX(0deg) rotateY(0deg) translateY(-50px) translateX(-50px) translateZ(0px);
+        background-color: rgba(var(--ac-1), 1);
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {opactity: 0}
+  to   {opactity: 1}
 }

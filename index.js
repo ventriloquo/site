@@ -9,6 +9,7 @@ import { books } from "./modules/books.js";
 import { games } from "./modules/games.js";
 import { links } from "./modules/links.js";
 import { sitemap } from "./modules/sitemap.js";
+import { intro } from "./modules/intro.js";
 
 function main() {
   tag("header", {},
@@ -43,6 +44,8 @@ function main() {
   links();
   menu();
   sitemap();
+  intro();
 }
 
 main();
+
