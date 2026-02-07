@@ -8,7 +8,7 @@ export function intro() {
   tag("section", {"id":"intro"},
     tag("div", {"class":"intro"},
       tag("div", {"class":"cube"},
-        tag("div", {"class":"face face--front"}, tag("a", {"href":"/#home"}, tag("img", {"src":"/assets/fav.png"}))),
+        tag("div", {"class":"face face--front"}, tag("a", {"href":"/#home"}, tag("div", {"style":"width: 200px; height: 200px;"}))),
         tag("div", {"class":"face face--right"}),
         tag("div", {"class":"face face--back"}),
       ),

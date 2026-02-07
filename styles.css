@@ -576,6 +576,28 @@ body:has(#intro:target) {
   }
 }
 
+@media only screen and (prefers-color-scheme: dark) {
+  .intro {
+    .cube {
+      .face--front {
+        background-image: url("/assets/fav_dark.png");
+        background-position: center;
+      }
+    }
+  }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+  .intro {
+    .cube {
+      .face--front {
+        background-image: url("/assets/fav_light.png");
+        background-position: center;
+      }
+    }
+  }
+}
+
 @keyframes fade-in {
   from {opactity: 0}
   to   {opactity: 1}
