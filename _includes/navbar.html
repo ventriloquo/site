@@ -1,7 +1,8 @@
 <header>
   <nav>
-    <div><a href="/">Início</a></div>
-    <div id="desktop_menu">
+    <div><a href="/home"><img src="/assets/fav.png" width="80" height="80"
+        style="border-radius: 5px; margin: 0 auto"></a></div>
+    <div class="desktop_menu">
       {% for link in site.data.nav %}
       <a href="{{link.url}}">{{link.title}}</a>
       {% endfor %}
