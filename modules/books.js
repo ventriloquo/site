@@ -64,6 +64,7 @@ export function books() {
             "title":book.title,
             "width":"180",
             "height":"280",
+            "style":"object-fit: cover",
             "src":`/assets/${book.cover}`
           }
         ),
