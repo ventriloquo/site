@@ -29,6 +29,13 @@
   --fg:   #564448;
   --ac-0: 223, 45, 82;
   --ac-1: 29, 137, 145;
+
+  --red:    #df2d52;
+  --green:  #2e916d;
+  --yellow: #f6661e;
+  --blue:   #006e93;
+  --purple: #5e2180;
+  --cyan:   #1d8991;
 }
 
 noscript {
@@ -463,6 +470,13 @@ table {
     --bg-1: #121212;
     --ac-0: 251, 184, 41;
     --ac-1: 44, 120, 191;
+
+    --red:    #EF2F27;
+    --green:  #519F50;
+    --yellow: #FBB829;
+    --blue:   #2C78BF;
+    --purple: #E02C6D;
+    --cyan:   #0AAEB3;
   }
 
   li:has(.blog_entry) a {
@@ -491,7 +505,7 @@ body:has(#intro:target) {
 }
 
 .intro {
-  display: block;
+  display: grid;
   margin: auto;
   position: relative;
   padding-top: 1em;
