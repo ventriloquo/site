@@ -1,7 +1,7 @@
 .git/**
+_site/
+src/
+public/
 *Zone**
-lyah
 *google*
-_site
 .jekyll*
-etc/**
