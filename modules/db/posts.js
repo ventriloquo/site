@@ -1,6 +1,23 @@
 "use strict";
 
 export const posts = [
+  {
+    title: "Ideias para o site",
+    date: "09.02.2026",
+    content: `
+Se você acompanha o meu site, já deve ter percebido algumas coisas mudando de repente ou surgindo/sumindo. Isso acontece porquê eu não planejei de forma prévia o que faria parte do site, então como resultado ele fica em contante mudança.
+
+Porém, tem coisas que eu quero fazer com ele e que eu planejo a implementação antes de colocar no ar (convenhamos, esse é o mínimo esperado). Por exemplo, se você visitar esse site pelo computador, você verá uma "intro" antes de ter acesso à home. Eu quero poder fazer algo parecido para os visitantes mobile também.
+
+Outra coisa que eu quero fazer é adicionar a minha nota para certo livro na minha lista de leitura, porém, não quero uma simples nota de 1 a 10, quero adicionar algo mais... humor e piadas. Tipo, digamos que eu dê um 9.5 para algum livro, eu quero que apareça um "emote da twitch" com o [[https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg-Z83xWmYqR3AX7HmwMWY4NI4Cvo7jXp0Nw&s][senhor cinema]] do lado da nota, ou então se eu dou um 2.0 aparece o meme do "[[https://i.scdn.co/image/ab67616d0000b2735c7c92b73a24a47e534c241f][It's Joever]]". Não me parece ser algo difícil de se fazer, mas o complicado vai ser fazer isso se adaptar bem para o mobile (o que para mim é uma obrigação, já que a minha namorada gosta de ver meu site de vez em quando e ela só tem celular).
+
+Talvez eu faça uma [[/#ideias][página dedicada a listar minhas ideias]] e coisas que quero implementar aqui...
+
+Bom, se eu não fizer uma página desse tipo, no mínimo eu tenho que anotar isso em algum lugar, se não eu vou acabar me esquecendo da ideia.
+
+Outra coisa que eu acho que já vou começar a implementar é um botão para enviar feedback de um post. Ele apareceria no final de cada post e nele teria um e-mail pré preenchido com algumas informações do post e pronto para que a pessoa simplesmente dê sua opinião e envie o e-mail. Essa sim é uma ideia fácil de implementar de forma satisfatória para computador e para mobile.
+`
+  },
 	{
 		title: "Chrome Devtools",
 		date: "25.01.2026",
