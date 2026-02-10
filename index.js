@@ -10,6 +10,7 @@ import { games } from "./modules/games.js";
 import { links } from "./modules/links.js";
 import { sitemap } from "./modules/sitemap.js";
 import { intro } from "./modules/intro.js";
+import { ideias } from "./modules/ideias.js";
 
 function main() {
   tag("header", {},
@@ -42,6 +43,7 @@ function main() {
   games();
   blog();
   links();
+  ideias();
   menu();
   sitemap();
   intro();
